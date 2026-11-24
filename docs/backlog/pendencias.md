@@ -43,6 +43,13 @@
 | D-038 | O design (RNF-024, protótipo com 7 telas) cobre só as telas da fase H ou também as pós-hackathon? Prioridade baixa. | sprint-01 | 2026-11-24 | aberta | - |
 | D-039 | PO criar e iniciar a Sprint 01 no quadro do Jira (projeto KAN) e arrastar KAN-11 a KAN-56 para a sprint (baixa). | sprint-01 | 2026-11-24 | aberta | - |
 | D-040 | Ordem de pegada das tarefas da Sprint 01 no Jira e quem pega a etapa 0 (T1 e T2) (baixa). | sprint-01 | 2026-11-24 | aberta | - |
+| D-041 | Transação no seed e no cron da conta demo (T4 e T5): o supabase-js não abre transação. Proposta provisória: função SQL chamada por `rpc` (migration aditiva) ou conexão direta ao Postgres; a escolha vai na PR (baixa). | sprint-01 | 2026-11-24 | aberta | - |
+| D-042 | Formato de retorno e estimativa de custo por reserva de `reserve_ai_usage` (T18) (baixa). Proposta provisória: retorno em jsonb com o id da reserva ou o código de erro; estimativa calculada no servidor a partir de `models.ts`. | sprint-01 | 2026-11-24 | aberta | - |
+| D-043 | Entrada de cartão na fila de flashcards pela primeira vez e os 4 rótulos de confiança, já que o protótipo mostra só 2 (T16) (baixa). Proposta provisória: cartões de conteúdos estudando ou dominados e sem estado contam como vencidos hoje; rótulos a propor e relatar na PR. | sprint-01 | 2026-11-24 | aberta | - |
+| D-044 | Duração de estudo por conteúdo no cronograma (T11) (baixa). Proposta provisória: 1 sessão por conteúdo pendente, na ordem da Jornada, em cada horário disponível a partir de hoje. | sprint-01 | 2026-11-24 | aberta | - |
+| D-045 | Valores de `essay_min_chars` e `essay_max_chars` e status HTTP de `AI_INVALID_OUTPUT` (T2) (baixa). Proposta provisória: o plano não fixa os valores; propor no PR de T2 e registrar. | sprint-01 | 2026-11-24 | aberta | - |
+
+Nota (não é decisão, sem ID): o `server-only` pode falhar quando o seed roda sob `tsx` (T4). Conferir o comportamento no pacote instalado; se falhar, o script cria o client com `@supabase/supabase-js`, como prevê o passo 2 da T4.
 
 ## Bloqueios
 | ID | Bloqueio | Origem | Desde | Status (aberto/resolvido) | Resolução |

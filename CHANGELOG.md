@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- Especificação executável das tarefas T1 a T25 da Sprint 01 em docs/backlog/sprints/tarefas-sprint-01.md, copiada para a descrição das issues KAN-32 a KAN-56 no Jira (M-028)
 - Sprint 01 com execução por issue do Jira (KAN-1 a KAN-56), chaves Jira nos épicos e pendências D-039 e D-040, abertas e de baixa prioridade (M-027)
 - RNF-024 (interface segue o protótipo do Figma na fase H; fidelidade com evidência por faixa), D-036 resolvida e D-037/D-038 abertas (M-026)
 - Sprint 01 aprovada e ativada; repositório Rangel64/aprumo criado; commit inicial 3ca1d5b (M-025)
