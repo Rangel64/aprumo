@@ -1,0 +1,530 @@
+<title>Plano Aprumo Hackathon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#f6f8f8;
+  --surface:#ffffff;
+  --surface-2:#eef3f3;
+  --text:#14201f;
+  --muted:#4a5c5b;
+  --border:#cbd8d7;
+  --accent:#0f766e;
+  --accent-ink:#ffffff;
+  --accent-soft:#d9efec;
+  --warn:#8a5a00;
+  --warn-soft:#fdf0d2;
+  --danger:#9f1d1d;
+  --code-bg:#e8eeee;
+  --focus:#0b4f4a;
+  --font-head:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1514;
+    --surface:#151e1d;
+    --surface-2:#1b2625;
+    --text:#e6efee;
+    --muted:#9fb3b1;
+    --border:#2b3b3a;
+    --accent:#4fd1c5;
+    --accent-ink:#06201d;
+    --accent-soft:#12302d;
+    --warn:#f2c14e;
+    --warn-soft:#2e2410;
+    --danger:#ff8a8a;
+    --code-bg:#1d2a29;
+    --focus:#8fe9df;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1514;
+  --surface:#151e1d;
+  --surface-2:#1b2625;
+  --text:#e6efee;
+  --muted:#9fb3b1;
+  --border:#2b3b3a;
+  --accent:#4fd1c5;
+  --accent-ink:#06201d;
+  --accent-soft:#12302d;
+  --warn:#f2c14e;
+  --warn-soft:#2e2410;
+  --danger:#ff8a8a;
+  --code-bg:#1d2a29;
+  --focus:#8fe9df;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;
+  padding-top:24px;
+  padding-bottom:64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  overflow-wrap:break-word;
+}
+.page{max-width:960px;margin:0 auto;min-width:0}
+h1,h2,h3{font-family:var(--font-head);line-height:1.2;margin:0}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:8px}
+h2{font-size:1.5rem;margin-top:0;padding-top:8px}
+h3{font-size:1.05rem;margin-bottom:6px}
+section{margin-top:48px;scroll-margin-top:16px}
+p,ul,ol{max-width:70ch}
+p{margin:10px 0}
+ul,ol{padding-left:1.3em;margin:10px 0}
+li{margin:4px 0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:3px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:var(--code-bg);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.lead{color:var(--muted);max-width:70ch}
+.seal{
+  display:inline-block;margin-bottom:14px;padding:4px 12px;
+  background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn);
+  border-radius:999px;font-weight:600;font-size:.85rem;
+}
+nav.toc{margin-top:24px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+nav.toc strong{font-family:var(--font-head)}
+nav.toc ol{columns:2 260px;column-gap:24px;max-width:none;margin:8px 0 0}
+nav.toc li{break-inside:avoid}
+.scroll{overflow-x:auto;max-width:100%;border:1px solid var(--border);border-radius:8px;background:var(--surface);margin:14px 0}
+.scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem}
+.scroll table.wide{min-width:880px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--border)}
+th{background:var(--surface-2);font-family:var(--font-head);font-weight:500;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin:14px 0}
+.grid>*{min-width:0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.card.accent{border-top:4px solid var(--accent)}
+.card ul{padding-left:1.1em;margin:6px 0}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--text);border-radius:4px;padding:0 8px;font-size:.8rem;font-weight:600}
+.note{background:var(--warn-soft);border-left:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;max-width:70ch;margin:14px 0}
+.rule{background:var(--accent-soft);border-left:4px solid var(--accent);padding:10px 14px;border-radius:0 8px 8px 0;max-width:70ch;margin:14px 0}
+pre.mermaid{margin:0;padding:12px;min-width:640px;background:var(--surface);color:var(--text);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem;line-height:1.4}
+.scroll.diagram{padding:0}
+.disclaimer{font-style:italic}
+.dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;margin:14px 0}
+.dl>div{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px}
+.dl b{display:block;font-family:var(--font-head);color:var(--accent);font-size:1.15rem}
+footer{margin-top:56px;color:var(--muted);font-size:.9rem;max-width:70ch}
+</style>
+
+<div class="page">
+<header>
+  <span class="seal">Decisões do PO registradas em 24/11</span>
+  <h1>Aprumo: plano para o Hack Brasil 2026</h1>
+  <p class="lead">Resumo para o time (4 devs, Hack Brasil 2026, projeto Aprumo, nome provisório). Fontes: <code>docs/arquitetura/plano-hackathon.md</code> e <code>docs/arquitetura/briefings/README.md</code>, de 24/11/2026. Em caso de dúvida, vale o plano.</p>
+  <div class="dl">
+    <div><b>30/11 23h59</b>prazo firme de submissão</div>
+    <div><b>30/11 20h</b>meta interna, com folga</div>
+    <div><b>29/11 12h</b>congelamento de funcionalidades</div>
+    <div><b>30/11 a 12/12</b>repositório congelado</div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Índice">
+  <strong>Índice</strong>
+  <ol>
+    <li><a href="#regras">Regras do hackathon</a></li>
+    <li><a href="#escopo">Escopo da fase H</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#faixas">Quatro faixas A/B/C/D</a></li>
+    <li><a href="#dia-a-dia">Plano dia a dia, 24 a 30/11</a></li>
+    <li><a href="#contratos">Contratos compartilhados</a></li>
+    <li><a href="#ia">IA da redação</a></li>
+    <li><a href="#dados">Modelo de dados e segurança</a></li>
+    <li><a href="#deploy">Deploy e operação</a></li>
+    <li><a href="#riscos">Riscos</a></li>
+    <li><a href="#decisoes">Decisões</a></li>
+  </ol>
+</nav>
+
+<section id="regras">
+  <h2>1. Regras do hackathon que mandam no plano</h2>
+  <ul>
+    <li><strong>Prazo:</strong> submissão até 30/11/2026 às 23h59. A meta interna é submeter até as 20h.</li>
+    <li><strong>Congelamento:</strong> o repositório fica congelado de 30/11 a 12/12. Nesse período não há commits nem deploy de código novo.</li>
+    <li><strong>Repositório:</strong> novo e público, criado em 24/11, sem código anterior ao evento. Não usar nome de funcionalidade que sugira simular prova real; ver RNF-020.</li>
+    <li><strong>Entrega:</strong> demo publicada, sem login obrigatório, mais vídeo de até 3 minutos.</li>
+    <li><strong>Critérios de nota:</strong> a demo e o vídeo mostram o fluxo completo com dados fictícios, com fontes visíveis e o aviso de estimativa na redação. O plano trata o regulamento como risco: repositório criado em 24/11, RN-023 (o modelo nunca reescreve o texto do aluno) e dados fictícios.</li>
+  </ul>
+</section>
+
+<section id="escopo">
+  <h2>2. Escopo da fase H</h2>
+  <p>Histórias recortadas: US-001, 002, 004, 005, 006, 009 a 014, 016, 018, mais US-042 a US-049.</p>
+  <div class="grid">
+    <div class="card accent">
+      <h3>Entra</h3>
+      <ul>
+        <li>Entrada, cadastro e login com e-mail e senha</li>
+        <li>Mapa de 18 conteúdos de Português/Redação, Trilha "ENEM: Redação"</li>
+        <li>Jornada com meta e prazo, cronograma</li>
+        <li>Conteúdo com fonte, mini-simulado, domínio, flashcards</li>
+        <li>Redação com retorno por IA nas 5 competências</li>
+        <li>Início (US-014), seed e conta demo</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fica para depois</h3>
+      <ul>
+        <li>Login com Google (US-002): decidido, fora da fase H</li>
+        <li>Submetas e nivelamento</li>
+        <li>pgvector, PWA, app nativo</li>
+        <li>Streaming da IA na v1</li>
+        <li>Monorepo, NestJS, Python</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Linha de corte, nesta ordem</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Ordem</th><th>História</th><th>Checkpoint</th><th>Se falhar</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>US-016 (cronograma)</td><td>27/11: Jornada e Mapa ok?</td><td>US-016 é cortada.</td></tr>
+      <tr><td>2</td><td>US-018 (flashcards)</td><td>28/11 ao meio-dia: redação ok?</td><td>US-018 é cortada e C ajuda D.</td></tr>
+      <tr><td>3</td><td>US-014 (Início)</td><td>29/11 ao meio-dia: Início estável?</td><td>US-014 é cortada: <code>/inicio</code> redireciona para <code>/jornada</code>.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="stack">
+  <h2>3. Stack</h2>
+  <p><strong>Um único app Next.js (App Router) + TypeScript + Tailwind, com Supabase (Postgres e Auth) em São Paulo, hospedado na Vercel. Gerenciador: pnpm, com um único <code>pnpm-lock.yaml</code>.</strong> Leituras em Server Components, escritas em Server Actions, um Route Handler para a IA. Não há serviço separado.</p>
+  <h3>Por que não NestJS nem Python</h3>
+  <ul>
+    <li>NestJS dobra deploy, CORS, autenticação e contratos. Nenhum requisito da fase H precisa disso, e a Vercel não roda servidor Nest persistente de forma idiomática.</li>
+    <li>Python só traria ganho se usássemos ML. Só chamamos API HTTP; o Vercel AI SDK (pacote <code>ai</code>) já dá saída estruturada validada por schema e troca de provedor. Python seria mais uma linguagem, um host e latência.</li>
+    <li>Com 6 dias e 4 pessoas pesa mais ter um deploy, uma linguagem e um só conjunto de tipos (zod).</li>
+  </ul>
+  <h3>Camadas</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Camada</th><th>Onde</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td>Telas</td><td><code>src/app</code>, <code>src/features</code>, <code>src/components/ui</code></td><td>Rotas, UI por domínio, shadcn/ui copiado</td></tr>
+      <tr><td>Contratos</td><td><code>src/contracts</code></td><td>Tipos, zod e códigos de erro, fixados no dia 1</td></tr>
+      <tr><td>Leituras</td><td><code>src/server/queries</code></td><td>Usadas em Server Components</td></tr>
+      <tr><td>Escritas</td><td><code>src/server/actions</code></td><td>Server Actions por domínio, retornam <code>ActionResult</code></td></tr>
+      <tr><td>IA</td><td><code>src/server/ai</code></td><td>Adapter, registry de modelos, prompts versionados, quota</td></tr>
+      <tr><td>Domínio</td><td><code>src/domain</code></td><td>Funções puras testadas: mastery, schedule, flashcards, quota</td></tr>
+      <tr><td>Supabase</td><td><code>src/lib/supabase</code>, <code>supabase/migrations</code></td><td>Clientes (admin só no servidor) e migrations</td></tr>
+      <tr><td>Conteúdo</td><td><code>content/</code>, <code>scripts/seed.ts</code></td><td>Seed em JSON, idempotente</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Comandos</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Comando</th><th>Faz</th></tr></thead>
+    <tbody>
+      <tr><td><code>pnpm dev</code></td><td>Servidor local no Supabase de dev; <code>AI_PROVIDER=fake</code> dispensa chave de IA</td></tr>
+      <tr><td><code>pnpm lint</code></td><td><code>eslint .</code></td></tr>
+      <tr><td><code>pnpm typecheck</code></td><td><code>tsc --noEmit</code></td></tr>
+      <tr><td><code>pnpm test</code></td><td>Vitest: domínio, quota, schema da IA, validação do seed</td></tr>
+      <tr><td><code>pnpm test:e2e</code></td><td>Playwright contra <code>E2E_BASE_URL</code></td></tr>
+      <tr><td><code>pnpm build</code></td><td><code>next build</code></td></tr>
+      <tr><td><code>pnpm db:push</code></td><td>Aplica as migrations no projeto Supabase vinculado (<code>aprumo-dev</code> por padrão; o de produção é só da faixa A)</td></tr>
+      <tr><td><code>pnpm db:types</code></td><td>Gera <code>src/lib/supabase/types.ts</code> com <code>supabase gen types</code>, sem Docker</td></tr>
+      <tr><td><code>pnpm seed</code></td><td>Seed idempotente (usa a service role)</td></tr>
+      <tr><td><code>pnpm eval:essay</code></td><td>Avaliação de modelos (protocolo D-010)</td></tr>
+    </tbody>
+  </table></div>
+  <p>CI (GitHub Actions, em PR e push na main): lint, typecheck e test. O build fica com o preview da Vercel. Ativar secret scanning e push protection do GitHub.</p>
+</section>
+
+<section id="faixas">
+  <h2>4. Quatro faixas</h2>
+  <p>Cada pessoa tem uma faixa com arquivos exclusivos. Etapa 0 no dia 1 até as 14h: a faixa A lidera e todos revisam (esqueleto, instalação de todos os pacotes, contratos v1 com <code>content.ts</code>, migration 0001, <code>app_config</code>, <code>src/server/config.ts</code>, <code>content/config.json</code>, pastas <code>docs/evidencias/</code> e <code>docs/adr/</code> com <code>.gitkeep</code>, e deploy vazio). Depois, as faixas andam em paralelo sobre os contratos.</p>
+  <div class="grid">
+    <div class="card accent">
+      <span class="tag">Faixa A</span>
+      <h3>Plataforma</h3>
+      <p>US-045, 046, 048 (script), 001, 002, 004, 005, 014. Apoio em US-047.</p>
+      <ul>
+        <li><code>package.json</code> e <code>pnpm-lock.yaml</code> (instala todos os pacotes na etapa 0), configs, <code>vercel.json</code>, <code>.github/</code>, <code>.env.example</code></li>
+        <li><code>supabase/config.toml</code> e migration 0001, <code>src/contracts/*</code>, <code>src/lib/supabase/*</code></li>
+        <li>Auth (<code>actions/auth.ts</code>, <code>features/auth</code>), <code>queries/home.ts</code>, <code>features/home</code>, <code>content/config.json</code></li>
+        <li><code>src/app/page.tsx</code>, <code>(auth)</code>, <code>(app)/layout.tsx</code>, <code>inicio</code></li>
+        <li><code>api/health</code>, <code>api/cron</code>, <code>scripts/seed.ts</code>, <code>e2e/*</code>, README</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <span class="tag">Faixa B</span>
+      <h3>Mapa e Jornada</h3>
+      <p>US-006, 009, 010, 011, 016.</p>
+      <ul>
+        <li><code>(app)/{mapa,trilhas,jornada,cronograma}</code></li>
+        <li><code>src/features/{map,journey,schedule}</code></li>
+        <li>Actions e queries de journey, schedule, map, trail</li>
+        <li><code>src/domain/schedule.ts</code> + teste</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <span class="tag">Faixa C</span>
+      <h3>Estudo e conteúdo</h3>
+      <p>US-012, 013, 018, 049. Conteúdo é escrito por todos.</p>
+      <ul>
+        <li><code>(app)/{conteudos,revisar}</code></li>
+        <li><code>src/features/{study,quiz,flashcards}</code></li>
+        <li>Actions e queries de study, quiz, flashcards, content</li>
+        <li><code>src/domain/{mastery,flashcard-scheduler}.ts</code> + testes</li>
+        <li><code>content/**</code>, exceto <code>content/essays/</code> e <code>content/config.json</code></li>
+        <li>Dona de <code>scripts/validate-content.ts</code> e dos testes de conteúdo</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <span class="tag">Faixa D</span>
+      <h3>Redação com IA</h3>
+      <p>US-042, 043, 044, D-010 e US-047 (vídeo e descrição, com A de apoio).</p>
+      <ul>
+        <li><code>(app)/redacao</code>, <code>api/essays</code>, <code>src/features/essay</code></li>
+        <li><code>src/server/ai/**</code>, <code>queries/essay.ts</code></li>
+        <li><code>src/domain/quota.ts</code> + teste</li>
+        <li><code>scripts/eval-essay.ts</code>, <code>content/essays/**</code> (<code>demo-essays.json</code> em 25/11), <code>avaliacao-modelos.md</code></li>
+        <li>Migrations da faixa, incluindo <code>reserve_ai_usage</code> (25/11, fora da 0001)</li>
+      </ul>
+    </div>
+  </div>
+  <h3>Regras de convivência</h3>
+  <ul>
+    <li>Trunk-based: branches curtas <code>faixa-x/...</code>, PR com CI verde e preview da Vercel, merge na main pelo menos 2 vezes por dia.</li>
+    <li>Cada pessoa usa clone próprio. Agentes em paralelo usam <code>git worktree</code> próprio.</li>
+    <li>Só edite os arquivos exclusivos da sua faixa. Mudança em <code>src/contracts/*</code> vai por PR e precisa de revisão de quem consome.</li>
+    <li>Um único lockfile (<code>pnpm-lock.yaml</code>). A instala todos os pacotes na etapa 0; as outras faixas pedem acréscimo por PR a A, e nenhuma outra altera <code>package.json</code>.</li>
+    <li>A migration 0001 tem o schema inteiro, sem <code>reserve_ai_usage</code>. Depois, cada faixa cria migration nova com timestamp, sempre aditiva, e nunca edita uma já mergeada. Quem cria aplica no <code>aprumo-dev</code> com <code>supabase db push</code> e gera os tipos com <code>supabase gen types typescript --project-id</code> no mesmo PR, sem Docker (só A usa Docker).</li>
+    <li>Até o backend existir, monte a UI com <code>src/contracts/fixtures.ts</code>.</li>
+    <li>Dependências: D (US-044) usa <code>addContentsToJourney</code> de B, entregue no dia 3. C entrega <code>trail.json</code> e <code>essay-topics.json</code> (3 temas) até 24/11 às 18h, 6 conteúdos no dia 2 e 18 no dia 5. B usa fixtures no Mapa até 25/11 e fecha o Mapa real em 26/11. A (Início) só entra no dia 4.</li>
+  </ul>
+</section>
+
+<section id="dia-a-dia">
+  <h2>5. Plano dia a dia, 24 a 30/11</h2>
+  <div class="scroll"><table class="wide">
+    <thead><tr><th>Dia</th><th>A Plataforma</th><th>B Mapa e Jornada</th><th>C Estudo e conteúdo</th><th>D Redação IA</th></tr></thead>
+    <tbody>
+      <tr><td><strong>24/11</strong></td><td>Repo público novo com docs; create-next-app; Supabase dev e prod (sa-east-1); Vercel (gru1); instala todos os pacotes; contratos v1 (com <code>content.ts</code>), 0001, <code>app_config</code>, <code>src/server/config.ts</code> e <code>content/config.json</code> até as 14h (seed de config, que só lê <code>content/config.json</code>; não é o <code>seed.ts</code> v1); deploy vazio; CI</td><td>Revisa contratos; Mapa com React Flow sobre fixture</td><td>Revisa contratos; validador e testes de conteúdo sobre o formato de A; lista dos 18 conteúdos e fontes; <code>trail.json</code> e <code>essay-topics.json</code> (3 temas) até 18h</td><td>Adapter + Fake; prompt v1; corpus de 5 redações (3 temas provisórios próprios); comparação D-010 (tarde, timebox de 3 h); chaves nos 2 provedores</td></tr>
+      <tr><td><strong>25/11</strong></td><td>Auth (cadastro, entrar, sair, aviso de dados de teste, trigger de profile); layout e nav; <code>seed.ts</code> v1 (lê <code>demo-essays.json</code> se já existir, senão ignora) e conta demo</td><td>Mapa sobre fixtures até os 6 primeiros conteúdos de C; drawer, filtro por estado; Trilha</td><td>6 conteúdos completos; página de conteúdo (seções, fonte, pergunta rápida)</td><td>Decide o modelo (ADR-005); <code>content/essays/demo-essays.json</code> (<code>demoAccountEssays</code> e <code>fallbackExamples</code>); migration <code>reserve_ai_usage</code> aplicada em <code>aprumo-dev</code> com <code>db push</code>, tipos regenerados no mesmo PR; rota de feedback com pós-validação</td></tr>
+      <tr><td><strong>26/11</strong></td><td><code>/api/health</code>; cron diário (keep-alive e reset da conta demo); esqueleto do smoke e2e (<code>app_config</code> já na etapa 0)</td><td>Fecha o Mapa real (<code>getMapView</code>); Criar Jornada (meta e prazo), <code>/jornada</code>; <code>addContentsToJourney</code></td><td>Mini-simulado, <code>submitQuizAttempt</code>, <code>mastery.ts</code> (RN-007, testado); nó acende</td><td>Tela <code>/redacao</code> (tema, parte, contador, aria-live); retorno com 5 competências e aviso</td></tr>
+      <tr><td><strong>27/11</strong></td><td>Início (US-014); revisão de RLS com 2 usuários; primeiro dump de prod, depois <code>db push</code> de prod (religar com <code>supabase link</code>), deploy prod e seed prod</td><td><strong>Checkpoint: Jornada e Mapa ok? Se não, US-016 é cortada.</strong> Cronograma: disponibilidade + <code>schedule.ts</code></td><td>Conteúdos 7 a 12; flashcards (US-018) começam</td><td>Sugestão de competência fraca + "Adicionar à Jornada"; exemplos gravados; teto global e <code>ai_enabled</code></td></tr>
+      <tr><td><strong>28/11</strong></td><td>e2e smoke verde em prod; README (arquitetura, como rodar, conta demo); monitor de uptime</td><td>Cronograma: gerar + "Começar sessão" (ou ajuda D/C se cortado)</td><td><strong>Checkpoint ao meio-dia: redação não ok, US-018 é cortada e C ajuda D.</strong> Conteúdos 13 a 18; flashcards concluídos</td><td>Endurecer: timeouts, nova tentativa, mensagens; medir p95; streaming só se p95 &gt; 15 s</td></tr>
+      <tr><td><strong>29/11</strong></td><td><strong>Congelar funcionalidades às 12h</strong> (US-014 cortada se o Início não estiver estável); release candidate; dump diário de prod (29/11 a 12/12); recarrega o seed de prod com os 18 conteúdos</td><td>QA cruzado</td><td>QA cruzado; revisão de fontes</td><td>US-047: gravação do vídeo (com todos, A de apoio) e descrição da submissão</td></tr>
+      <tr><td><strong>30/11</strong></td><td>Só correções críticas até as 18h; submeter até as 20h; tag <code>v1.0-submissao</code></td><td>Disponível para chamado</td><td>Disponível para chamado</td><td>Disponível para chamado</td></tr>
+    </tbody>
+  </table></div>
+  <p>QA: testes unitários no que é crítico (mastery, quota, schedule, schema e pós-validação da IA, validação do seed), 1 smoke Playwright com <code>AI_PROVIDER=fake</code> e roteiro manual na demo com a conta demo e com uma conta nova.</p>
+</section>
+
+<section id="contratos">
+  <h2>6. Contratos compartilhados</h2>
+  <div class="rule">Fixados até 24/11 às 14h em <code>src/contracts/</code>, incluindo <code>content.ts</code> (zod dos JSON de <code>content/</code>).Depois do merge do PR "contracts v1", qualquer mudança exige PR revisado por quem consome o contrato, e só por adição.</div>
+  <h3>Leituras (<code>src/server/queries/*</code>)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Função</th><th>Retorna</th><th>Faixa</th></tr></thead>
+    <tbody>
+      <tr><td><code>getMapView(userId)</code></td><td>nós (status, reviewedToday, posição, trilhas, competências) e arestas</td><td>B</td></tr>
+      <tr><td><code>getTrail(slug)</code></td><td>trilha com seus conteúdos</td><td>B</td></tr>
+      <tr><td><code>getActiveJourney(userId)</code></td><td>Jornada ativa ou null, próximo conteúdo, dominados e total</td><td>B</td></tr>
+      <tr><td><code>getContentView(slug, userId)</code></td><td>seções com fonte e status</td><td>C</td></tr>
+      <tr><td><code>getQuizView(slug)</code></td><td>questões e opções, sem gabarito</td><td>C</td></tr>
+      <tr><td><code>getDueFlashcards(userId)</code></td><td>flashcards vencidos</td><td>C</td></tr>
+      <tr><td><code>getScheduleView(userId)</code></td><td>sessões, disponibilidade, prazo em risco</td><td>B</td></tr>
+      <tr><td><code>getEssayQuota(userId)</code></td><td>usado, limite, restante, IA global disponível</td><td>D</td></tr>
+      <tr><td><code>getHomeView(userId)</code></td><td>composição das anteriores com contagem de flashcards vencidos</td><td>A (US-014)</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Escritas (Server Actions, validam com zod e retornam <code>ActionResult</code>)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Action</th><th>Entrada</th><th>Saída</th><th>Faixa</th></tr></thead>
+    <tbody>
+      <tr><td><code>signUp</code>, <code>signIn</code>, <code>signOut</code></td><td>e-mail, senha, displayName opcional</td><td><code>{ redirectTo }</code></td><td>A</td></tr>
+      <tr><td><code>createJourney</code></td><td>base (trilha ou ao menos 1 conteúdo), meta de 3 a 200 caracteres, prazo futuro, metodologia <code>none</code></td><td><code>{ journeyId }</code></td><td>B</td></tr>
+      <tr><td><code>addContentsToJourney</code></td><td>contentIds, origem <code>map</code> ou <code>essay_suggestion</code></td><td><code>{ journeyId, added }</code> ou <code>NO_ACTIVE_JOURNEY</code></td><td>B</td></tr>
+      <tr><td><code>saveAvailability</code></td><td>slots (dia 0..6, hora, 15 a 240 min)</td><td><code>{ count }</code></td><td>B</td></tr>
+      <tr><td><code>generateSchedule</code></td><td><code>{ journeyId }</code></td><td><code>{ sessionsCount, deadlineAtRisk }</code></td><td>B</td></tr>
+      <tr><td><code>markStudying</code></td><td><code>{ contentId }</code></td><td><code>{}</code></td><td>C</td></tr>
+      <tr><td><code>submitQuizAttempt</code></td><td>contentId, respostas</td><td>acertos, total, aprovado, dominado, seções a rever</td><td>C</td></tr>
+      <tr><td><code>reviewFlashcard</code></td><td>flashcardId, nota 1 a 4</td><td><code>{ nextDueOn }</code></td><td>C</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Erros</h3>
+  <p><code>ActionResult&lt;T&gt;</code> é <code>{ ok: true, data }</code> ou <code>{ ok: false, error: AppError }</code>. <code>AppError</code> traz <code>code</code>, <code>message</code> em pt-BR pronta para a UI e <code>field</code> opcional. Nunca expor stack nem mensagem do provedor; registrar no log com <code>requestId</code>.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Código</th><th>Status no Route Handler</th></tr></thead>
+    <tbody>
+      <tr><td><code>VALIDATION</code>, <code>TEXT_TOO_SHORT</code>, <code>TEXT_TOO_LONG</code></td><td>400</td></tr>
+      <tr><td><code>UNAUTHENTICATED</code></td><td>401</td></tr>
+      <tr><td><code>NOT_FOUND</code></td><td>404</td></tr>
+      <tr><td><code>QUOTA_USER_EXCEEDED</code>, <code>QUOTA_GLOBAL_EXCEEDED</code></td><td>429</td></tr>
+      <tr><td><code>AI_DISABLED</code>, <code>AI_UNAVAILABLE</code></td><td>503</td></tr>
+      <tr><td><code>AI_TIMEOUT</code></td><td>504</td></tr>
+      <tr><td><code>INTERNAL</code></td><td>500</td></tr>
+      <tr><td><code>CONFLICT</code>, <code>NO_ACTIVE_JOURNEY</code>, <code>AI_INVALID_OUTPUT</code></td><td>sem status listado no plano; definir no PR de contratos</td></tr>
+    </tbody>
+  </table></div>
+  <p>O corpo de erro do Route Handler é <code>{ error: AppError }</code>.</p>
+  <h3>Rota <code>POST /api/essays/feedback</code> (faixa D)</h3>
+  <ul>
+    <li>Request: <code>{ topicId, part: 'introduction' | 'development' | 'conclusion', text }</code>.</li>
+    <li>Resposta 200: <code>{ submissionId, feedback: EssayFeedback, quota: EssayQuota }</code>.</li>
+    <li><code>EssayFeedback</code> tem exatamente 5 competências (ids 1 a 5), cada uma com <code>assessable</code>, <code>scoreEstimate</code> (0, 40, 80, 120, 160, 200 ou null), strengths, improvements e evidence (trechos literais do aluno). Também traz <code>isEstimate: true</code>, <code>disclaimer</code>, <code>promptVersion</code>, <code>modelKey</code>, <code>summary</code>, <code>totalEstimate</code>, <code>weakCompetencies</code> e <code>suggestions</code>.</li>
+  </ul>
+  <p>Telas: <code>/</code>, <code>/entrar</code>, <code>/cadastro</code>, <code>/inicio</code>, <code>/mapa?estado=...</code>, <code>/trilhas/[slug]</code>, <code>/jornada</code>, <code>/jornada/nova</code>, <code>/conteudos/[slug]</code>, <code>/conteudos/[slug]/mini-simulado</code>, <code>/revisar</code>, <code>/cronograma</code>, <code>/redacao</code>, <code>/redacao/[submissionId]</code>. UI em pt-BR, código em inglês.</p>
+</section>
+
+<section id="ia">
+  <h2>7. IA da redação</h2>
+  <div class="scroll diagram">
+<pre class="mermaid">
+sequenceDiagram
+  participant UI as redacao (client)
+  participant RH as POST /api/essays/feedback
+  participant Q as quota (Postgres)
+  participant M as EssayFeedbackModel (adapter)
+  UI->>RH: topicId, part, text
+  RH->>RH: auth, zod, min e max de caracteres (sem consumir)
+  RH->>Q: reserve_ai_usage (limite por dia, teto global, ai_enabled)
+  Q-->>RH: reservationId ou QUOTA ou AI_DISABLED
+  RH->>RH: grava essay_submissions pending
+  RH->>M: generate com timeout
+  M-->>RH: objeto validado e usage
+  RH->>RH: pos-validacao (RN-023, evidence literal), derivados, aviso
+  RH->>Q: confirma reserva (succeeded ou failed)
+  RH-->>UI: EssayFeedbackResponse ou AppError
+</pre>
+  </div>
+  <ul>
+    <li><strong>O modelo só preenche</strong> <code>competencies[].{assessable, scoreEstimate, strengths, improvements, evidence}</code> e <code>summary</code>. Nota total, competências fracas, sugestões, nomes das competências e aviso vêm do servidor.</li>
+    <li><strong>RN-023:</strong> o retorno aponta problema e caminho, nunca reescreve o texto. Cada <code>evidence</code> precisa ser substring do texto do aluno, senão é descartada. Citação entre aspas acima de 12 palavras que não esteja no texto também é descartada. Nota fora da escala ENEM é rejeitada.</li>
+    <li><strong>Aviso fixo RN-014</strong> (constante <code>ESSAY_ESTIMATE_DISCLAIMER</code> em <code>contracts/essay.ts</code>, inserido sempre pelo servidor, nunca pelo modelo). Toda nota aparece com o rótulo "estimativa". Texto (RN-014): <span class="disclaimer">"Esta nota é uma estimativa feita por inteligência artificial com base nas 5 competências do ENEM. Não é a nota oficial e pode diferir da correção de uma banca humana. Use como orientação de estudo."</span></li>
+    <li><strong>Limites em <code>app_config</code></strong> (D-020, configuráveis sem redeploy): 3 retornos por usuário por dia (<code>essay_daily_limit_per_user</code>), teto global de US$ 20 (<code>ai_global_budget_usd</code>) e kill switch <code>ai_enabled</code>. A função SQL <code>reserve_ai_usage</code> (migration de D em 25/11, fora da 0001, só service role) reserva de forma atômica. A conta demo usa <code>essay_daily_limit_demo</code> (15). Texto curto, falha, timeout ou saída inválida não contam. Trava física: limite de gasto mensal no console do provedor.</li>
+    <li><strong>Falhas:</strong> timeout de 45 s, <code>maxDuration = 60</code>, 1 nova tentativa se sobrar tempo. Com teto atingido ou IA desligada, a tela mostra o aviso e um exemplo gravado (linha de reserva, lida só no servidor com a service role), rotulado como exemplo.</li>
+    <li><strong>Sem streaming na v1.</strong> Estado "corrigindo..." em região aria-live; a submissão fica <code>pending</code> e <code>/redacao/[id]</code> atualiza a cada 3 s. Só reavaliar no dia 5 se o p95 passar de 15 s.</li>
+    <li><strong>Competência fraca leva ao conteúdo do Mapa por mapeamento fixo</strong> (tabela <code>competency_contents</code> do seed). O modelo não escolhe conteúdo. Sem mapeamento, a lista fica vazia e a UI não promete sugestão. "Adicionar à Jornada" sem Jornada ativa leva a <code>/jornada/nova?conteudos=...</code>.</li>
+    <li><strong>Adapter:</strong> <code>AiSdkEssayModel</code> (qualquer provedor do AI SDK) e <code>FakeEssayModel</code> (dev, testes, e2e e dia 1). Troca de modelo por env (<code>AI_PROVIDER</code>, <code>AI_ESSAY_MODEL_KEY</code>) com redeploy do mesmo commit. Prompt versionado em arquivo (<code>essay-feedback.v1.ts</code>); nova versão é arquivo novo.</li>
+  </ul>
+  <h3>Protocolo D-010 (comparação em 24/11 à tarde, faixa D, timebox de 3 h; decisão em 25/11)</h3>
+  <ol>
+    <li>2 modelos de provedores diferentes na faixa custo-benefício; IDs e preços conferidos na página oficial.</li>
+    <li>Corpus de 5 partes fictícias: uma boa, uma com desvios de norma (C1), uma que tangencia o tema (C2), uma conclusão sem proposta completa (C5) e uma com tentativa de injeção. Em 24/11 à tarde, os temas são 3 provisórios escritos por D; os 3 temas oficiais de C (<code>essay-topics.json</code>, 24/11 às 18h) entram depois, sem refazer a comparação.</li>
+    <li><code>pnpm eval:essay</code> roda cada caso 3 vezes por modelo (30 chamadas) e grava <code>docs/arquitetura/avaliacao-modelos.md</code>.</li>
+    <li>Métricas: saída válida, latência p50 e p95, custo por retorno, nota cega de 2 pessoas (1 a 5), com ausência de reescrita (RN-023) eliminatória.</li>
+    <li>Elimina quem violar RN-023 após ajuste de prompt ou ficar abaixo de 100% de saídas válidas com 1 nova tentativa. Entre os restantes vence a maior nota com p95 até 20 s e custo até US$ 0,02 por retorno; empate vai ao mais barato. Resultado em ADR.</li>
+  </ol>
+</section>
+
+<section id="dados">
+  <h2>8. Modelo de dados e segurança</h2>
+  <p>Diagrama simplificado, só com as entidades centrais.</p>
+  <div class="scroll diagram">
+<pre class="mermaid">
+erDiagram
+  profiles ||--o{ journeys : cria
+  journeys ||--o{ journey_contents : inclui
+  contents ||--o{ journey_contents : ""
+  contents ||--o{ content_sections : tem
+  contents ||--o{ questions : tem
+  questions ||--|| question_keys : "gabarito privado"
+  contents ||--o{ content_edges : "pre-requisito"
+  contents ||--o{ flashcards : tem
+  contents ||--o{ competency_contents : "sugerido para"
+  profiles ||--o{ content_progress : ""
+  profiles ||--o{ quiz_attempts : faz
+  profiles ||--o{ essay_submissions : escreve
+  essay_submissions ||--o| essay_feedbacks : recebe
+  profiles ||--o{ ai_usage : consome
+</pre>
+  </div>
+  <ul>
+    <li><strong>RLS ligada em todas as tabelas</strong> de <code>public</code>.</li>
+    <li><strong>Catálogo</strong> (conteúdos, arestas, seções, questões, trilhas, flashcards, competency_contents, temas): leitura para autenticados, sem escrita. Só a service role (seed) escreve.</li>
+    <li><strong>Escrito pelo aluno</strong> (jornadas, disponibilidade, cronograma, estados de flashcard, redações): só onde <code>user_id = auth.uid()</code>.</li>
+    <li><strong>Escritas sensíveis só pelo servidor</strong> (<code>content_progress</code>, <code>quiz_attempts</code>, <code>essay_feedbacks</code>, <code>ai_usage</code>): o aluno só lê o próprio registro. Service role usada depois de <code>supabase.auth.getUser()</code>, para o aluno não marcar domínio nem zerar uso pela API REST.</li>
+    <li><strong>Gabarito privado:</strong> <code>question_keys</code> e <code>app_config</code> não têm política, só o servidor acessa. O cliente nunca recebe <code>correct_index</code>.</li>
+    <li><code>profiles</code>: o aluno só altera <code>display_name</code>. A service role vive só em <code>src/lib/supabase/admin.ts</code> com <code>server-only</code>, e nenhuma chave secreta usa <code>NEXT_PUBLIC_</code>.</li>
+    <li>Prompt injection: o texto do aluno vai delimitado como dado, a saída é validada por schema e o modelo não tem ferramentas.</li>
+    <li><strong>Dados de demo:</strong> 18 conteúdos, 90 questões originais do time, 54 flashcards, 3 temas e redações fictícias assinadas por "Aluno Demo". Conta demo <code>demo@example.com</code> (3 conteúdos dominados, 1 Jornada, 2 redações da própria conta, flashcards vencidos) com reset diário. Nenhum dado real (RNF-017). Cadastro sem confirmação de e-mail no projeto da demo.</li>
+    <li><strong><code>essay_submissions</code> em duas partes:</strong> (a) as 2 redações da conta demo pertencem à conta demo (<code>is_example=false</code>) e o aluno as vê pela RLS normal; não criam linhas em <code>ai_usage</code>, então não consomem o limite de 15 por dia nem o teto global. Na reposição diária (seed e cron), em transação, apagam-se todas as redações da conta demo e reinserem-se as 2 do estado-base. (b) as linhas de reserva (<code>is_example=true</code>, <code>user_id</code> nulo, <code>example_key</code> única, com seus feedbacks) são lidas só no servidor, com a service role; a RLS do aluno não as expõe. As restrições são <code>CHECK (user_id IS NOT NULL OR is_example)</code> e <code>CHECK (is_example = (example_key IS NOT NULL))</code>. <code>ai_usage.submission_id</code> é <code>ON DELETE SET NULL</code>: o gasto registrado permanece e conta no teto de US$ 20 e no limite diário.</li>
+    <li>"Dominado" é definitivo e só o mini-simulado concede (RN-007). A meta fica dentro de <code>journeys</code>.</li>
+  </ul>
+</section>
+
+<section id="deploy">
+  <h2>9. Deploy e operação</h2>
+  <ul>
+    <li><strong>Supabase:</strong> dois projetos em sa-east-1, <code>aprumo-dev</code> (time) e <code>aprumo-prod</code> (demo). Quem cria a migration a aplica no <code>aprumo-dev</code> com <code>supabase db push</code>, sem Docker. O <code>db push</code> de produção é só de A: religar com <code>supabase link</code> para <code>aprumo-prod</code>, dump antes, e o vínculo volta ao <code>aprumo-dev</code>. A também roda o seed de prod localmente, com env que nunca vai ao repositório.</li>
+    <li><strong>Vercel:</strong> <code>regions: ["gru1"]</code>; preview por PR apontando para <code>aprumo-dev</code> com <code>AI_PROVIDER=fake</code>; produção na <code>main</code>.</li>
+    <li><strong>Healthcheck:</strong> <code>GET /api/health</code> devolve status, banco, IA (habilitada e orçamento restante) e commit. Não chama a IA; 503 se o banco falhar.</li>
+    <li><strong>Monitor (obrigatório):</strong> serviço externo gratuito no <code>/api/health</code> a cada 5 min, conferido todo dia por qualquer integrante do grupo, sem escala, e cron diário da Vercel em <code>/api/cron/daily</code> que faz keep-alive e repõe a conta demo, inclusive a senha.</li>
+    <li><strong>Congelamento (30/11 a 12/12):</strong> sem commits nem deploy novo. Limites e kill switch mudam em <code>app_config</code> no painel do Supabase. Sem escala: qualquer integrante do grupo atende chamados até 12/12.</li>
+    <li><strong>Rollback:</strong> app por Instant Rollback da Vercel; banco só com migrations aditivas a partir de 27/11, com <code>supabase db dump</code> antes do primeiro <code>db push</code> de prod (27/11), antes de cada <code>db push</code> e diário de 29/11 a 12/12, guardado fora do repo; IA com <code>ai_enabled=false</code>, que faz a demo mostrar exemplos gravados.</li>
+    <li><strong>Verificação em runtime real</strong>, na URL de produção, com a conta demo e com conta nova em janela anônima: Mapa com 18 nós e filtro, Jornada (bloqueia sem meta), conteúdo com fonte, mini-simulado com 3 de 5 e com 4 de 5, redação com texto curto, redação válida, sugestão, limite esgotado sem chamada de IA, flashcards, cronograma, <code>/api/health</code> 200, celular sem rolagem horizontal e teclado e foco na redação.</li>
+  </ul>
+  <h3>Roteiro do vídeo (até 3 min, sem login, só dados fictícios)</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Tempo</th><th>Conteúdo</th></tr></thead>
+    <tbody>
+      <tr><td>0:00 a 0:20</td><td>Problema: estudante sem direção nem correção acessível</td></tr>
+      <tr><td>0:20 a 0:40</td><td>Proposta do Aprumo: Mapa, Jornada, prática e correção; não dá aulas</td></tr>
+      <tr><td>0:40 a 1:25</td><td>Conta demo, Mapa, criar Jornada com meta e prazo, estudar com fonte, mini-simulado e nó acendendo</td></tr>
+      <tr><td>1:25 a 2:20</td><td>Redação (introdução), retorno pelas 5 competências, rótulo "estimativa" com aviso, competência fraca, "Adicionar à Jornada", contador de usos</td></tr>
+      <tr><td>2:20 a 2:40</td><td>Flashcards e cronograma em cortes rápidos</td></tr>
+      <tr><td>2:40 a 2:55</td><td>Arquitetura em 1 slide: Next.js + Supabase SP, RLS, adapter de IA, limites de custo, dados fictícios</td></tr>
+      <tr><td>2:55 a 3:00</td><td>Impacto (acesso à educação) e link</td></tr>
+    </tbody>
+  </table></div>
+  <p>Gravar trechos separados, com a resposta da IA já carregada se a latência atrapalhar.</p>
+</section>
+
+<section id="riscos">
+  <h2>10. Riscos</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Risco</th><th>Mitigação</th></tr></thead>
+    <tbody>
+      <tr><td>Latência da IA (10 a 30 s) ou timeout</td><td>Estado pendente com aria-live, submissão persistida, timeout de 45 s, 1 nova tentativa, p95 medido no D-010, vídeo com trechos gravados</td></tr>
+      <tr><td>Custo da IA ou abuso do cadastro livre</td><td>Limite por usuário e teto global em <code>app_config</code>, reserva atômica, limite no console do provedor, kill switch</td></tr>
+      <tr><td>Conta demo pública esgotada, bagunçada ou com senha trocada</td><td>Limite maior para a demo, reset diário por cron, README sugere cadastro livre</td></tr>
+      <tr><td>RLS errada</td><td>Escritas "conquistadas" só pelo servidor, gabarito sem política, teste com 2 usuários no dia 27, Security Advisor</td></tr>
+      <tr><td>Supabase Free pausa ou fica sem backup</td><td>Decidido: Free. Monitor obrigatório a cada 5 min (conferido por dia por qualquer integrante do grupo, sem escala) e cron geram atividade, primeiro dump em 27/11 (antes do primeiro <code>db push</code> de prod), depois antes de cada <code>db push</code> e diário de 29/11 a 12/12, fora do repo, recuperação pelo painel ou com migrations e <code>pnpm seed</code></td></tr>
+      <tr><td>Cold start da Vercel</td><td>Funções na gru1, monitor a cada 5 min, catálogo estático ou revalidado</td></tr>
+      <tr><td>Limites do Hobby</td><td>Um cron por dia basta, monitor externo faz o resto, uso não comercial</td></tr>
+      <tr><td>Demo fora do ar na avaliação</td><td>Healthcheck e alerta, Instant Rollback, qualquer integrante do grupo, sem escala, até 12/12</td></tr>
+      <tr><td>Integração tardia entre faixas</td><td>Contratos e fixtures no dia 1, merge 2 vezes por dia, preview por PR, checkpoints em 27, 28 e 29/11</td></tr>
+      <tr><td>Saída da IA fora do schema ou reescrita do texto</td><td><code>Output.object</code> + zod, evidência literal, eliminatório no D-010, prompt versionado</td></tr>
+      <tr><td>E-mail do Supabase Auth limitado</td><td>Confirmação de e-mail desligada no projeto da demo</td></tr>
+      <tr><td>Segredos no repo público</td><td><code>.env.example</code> sem valores, push protection, service role com <code>server-only</code></td></tr>
+      <tr><td>Regulamento (código anterior, aparência de "cola")</td><td>Repo criado em 24/11, sem nome de funcionalidade que sugira simular prova real (ver RNF-020), RN-023, dados fictícios</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="decisoes">
+  <h2>11. Decisões</h2>
+  <h3>Decisões tomadas (PO, 24/11/2026)</h3>
+  <ol>
+    <li><strong>Limite da conta demo:</strong> 15 retornos por dia (<code>essay_daily_limit_demo</code> = 15), dentro do teto global de US$ 20. Aprovado.</li>
+    <li><strong>Google:</strong> decidido: fora da fase H. Só e-mail e senha, sem confirmação de e-mail na demo. Aprovado.</li>
+    <li><strong>Quem paga a IA:</strong> o próprio grupo paga as contas dos provedores. Dia 1: criar as contas (2 provedores para o D-010, depois 1) e configurar o limite de gasto mensal no console de cada provedor.</li>
+    <li><strong>Plantão (decisão do PO, 24/11):</strong> não haverá escala de plantão. Quando houver chamado, qualquer integrante do grupo atende. O monitor externo e o dump diário seguem obrigatórios até 12/12.</li>
+    <li><strong>Nome:</strong> Aprumo mantido (projeto não comercial). Verificar disponibilidade deixa de ser urgente.</li>
+    <li><strong>Já decidido antes:</strong> tudo no plano gratuito, exceto a IA. Supabase Pro (US$ 25) foi recusado pelo PO em 24/11.</li>
+  </ol>
+  <h3>Ainda em aberto</h3>
+  <ul>
+    <li><strong>D-010 (modelo de IA):</strong> comparação em 24/11 à tarde pelo protocolo da seção 7 e decisão em 25/11, registrada em ADR-005.</li>
+    <li><strong>D-020 (teto global final):</strong> US$ 20 como referência; o valor final é fixado no dia 1 (<code>ai_global_budget_usd</code>).</li>
+    <li><strong>Ponto de atenção (sem escala):</strong> sem dono definido, o dump diário e a conferência do monitor podem não ser feitos por ninguém. O grupo decide a mitigação. Sugestões a registrar, sem decisão: o alerta do monitor chega aos 4 integrantes; quem fizer o dump avisa no canal do grupo.</li>
+  </ul>
+  <div class="note"><strong>Confirmar no dia 1:</strong> na documentação oficial, limites do Supabase Free (projetos ativos, armazenamento, tráfego, e-mails de Auth, pausa, backups e restauração), limites do Vercel Hobby (funções, 1 cron por dia, duração de função com Fluid compute, uso não comercial), região <code>gru1</code> e a API do AI SDK na versão instalada (<code>generateText</code> com <code>Output.object</code>, <code>NoObjectGeneratedError</code>).</div>
+</section>
+
+<footer>
+  Resumo de <code>docs/arquitetura/plano-hackathon.md</code> e de <code>docs/arquitetura/briefings/README.md</code>. O plano incorpora as decisões do PO de 24/11/2026; este resumo não cria decisões novas.
+</footer>
+</div>
