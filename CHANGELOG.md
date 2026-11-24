@@ -2,6 +2,9 @@
 
 ## [Não lançado]
 ### Adicionado
+- Sprint 01 com execução por issue do Jira (KAN-1 a KAN-56), chaves Jira nos épicos e pendências D-039 e D-040, abertas e de baixa prioridade (M-027)
+- RNF-024 (interface segue o protótipo do Figma na fase H; fidelidade com evidência por faixa), D-036 resolvida e D-037/D-038 abertas (M-026)
+- Sprint 01 aprovada e ativada; repositório Rangel64/aprumo criado; commit inicial 3ca1d5b (M-025)
 - Sprint 01 planejada (hackathon, 24 a 30/11, 21 histórias da fase H em "em sprint") em docs/backlog/sprints/sprint-01.md; épicos E1 a E17 em docs/backlog/epicos.md; pendências D-033 (Docker desligado) e D-034 (autorizações de commit), abertas (M-024)
 - Doc de referência da plataforma em docs/referencias (M-001)
 - Documentação de requisitos em docs/requisitos: histórias, casos de uso, RF/RNF/RN, rastreabilidade (M-002)
@@ -12,6 +15,7 @@
 - 5 briefings das faixas A a D criados em docs/arquitetura/briefings/ (README.md, faixa-a-plataforma.md, faixa-b-mapa-jornada.md, faixa-c-estudo-conteudo.md, faixa-d-redacao-ia.md), a partir do plano da fase H; D-010, D-020 e D-030 seguem em aberto (M-018)
 - Pendências D-031 (regra de quem ajusta teste quebrado de outra faixa) e D-032 (possível divergência de Gherkin em US-010 e US-018), ambas abertas e de baixa prioridade (M-018)
 ### Alterado
+- Sprint 01: design system em T2 e T3, critério de fidelidade ao Figma nas tarefas de UI, risco R-16 e D-037/D-038 em aberto; matriz liga RNF-024 às histórias de UI da fase H (M-026)
 - Página do artefato plano-rumo-artefato.html sincronizada com plano e briefings (donos, datas, pacotes, migrations, esquema de exemplos); termo do modo de prova removido (M-023)
 - Plano e briefings: reposição da conta demo por apagar e reinserir as 2 redações (sem ON CONFLICT na tripla), ai_usage.submission_id com ON DELETE SET NULL, redações semeadas da conta demo não consomem o limite de 15 nem o teto, CHECK (is_example = (example_key IS NOT NULL)), db push de produção só de A (supabase link e dump antes), seed de config distinto do seed.ts v1 (M-022)
 - Plano e briefings ajustados para linhas de exemplo de redação: user_id nulo só com CHECK, example_key único para idempotência do seed e do cron, redações da conta demo separadas das reservas, db push de produção só de A, migrations listadas em B e C (M-021)

@@ -29,7 +29,8 @@ Por quê:
 - `zod` (validar entradas, saída da IA e configuração).
 - `ai` mais um provedor `@ai-sdk/<provedor>` por modelo candidato. Na v6/v7, `generateObject` está *deprecated*: usar `generateText` com `output: Output.object({ schema })`, que lança `NoObjectGeneratedError` se o objeto for inválido. Confirmar a API na documentação da versão instalada.
 - `@xyflow/react` (React Flow) para o Mapa. As posições dos nós vêm do seed, então não entra biblioteca de layout.
-- UI: componentes shadcn/ui copiados para `src/components/ui` (não é dependência de runtime) e `sonner` para avisos.
+- UI: componentes shadcn/ui copiados para `src/components/ui` (não é dependência de runtime, ajustados aos tokens) e `sonner` para avisos.
+- **Design (decisão do PO, 24/11): segue o protótipo do Figma** (`docs/design/README.md`, imagens em `docs/design/figma-prototipo/`). Tailwind com os tokens do Figma no tema (purple #7b5cff, purple-dark #6243e8, purple-light #ede9ff, coral #ff6b5b, yellow #ffc93c, mint #2ed3a0, blue #3ba4ff, pink #ff5fa2, orange #ff9a3c, cream #fff9f2, ink #1f1b2e, muted #6b6880, line #e9e5ef; raios 8/16/24/999px) e `next/font` com Nunito (corpo) e Quicksand (destaque). Sem tema escuro.
 - Testes: `vitest` (unitários) e `@playwright/test` (um smoke e2e).
 - CLI: `supabase` (migrations), `tsx` (scripts de seed e de avaliação de modelos).
 - Fora: ORM (usar o cliente Supabase com tipos gerados por `supabase gen types`), gerenciadores de estado e filas.
@@ -336,7 +337,10 @@ Migrations: `supabase/config.toml` e a 0001 (schema inteiro deste plano, **sem**
 | **C: Estudo e conteúdo** | dev-web, dev-backend (conteúdo: todos) | US-012, 013, 018, 049 | `src/app/(app)/{conteudos,revisar}/*`, `src/features/{study,quiz,flashcards}/*`, `src/server/actions/{study,quiz,flashcards}.ts`, `src/server/queries/{content,quiz,flashcards}.ts`, `src/domain/{mastery,flashcard-scheduler}.ts` + testes, `content/**` (exceto `content/essays/` e `content/config.json`), `scripts/validate-content.ts`, `src/domain/content/__tests__/*`, `e2e/faixa-c.spec.ts`, `docs/evidencias/faixa-c/`, `supabase/migrations/*` (migrations aditivas da faixa, com timestamp) |
 | **D: Redação com IA** | dev-backend, dev-web | US-042, 043, 044, 047, D-010 | `src/app/(app)/redacao/*`, `src/app/api/essays/*`, `src/features/essay/*`, `src/server/ai/**`, `src/server/queries/essay.ts`, `src/domain/quota.ts` + teste, `scripts/eval-essay.ts`, `content/essays/**`, `docs/arquitetura/avaliacao-modelos.md`, `e2e/faixa-d.spec.ts`, `docs/evidencias/faixa-d/`, migrations da faixa (`reserve_ai_usage` e demais) em `supabase/migrations/` |
 
+**Design (decisão do PO, 24/11):** a faixa A é dona do design system (tokens do Tailwind, `next/font` Nunito e Quicksand, componentes base em `src/components/ui`: botão pill roxo, cartão raio 24 com sombra, chips, barra de progresso, nó do Mapa nos 4 estados, layout com menu lateral), da Entrada e do layout `(app)`: tokens e componentes base em 24/11, layout e Entrada em 25/11. B (03 cronograma, 04 mapa), C (05 conteúdo, 06 flashcards) e D (07 redação) usam só esses componentes e tokens e entregam só telas da fase H; todas têm critério "fiel ao Figma" com comparação lado a lado em `docs/evidencias/<faixa>/`. Em conflito com o Gherkin, o Gherkin manda no comportamento e o dev relata a divergência (ex.: redação com 5 etapas no protótipo contra 3 partes no RF-054; nome de funcionalidade do protótipo proibido pelo RNF-020; "[Nome da plataforma]" vira Aprumo; contraste do roxo em texto pequeno a verificar).
+
 Dependências entre faixas:
+- B, C e D usam as fixtures e os componentes base de A (24/11) até o layout `(app)` e a Entrada chegarem (25/11).
 - B, C e D dependem da etapa 0 (contratos, 0001 e clientes Supabase). Até lá, trabalham com fixtures.
 - D (US-044) usa `addContentsToJourney` de B. Até o merge, a UI de D chama o contrato e B entrega no dia 3.
 - B (Mapa) e D (sugestões) dependem do seed de conteúdos de C. C entrega `trail.json` e `essay-topics.json` (3 temas) até 24/11 às 18h, 6 conteúdos completos no dia 2 e os 18 no dia 5; B usa fixtures no Mapa até os 6 primeiros conteúdos (25/11) e fecha o Mapa real em 26/11.
@@ -426,6 +430,7 @@ QA (papel `qa`, dono A, com todos no dia 29):
 | Envio de e-mail do Supabase Auth limitado | Confirmação de e-mail desligada no projeto da demo |
 | Segredos no repo público | `.env.example` sem valores; push protection do GitHub; service role com `server-only` |
 | Regulamento (código anterior ou aparência de "cola") | Repo criado em 24/11; sem nome de funcionalidade que sugira simular prova real (RNF-020); RN-023; dados fictícios |
+| Fidelidade ao Figma consome tempo de UI | Componentes base na etapa 0, só as telas da fase H |
 
 ### ADRs necessários (o documentador escreve em `docs/adr/`)
 1. ADR-001: app único Next.js + Supabase, sem NestJS nem Python na fase H.

@@ -13,6 +13,17 @@ Estudar um conteúdo com fonte, dominar pelo mini-simulado, revisar com flashcar
 | [US-018](../../requisitos/historias.md) (Should) | Flashcards | Respondo, viro e avalio confiança em 4 níveis, e a próxima revisão é agendada; ao fim, os conteúdos revisados ganham destaque "revisado hoje" no Mapa; sem pendências mostra mensagem de nada pendente. Teste unitário de `flashcard-scheduler.ts`. |
 | [US-049](../../requisitos/historias.md) | Conteúdo de exemplo com fonte | 18 conteúdos de Português/Redação; toda seção com fonte citada; toda questão original ou pública com fonte (RF-062); cada conteúdo com pelo menos 1 seção e 5 questões (90 no total). Validado por teste Vitest sobre `content/`. |
 
+## Design (decisão do PO, 24/11/2026): fiel ao Figma
+
+O design da aplicação segue o protótipo do Figma (https://object-study-60652393.figma.site/). Leia `docs/design/README.md` e veja as imagens de referência em `docs/design/figma-prototipo/`. Telas desta faixa: Conteúdo (estudo e mini-simulado) e Flashcards (`/revisar`). Referência: `05-conteudo.jpg` e `06-flashcards.jpg`.
+
+- Use **só** os componentes de `src/components/ui` e os tokens do tema do Tailwind (da faixa A): sem cor, fonte, raio ou sombra soltos no código. Precisa de variante nova? Peça a A por PR; não edite `src/components/ui`.
+- Elementos do protótipo fora da fase H não entram (nada do que está fora do recorte H, sem tema escuro). Em conflito com o Gherkin, o Gherkin manda no comportamento e você relata a divergência ao grupo (não decida sozinho). Texto do protótipo "[Nome da plataforma]" vira Aprumo; nome de funcionalidade que o RNF-020 proíbe não é usado.
+- Até o layout `(app)` de A chegar (25/11), monte as telas com as fixtures e os componentes base (entregues por A em 24/11); depois, encaixe-as no layout.
+- **Critério de pronto "fiel ao Figma":** comparação lado a lado de cada tela (desktop; celular quando o protótipo tiver) com a imagem de referência, salva em `docs/evidencias/faixa-c/` (ex.: `<tela>-lado-a-lado.png`, nossa tela ao lado do JPG de referência); diferenças aceitas ficam anotadas na PR. Sem a comparação, a tela não está "feita".
+- Flashcards: níveis de confiança e estados seguem o Gherkin (US-018); se o protótipo mostrar algo diferente, relate.
+
+
 ## 2. Stack e comandos
 
 Next.js App Router + TypeScript + Tailwind; Supabase (SP); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar. Todos os pacotes são instalados por A na etapa 0; acréscimo só por PR a A. Markdown das seções (`body_md`): o renderizador é instalado por A na etapa 0; troca só por PR a A, sem inventar pacote.

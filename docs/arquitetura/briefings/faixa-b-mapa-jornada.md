@@ -14,6 +14,17 @@ Mapa de conteúdos de Português/Redação, Trilha, criação de Jornada com met
 | [US-011](../../requisitos/historias.md) | Criar Jornada com meta | Base Trilha ou conteúdos; meta (3..200 caracteres) e prazo (> hoje) obrigatórios, sem meta o fluxo é bloqueado com mensagem; metodologia só "sem metodologia"; a Jornada aparece no Início. Sem submetas, nivelamento, revisão final ou limite de 2 Jornadas (fora do recorte H). |
 | [US-016](../../requisitos/historias.md) (Should) | Cronograma mínimo | Gera sessões em datas e horários ligadas a conteúdos da Jornada; "Começar sessão" abre o conteúdo; sem disponibilidade leva a informá-la; sem Jornada mostra convite; disponibilidade insuficiente gera aviso e as sessões mesmo assim; sem cota nem cobrança. Teste unitário de `schedule.ts`. |
 
+## Design (decisão do PO, 24/11/2026): fiel ao Figma
+
+O design da aplicação segue o protótipo do Figma (https://object-study-60652393.figma.site/). Leia `docs/design/README.md` e veja as imagens de referência em `docs/design/figma-prototipo/`. Telas desta faixa: Cronograma e Mapa (Jornada e Trilha no mesmo estilo, só com elementos da fase H). Referência: `03-cronograma.jpg` e `04-mapa.jpg`.
+
+- Use **só** os componentes de `src/components/ui` e os tokens do tema do Tailwind (da faixa A): sem cor, fonte, raio ou sombra soltos no código. Precisa de variante nova? Peça a A por PR; não edite `src/components/ui`.
+- Elementos do protótipo fora da fase H não entram (nada do que está fora do recorte H, sem tema escuro). Em conflito com o Gherkin, o Gherkin manda no comportamento e você relata a divergência ao grupo (não decida sozinho). Texto do protótipo "[Nome da plataforma]" vira Aprumo; nome de funcionalidade que o RNF-020 proíbe não é usado.
+- Até o layout `(app)` de A chegar (25/11), monte as telas com as fixtures e os componentes base (entregues por A em 24/11); depois, encaixe-as no layout.
+- **Critério de pronto "fiel ao Figma":** comparação lado a lado de cada tela (desktop; celular quando o protótipo tiver) com a imagem de referência, salva em `docs/evidencias/faixa-b/` (ex.: `<tela>-lado-a-lado.png`, nossa tela ao lado do JPG de referência); diferenças aceitas ficam anotadas na PR. Sem a comparação, a tela não está "feita".
+- O nó do Mapa usa o componente de A (4 estados) dentro do React Flow.
+
+
 ## 2. Stack e comandos
 
 Next.js App Router + TypeScript + Tailwind; Supabase (SP); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar. Os pacotes (inclusive `@xyflow/react`) são instalados por A na etapa 0 (24/11); acréscimo só por PR a A. Mapa: `@xyflow/react` (React Flow), posições dos nós vêm do seed (`pos_x`, `pos_y`), sem biblioteca de layout.

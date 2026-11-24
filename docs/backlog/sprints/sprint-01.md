@@ -1,10 +1,10 @@
 ---
 schema: 1
 sprint: 01
-status: planejada
+status: ativa
 meta: "Demo pública do Aprumo no ar com o fluxo Mapa > Jornada > estudo > mini-simulado > redação por partes com IA, repositório novo e público, vídeo e descrição submetidos até 30/11/2026 23h59."
 historias: [US-048, US-045, US-002, US-005, US-004, US-001, US-049, US-006, US-010, US-009, US-011, US-012, US-013, US-042, US-043, US-044, US-046, US-047, US-014, US-016, US-018]
-proximo_passo: "PO aprovar o plano; liberar as autorizações pendentes de ok (seção Ambiente); iniciar a etapa 0 (T1 e T2) em 24/11."
+proximo_passo: "PO cria e inicia a Sprint 01 no quadro do Jira (KAN-11 a KAN-56); cada pessoa pega uma tarefa por vez; faixa A começa por KAN-32 (T1) e KAN-33 (T2)"
 ---
 # Sprint 01: Aprumo na Hack Brasil 2026 (fase H)
 
@@ -40,46 +40,125 @@ Modo: trunk-based, branch curta `faixa-x/...`, PR com CI verde, merge na main ao
 
 | Tarefa | Faixa | Histórias | Arquivos/faixa exclusiva | Depende de | Data alvo | Modo | Perfil DoD | Status |
 |---|---|---|---|---|---|---|---|---|
-| T1 Repositório novo e público, pnpm (política e lockfile), instala todos os pacotes, create-next-app, Supabase dev e prod, Vercel gru1, CI, deploy vazio, limites Free/Hobby | A | US-045 | `package.json`, lockfile, configs, `vercel.json`, `.github/`, `.env.example`, `supabase/config.toml`, `docs/adr/`, `docs/evidencias/` | - | 24/11 | workspace | infra | pendente |
-| T2 Contratos v1, migration 0001, `app_config`, `config.ts`, `content/config.json`, seed de config | A | base de todas | `src/contracts/*`, `src/lib/supabase/*`, `src/server/config.ts`, migration 0001, `content/config.json` | T1 | 24/11 até 14h | workspace | sensível (RLS) | pendente |
-| T3 Auth, layout e nav, trigger de profile, aviso de dados de teste, entrada | A | US-001, 002, 004, 005 | `actions/auth.ts`, `features/auth`, `(auth)`, `(app)/layout.tsx`, `page.tsx`, `proxy.ts`/`middleware.ts`, `components/ui` | T2; D-030 | 25/11 | worktree | hackathon | pendente |
+| T1 Repositório novo e público, pnpm (política e lockfile), instala todos os pacotes, create-next-app, Supabase dev e prod, Vercel gru1, CI, deploy vazio, limites Free/Hobby | A | US-045 | `package.json`, lockfile, configs, `vercel.json`, `.github/`, `.env.example`, `supabase/config.toml`, `docs/adr/`, `docs/evidencias/` | - | 24/11 | workspace | infra | pendente (repositório remoto criado pelo orquestrador a pedido do PO; falta o restante da T1) |
+| T2 Contratos v1, migration 0001, `app_config`, `config.ts`, `content/config.json`, seed de config; design system (tokens, componentes base, Entrada e layout fiéis ao Figma; RNF-024; 24/11 a 25/11) | A | base de todas | `src/contracts/*`, `src/lib/supabase/*`, `src/server/config.ts`, migration 0001, `content/config.json` | T1 | 24/11 até 14h | workspace | sensível (RLS) | pendente |
+| T3 Auth, layout e nav, trigger de profile, aviso de dados de teste, entrada; design system (tokens, componentes base, Entrada e layout fiéis ao Figma; RNF-024; 24/11 a 25/11), fiel ao Figma com evidência em `docs/evidencias/faixa-a/` | A | US-001, 002, 004, 005 | `actions/auth.ts`, `features/auth`, `(auth)`, `(app)/layout.tsx`, `page.tsx`, `proxy.ts`/`middleware.ts`, `components/ui` | T2; D-030 | 25/11 | worktree | hackathon | pendente |
 | T4 `seed.ts` v1 e conta demo | A | US-048 | `scripts/seed.ts` | T2, T12 (validador), T13 (conteúdos), T18 (`demo-essays.json`; ignora se faltar) | 25/11 | worktree | hackathon | pendente |
 | T5 `/api/health`, cron diário, esqueleto do smoke e2e | A | US-046 | `api/health`, `api/cron`, `e2e/smoke.spec.ts`, config Playwright | T2, T3 | 26/11 | worktree | infra | pendente |
-| T6 Início | A | US-014 | `actions`/`queries/home.ts`, `features/home`, `(app)/inicio` | T9, T10, T16, T18 | 27/11 | worktree | hackathon | pendente |
+| T6 Início (fiel ao Figma com evidência em `docs/evidencias/faixa-a/`, RNF-024) | A | US-014 | `actions`/`queries/home.ts`, `features/home`, `(app)/inicio` | T9, T10, T16, T18 | 27/11 | worktree | hackathon | pendente |
 | T7 Revisão de segurança RLS com 2 usuários e Security Advisor (revisor em opus, roteiro de segurança) | A | US-046 | `docs/evidencias/faixa-a/` | T2, T3, T18 | 27/11 | em etapas | sensível | pendente |
 | T8 Produção: primeiro dump, `db push`, deploy e seed de prod | A | US-046, US-048 | `aprumo-prod` (variáveis fora do repo) | T7 | 27/11 | em etapas | sensível | pendente |
-| T9 Mapa: React Flow sobre fixture, drawer, filtro por estado; Trilha | B | US-006, 009, 010 | `(app)/{mapa,trilhas}`, `features/map`, `queries/{map,trail}.ts`, `e2e/faixa-b.spec.ts` | T2; `trail.json` de C (24/11 18h) | 24 a 26/11 (Mapa real 26/11) | worktree | hackathon | pendente |
-| T10 Criar Jornada, `/jornada`, `addContentsToJourney` | B | US-011 | `(app)/jornada`, `features/journey`, `actions/journey.ts`, `queries/journey.ts` | T9, T2 | 26/11 (D usa neste dia) | worktree | hackathon | pendente |
-| T11 Cronograma: disponibilidade, `schedule.ts` + teste, gerar, "Começar sessão" | B | US-016 | `(app)/cronograma`, `features/schedule`, `actions/schedule.ts`, `queries/schedule.ts`, `domain/schedule.ts` | T10 | 27 a 28/11 (cortável 1º) | worktree | hackathon | pendente |
+| T9 Mapa: React Flow sobre fixture, drawer, filtro por estado; Trilha; fiel ao Figma com evidência em `docs/evidencias/faixa-b/` (RNF-024) | B | US-006, 009, 010 | `(app)/{mapa,trilhas}`, `features/map`, `queries/{map,trail}.ts`, `e2e/faixa-b.spec.ts` | T2; `trail.json` de C (24/11 18h) | 24 a 26/11 (Mapa real 26/11) | worktree | hackathon | pendente |
+| T10 Criar Jornada, `/jornada`, `addContentsToJourney`; fiel ao Figma com evidência em `docs/evidencias/faixa-b/` (RNF-024) | B | US-011 | `(app)/jornada`, `features/journey`, `actions/journey.ts`, `queries/journey.ts` | T9, T2 | 26/11 (D usa neste dia) | worktree | hackathon | pendente |
+| T11 Cronograma: disponibilidade, `schedule.ts` + teste, gerar, "Começar sessão"; fiel ao Figma com evidência em `docs/evidencias/faixa-b/` (RNF-024) | B | US-016 | `(app)/cronograma`, `features/schedule`, `actions/schedule.ts`, `queries/schedule.ts`, `domain/schedule.ts` | T10 | 27 a 28/11 (cortável 1º) | worktree | hackathon | pendente |
 | T12 Validador de `content/`, testes Vitest, lista dos 18 e fontes, `trail.json`, `essay-topics.json` | C | US-049 | `scripts/validate-content.ts`, `src/domain/content/__tests__/*`, `content/trail.json`, `content/essay-topics.json` | T2 (formato) | 24/11 (JSON até 18h) | worktree | hackathon | pendente |
-| T13 Seis conteúdos completos, página de conteúdo (seções, fonte, pergunta rápida) | C | US-049, 012 | `content/**`, `(app)/conteudos`, `features/study`, `queries/content.ts` | T12 | 25/11 | worktree | hackathon | pendente |
-| T14 Mini-simulado, `submitQuizAttempt`, `mastery.ts` + teste, nó acende | C | US-013 | `features/quiz`, `actions/{study,quiz}.ts`, `queries/quiz.ts`, `domain/mastery.ts`, `e2e/faixa-c.spec.ts` | T13 | 26/11 | worktree | sensível (gabarito, escrita servidor) | pendente |
+| T13 Seis conteúdos completos, página de conteúdo (seções, fonte, pergunta rápida); fiel ao Figma com evidência em `docs/evidencias/faixa-c/` (RNF-024) | C | US-049, 012 | `content/**`, `(app)/conteudos`, `features/study`, `queries/content.ts` | T12 | 25/11 | worktree | hackathon | pendente |
+| T14 Mini-simulado, `submitQuizAttempt`, `mastery.ts` + teste, nó acende; fiel ao Figma com evidência em `docs/evidencias/faixa-c/` (RNF-024) | C | US-013 | `features/quiz`, `actions/{study,quiz}.ts`, `queries/quiz.ts`, `domain/mastery.ts`, `e2e/faixa-c.spec.ts` | T13 | 26/11 | worktree | sensível (gabarito, escrita servidor) | pendente |
 | T15 Conteúdos 7 a 18 e revisão de fontes | C | US-049 | `content/**` | T13 | 27 a 28/11 | worktree | hackathon | pendente |
-| T16 Flashcards, `reviewFlashcard`, `flashcard-scheduler.ts` + teste | C | US-018 | `(app)/revisar`, `features/flashcards`, `actions/flashcards.ts`, `queries/flashcards.ts`, `domain/flashcard-scheduler.ts` | T14 | 27 a 28/11 (cortável 2º) | worktree | hackathon | pendente |
+| T16 Flashcards, `reviewFlashcard`, `flashcard-scheduler.ts` + teste; fiel ao Figma com evidência em `docs/evidencias/faixa-c/` (RNF-024) | C | US-018 | `(app)/revisar`, `features/flashcards`, `actions/flashcards.ts`, `queries/flashcards.ts`, `domain/flashcard-scheduler.ts` | T14 | 27 a 28/11 (cortável 2º) | worktree | hackathon | pendente |
 | T17 Adapter de IA, Fake, prompt v1, corpus, comparação D-010 (24/11 tarde), contas com limite de gasto | D | US-042 | `server/ai/**`, `scripts/eval-essay.ts`, `content/essays/**`, `docs/arquitetura/avaliacao-modelos.md` | T2; D-010 | 24 a 25/11 | worktree | sensível (IA com custo, segredos) | pendente |
 | T18 `reserve_ai_usage` (migration), `quota.ts` + teste, rota `/api/essays/feedback` com pós-validação, `demo-essays.json` | D | US-042, 043 | `api/essays`, `domain/quota.ts`, `queries/essay.ts`, migration da faixa | T17, T2 | 25/11 | worktree | sensível (RLS, custo) | pendente |
-| T19 Telas `/redacao` e retorno com 5 competências e aviso RN-014 | D | US-042, 043 | `(app)/redacao`, `features/essay`, `e2e/faixa-d.spec.ts` | T18 | 26/11 | worktree | hackathon | pendente |
-| T20 Sugestão de competência fraca, reservas com IA desligada ou teto, kill switch | D | US-044, 043 | `features/essay`, `server/ai/**` | T19, T10, T13 | 27/11 | worktree | sensível | pendente |
+| T19 Telas `/redacao` e retorno com 5 competências e aviso RN-014; fiel ao Figma com evidência em `docs/evidencias/faixa-d/` (RNF-024; D-037 (a) antes de 26/11) | D | US-042, 043 | `(app)/redacao`, `features/essay`, `e2e/faixa-d.spec.ts` | T18 | 26/11 | worktree | hackathon | pendente |
+| T20 Sugestão de competência fraca, reservas com IA desligada ou teto, kill switch; fiel ao Figma com evidência em `docs/evidencias/faixa-d/` (RNF-024) | D | US-044, 043 | `features/essay`, `server/ai/**` | T19, T10, T13 | 27/11 | worktree | sensível | pendente |
 | T21 Endurecer redação: timeouts, nova tentativa, p95 | D | US-042 | `server/ai/**`, `api/essays` | T20 | 28/11 | worktree | hackathon | pendente |
 | T22 e2e smoke verde em prod, README, monitor de uptime | A | US-045, 046 | `README.md`, `e2e/smoke.spec.ts` | T8 | 28/11 | workspace | infra | pendente |
 | T23 Congelamento, QA cruzado, dump diário, seed de prod com 18 conteúdos, release candidate | A (todas apoiam) | todas | - | T15, T21, T22 | 29/11 (12h) | em etapas | hackathon | pendente |
 | T24 Vídeo (até 3 min) e descrição da submissão | D (A apoia; gravação com todos) | US-047 | `docs/evidencias/faixa-d/` | T23 | 29/11 | workspace | hackathon | pendente |
 | T25 Submissão e tag `v1.0-submissao` | A | US-047, 045 | - | T24 | 30/11 até 20h | workspace | hackathon | pendente |
 
+## Execução por issue do Jira
+Decisão do PO (2026-11-24): não executamos todas as tarefas em lote. A execução é por issue do Jira (projeto KAN): cada tarefa é pega uma a uma no Jira por qualquer integrante do grupo e pelos agentes de cada um; não é só o orquestrador que executa. O orquestrador não roda `/sprint-run` em lote; atua sob demanda, na issue que o PO indicar. A sprint ainda precisa ser criada e iniciada no quadro do Jira pelo PO (as ferramentas do orquestrador não criam sprint; D-039).
+
+Fluxo por issue:
+1. Pegar a issue KAN-nn no Jira.
+2. Mover a issue para em andamento.
+3. Fazer em branch curta `faixa-x/KAN-nn-slug`.
+4. Abrir PR com CI verde. O merge na main segue D-034 (só com ok explícito).
+5. Registrar a evidência: `docs/evidencias/faixa-x/` ou, quando houver verificação em Docker, `docs/evidencias/sprint-01/US-xxx/`.
+6. Fechar a issue no Jira.
+7. Quando a issue alterar arquivo, registrar o M-nnn em `docs/backlog/mudancas.md` e no CHANGELOG.
+
+Correspondência com o Jira:
+
+| Épico | Jira |
+|---|---|
+| E1 | KAN-1 |
+| E2 | KAN-2 |
+| E3 | KAN-3 |
+| E4 | KAN-4 |
+| E5 | KAN-5 |
+| E9 | KAN-6 |
+| E11 | KAN-7 |
+| E15 | KAN-8 |
+| E16 | KAN-9 |
+| E17 | KAN-10 |
+
+| História | Jira |
+|---|---|
+| US-001 | KAN-11 |
+| US-002 | KAN-12 |
+| US-004 | KAN-13 |
+| US-005 | KAN-14 |
+| US-006 | KAN-15 |
+| US-009 | KAN-16 |
+| US-010 | KAN-17 |
+| US-011 | KAN-18 |
+| US-012 | KAN-19 |
+| US-013 | KAN-20 |
+| US-018 | KAN-21 |
+| US-042 | KAN-22 |
+| US-043 | KAN-23 |
+| US-044 | KAN-24 |
+| US-016 | KAN-25 |
+| US-014 | KAN-26 |
+| US-049 | KAN-27 |
+| US-045 | KAN-28 |
+| US-046 | KAN-29 |
+| US-047 | KAN-30 |
+| US-048 | KAN-31 |
+
+| Tarefa | Jira |
+|---|---|
+| T1 | KAN-32 |
+| T2 | KAN-33 |
+| T3 | KAN-34 |
+| T4 | KAN-35 |
+| T5 | KAN-36 |
+| T6 | KAN-37 |
+| T7 | KAN-38 |
+| T8 | KAN-39 |
+| T9 | KAN-40 |
+| T10 | KAN-41 |
+| T11 | KAN-42 |
+| T12 | KAN-43 |
+| T13 | KAN-44 |
+| T14 | KAN-45 |
+| T15 | KAN-46 |
+| T16 | KAN-47 |
+| T17 | KAN-48 |
+| T18 | KAN-49 |
+| T19 | KAN-50 |
+| T20 | KAN-51 |
+| T21 | KAN-52 |
+| T22 | KAN-53 |
+| T23 | KAN-54 |
+| T24 | KAN-55 |
+| T25 | KAN-56 |
+
 ## Ambiente (checklist, em 2026-11-24)
 | Item | Situação |
 |---|---|
 | Docker | não atendido: CLI presente (cliente 29.8.0, contexto desktop-linux), mas o daemon não responde (`docker info` falha). Pedir ao usuário para ligar o Docker Desktop; agentes não o iniciam. Impacto: só a faixa A usa Docker/Supabase local; B, C e D aplicam migrations no `aprumo-dev`. Não bloqueia a sprint, só a verificação local da faixa A (D-033) |
-| Git | a pasta não é repositório git e não tem `origin`; o repositório de entrega será criado pela faixa A (T1), novo e público, sem fork |
+| Git | repositório criado: github.com/Rangel64/aprumo (público, conta pessoal, não é fork, criado em 24/11/2026); origin existe; commit inicial 3ca1d5b com os docs; autor com e-mail noreply do GitHub |
 | Portas 3000, 54321, 54322 | livres |
 | Navegadores | Chrome e Edge instalados |
 | Node e pnpm | Node v24.20.0, pnpm 11.25.0 |
 | Stack | Next.js + Supabase; sem Prisma nem `JWT_SECRET` local |
-| `/security-review` | não roda sem `origin`; a revisão de segurança (RLS, segredos, IA com custo) usa o `revisor` em opus com roteiro de segurança, registrada na sprint (T2, T7, T14, T17, T18, T20) |
+| `/security-review` | agora tem `origin`. O plano mantém a revisão de segurança (RLS, segredos, IA com custo) com o `revisor` em opus e roteiro de segurança, registrada na sprint (T2, T7, T14, T17, T18, T20); pode usar também `/security-review` quando houver código |
 | pnpm e lockfile | `devops` define a política de instalação do pnpm na T1 e é dono do lockfile |
 | `.env` | agentes nunca leem nem criam `.env` |
 
-Autorizações pendentes de ok do usuário (não concedidas; D-034): (a) commit inicial do repositório novo; (b) commits locais dos agentes só em branches de worktree, nunca na main; (c) commit na main dos docs de planejamento depois do ok do PO ao plano. Merge na main e push só com ok explícito.
+Autorizações de commit (D-034): (a) commit inicial do repositório novo e (c) commit na main dos docs de planejamento foram concedidos pelo PO em 2026-11-24 (commit e push feitos pelo orquestrador a pedido). (b) commits locais dos agentes só em branches de worktree, nunca na main: ainda sem ok explícito, pendente. Merge na main e push só com ok explícito.
 
 ## Riscos
 | Risco | Mitigação |
@@ -95,6 +174,7 @@ Autorizações pendentes de ok do usuário (não concedidas; D-034): (a) commit 
 | Saída da IA fora do schema ou reescrita (RN-023) | `Output.object` + zod, pós-validação, critério eliminatório no D-010 |
 | Segredos no repositório público | `.env.example` sem valores, push protection, `server-only`, varredura do histórico |
 | Docker desligado | Só afeta a verificação local da faixa A (D-033) |
+| R-16: Fidelidade ao Figma consome tempo de UI | Design system e componentes base de A (T2 e T3) primeiro, que B, C e D reutilizam; conferência lado a lado por faixa com evidência em `docs/evidencias/faixa-x/`; se faltar tempo, a fidelidade visual cede ao Gherkin e a divergência é relatada (RNF-024, D-037); cortes seguem a ordem US-016, US-018, US-014 |
 
 ## Decisões em aberto
 Ver [pendencias.md](../pendencias.md).
@@ -106,12 +186,17 @@ Ver [pendencias.md](../pendencias.md).
 | D-031 | Quem ajusta teste quebrado de outra faixa (proposta: o dono do teste) | dia 1 |
 | D-032 | Divergência possível de Gherkin em US-010 e US-018 | na implementação |
 | D-033 | Ligar o Docker Desktop ou aceitar rodar sem Supabase local | dia 1 |
-| D-034 | Autorizações de commit (a, b, c acima) | antes de T1 |
+| D-034 | Autorizações de commit: (a) e (c) concedidas em 24/11; (b) pendente | antes de qualquer commit de agente na sprint |
+| D-035 | Colaboradores do repositório (3 integrantes) e visibilidade pública desde já (baixa) | dia 1 |
+| D-037 | Divergências do protótipo do Figma (redação com 5 etapas x 3 partes do RF-054, tema escuro, contraste do roxo, nome do modo de prova) (baixa) | antes de T19 (26/11) para a redação; demais antes da conferência de fidelidade |
+| D-038 | Design cobre só as telas da fase H ou também as pós-hackathon (baixa) | dia 1 |
 | - | Dono do dump diário e do monitor (D-029: sem escala; ponto de atenção do grupo) | dia 1 |
 
 ## Andamento
 | Data | Feito | Bloqueios |
 |---|---|---|
+| 2026-11-24 | Sprint aprovada e ativada pelo PO; repositório Rangel64/aprumo criado e docs enviados à main (3ca1d5b) | D-033 Docker desligado; D-029 dono do dump/monitor; contratos v1 previstos para 14h de 24/11 ainda pendentes |
+| 2026-11-24 | Épicos, histórias e tarefas criados no Jira (KAN-1 a KAN-56); sprint ainda não criada no quadro do Jira | Sprint a criar e iniciar pelo PO no Jira (D-039); ordem de pegada e quem pega a etapa 0 a definir (D-040) |
 
 ## Review
 | US | Resultado (feito / não feito) | Motivo |
@@ -125,7 +210,7 @@ Ver [pendencias.md](../pendencias.md).
 - Ciclos de correção: -
 - Testes planejados x executados: - x -
 - Problemas pós-entrega: -
-- Registros M: M-024..
+- Registros M: M-024..M-027
 
 | Agente | Modelo | Quantidade |
 |---|---|---|

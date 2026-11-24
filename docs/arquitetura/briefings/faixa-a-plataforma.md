@@ -19,9 +19,23 @@ Dar a base que as outras 3 faixas usam (repositório, contratos, banco, CI, depl
 
 Também é da faixa: instalação de todos os pacotes (etapa 0), contratos v1 (inclui o formato dos JSON de `content/`), migration 0001, `app_config`, `src/server/config.ts` e `content/config.json` (etapa 0), pastas `docs/evidencias/` e `docs/adr/` com `.gitkeep` (ADRs ficam com A, o documentador), CI, Supabase, Vercel, monitor, cron, dumps, conta demo, login, cadastro e Início (`actions/auth.ts`, `queries/home.ts`, `features/{auth,home}`), README, QA e roteiro de verificação. Apoia a faixa D na US-047 (vídeo e descrição; gravação com todos em 29/11).
 
+## Design (decisão do PO, 24/11/2026): fiel ao Figma
+
+O design da aplicação segue o protótipo do Figma (https://object-study-60652393.figma.site/). Leia `docs/design/README.md` e veja as imagens de referência em `docs/design/figma-prototipo/`. Telas desta faixa: Entrada (`/`) e Início (`/inicio`), além do layout `(app)` e das telas de cadastro e entrada no mesmo estilo. Referência: `01-entrada.jpg` e `02-inicio.jpg`.
+
+- Use **só** os componentes de `src/components/ui` e os tokens do tema do Tailwind (da faixa A): sem cor, fonte, raio ou sombra soltos no código. Precisa de variante nova? Peça a A por PR; não edite `src/components/ui`.
+- Elementos do protótipo fora da fase H não entram (nada do que está fora do recorte H, sem tema escuro). Em conflito com o Gherkin, o Gherkin manda no comportamento e você relata a divergência ao grupo (não decida sozinho). Texto do protótipo "[Nome da plataforma]" vira Aprumo; nome de funcionalidade que o RNF-020 proíbe não é usado.
+- Até o layout `(app)` de A chegar (25/11), monte as telas com as fixtures e os componentes base (entregues por A em 24/11); depois, encaixe-as no layout.
+- **Critério de pronto "fiel ao Figma":** comparação lado a lado de cada tela (desktop; celular quando o protótipo tiver) com a imagem de referência, salva em `docs/evidencias/faixa-a/` (ex.: `<tela>-lado-a-lado.png`, nossa tela ao lado do JPG de referência); diferenças aceitas ficam anotadas na PR. Sem a comparação, a tela não está "feita".
+- **A é dona do design system** (tokens e componentes base). Entrega: tokens e componentes base em **24/11** (B, C e D os usam desde então; antes, só fixtures); layout `(app)` com menu lateral e tela de Entrada em **25/11**, antes de as outras faixas montarem telas finais. Se atrasar, avise o canal: as outras faixas continuam com fixtures e componentes.
+- **Tokens no tema do Tailwind** (configuração ou `@theme`, conforme a versão instalada): cores `purple #7b5cff`, `purple-dark #6243e8`, `purple-light #ede9ff`, `coral #ff6b5b`, `yellow #ffc93c`, `mint #2ed3a0`, `blue #3ba4ff`, `pink #ff5fa2`, `orange #ff9a3c`, `cream #fff9f2` (fundo), `ink #1f1b2e`, `muted #6b6880`, `line #e9e5ef`; raios 8, 16, 24 e 999px; sombras suaves do protótipo; fontes Nunito (corpo) e Quicksand (destaque) via `next/font` (confirmar a API na versão instalada).
+- **Componentes base em `src/components/ui`:** botão pill roxo, cartão com raio 24 e sombra, chips, barra de progresso, nó do Mapa nos 4 estados (não iniciado, estudando, dominado, revisado hoje; a faixa B o usa dentro do React Flow) e layout com menu lateral. Os componentes shadcn copiados são ajustados aos tokens.
+- **Evidência "fiel ao Figma" da faixa A:** `docs/evidencias/faixa-a/` com screenshot da Entrada ao lado de `01-entrada.jpg` e do Início ao lado de `02-inicio.jpg`.
+
+
 ## 2. Stack e comandos
 
-Next.js App Router + TypeScript + Tailwind; Supabase (São Paulo, sa-east-1); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar com o grupo (esta faixa cria o projeto, instala **todos** os pacotes na etapa 0 do dia 1 e fixa as versões no lockfile; as outras faixas pedem acréscimos por PR a A).
+Next.js App Router + TypeScript + Tailwind (com os tokens do Figma no tema) e `next/font` com Nunito e Quicksand; Supabase (São Paulo, sa-east-1); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar com o grupo (esta faixa cria o projeto, instala **todos** os pacotes na etapa 0 do dia 1 e fixa as versões no lockfile; as outras faixas pedem acréscimos por PR a A).
 
 | Comando | Faz |
 |---|---|
@@ -84,8 +98,8 @@ Migration 0001 inclui: todas as tabelas do plano, RLS em todas (catálogo só SE
 
 | Dia | Entregas |
 |---|---|
-| 24/11 | Repo público novo com os docs; `create-next-app`; Supabase dev e prod; Vercel gru1; **instala todos os pacotes; contratos v1 (com `content.ts` e fixtures de `EssayQuota` e `FlashcardView`), 0001, `app_config` + `src/server/config.ts` + `content/config.json` e seed de config (lê só `content/config.json`) até 14h**; pastas `docs/evidencias/` e `docs/adr/` com `.gitkeep`; deploy vazio no ar; CI; confirmar limites (Free/Hobby). |
-| 25/11 | Auth (cadastro, entrar, sair, aviso de dados de teste, trigger de profile); layout e nav; `seed.ts` v1 (25/11; distinto do seed de config da etapa 0) + conta demo (lê `content/essays/demo-essays.json` se D já o entregou em 25/11; senão ignora). |
+| 24/11 | **Design system: tokens no tema do Tailwind, `next/font` (Nunito e Quicksand) e componentes base em `src/components/ui`, até o fim do dia.** Repo público novo com os docs; `create-next-app`; Supabase dev e prod; Vercel gru1; **instala todos os pacotes; contratos v1 (com `content.ts` e fixtures de `EssayQuota` e `FlashcardView`), 0001, `app_config` + `src/server/config.ts` + `content/config.json` e seed de config (lê só `content/config.json`) até 14h**; pastas `docs/evidencias/` e `docs/adr/` com `.gitkeep`; deploy vazio no ar; CI; confirmar limites (Free/Hobby). |
+| 25/11 | Auth (cadastro, entrar, sair, aviso de dados de teste, trigger de profile); layout `(app)` com menu lateral e tela de Entrada fiéis ao Figma (evidência em `docs/evidencias/faixa-a/`), antes de as outras faixas montarem telas; `seed.ts` v1 (25/11; distinto do seed de config da etapa 0) + conta demo (lê `content/essays/demo-essays.json` se D já o entregou em 25/11; senão ignora). |
 | 26/11 | `/api/health`; cron diário; esqueleto do smoke e2e (`app_config` já entrou na etapa 0, em 24/11). |
 | 27/11 | Início (US-014); revisão de segurança RLS com 2 usuários; primeiro dump de prod, depois `db push`, deploy prod e seed prod. **Checkpoint: Jornada e Mapa ok? Se não, US-016 é cortada.** |
 | 28/11 | e2e smoke verde em prod; README; monitor de uptime. **Meio-dia: se a redação não estiver ok, US-018 é cortada.** |

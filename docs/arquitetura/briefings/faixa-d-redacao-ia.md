@@ -14,6 +14,17 @@ O aluno escreve uma parte da redação (introdução, desenvolvimento ou conclus
 | [US-047](../../requisitos/historias.md) | Vídeo e descrição da submissão | Vídeo de até 3 min, assistível sem login, mostrando problema, fluxo (Mapa, Jornada, estudo, redação) e impacto, só com dados fictícios (RNF-017); descrição e trilha "Acesso à educação" preenchidas; envio até 30/11 (meta interna 20h; prazo oficial 23h59). **Faixa D responde; A apoia; a gravação é com todos no dia 29/11.** Evidência: link do vídeo e checklist de revisão dos dados em `docs/evidencias/faixa-d/`. |
 | D-010 | Escolha do modelo | Comparação de 2 modelos (protocolo da seção 5) na tarde do dia 1 (24/11); modelo decidido em 25/11; resultado em `docs/arquitetura/avaliacao-modelos.md` e ADR-005. **D-010 está em aberto até esse registro.** |
 
+## Design (decisão do PO, 24/11/2026): fiel ao Figma
+
+O design da aplicação segue o protótipo do Figma (https://object-study-60652393.figma.site/). Leia `docs/design/README.md` e veja as imagens de referência em `docs/design/figma-prototipo/`. Telas desta faixa: Redação (`/redacao` e `/redacao/[submissionId]`). Referência: `07-redacao.jpg`.
+
+- Use **só** os componentes de `src/components/ui` e os tokens do tema do Tailwind (da faixa A): sem cor, fonte, raio ou sombra soltos no código. Precisa de variante nova? Peça a A por PR; não edite `src/components/ui`.
+- Elementos do protótipo fora da fase H não entram (nada do que está fora do recorte H, sem tema escuro). Em conflito com o Gherkin, o Gherkin manda no comportamento e você relata a divergência ao grupo (não decida sozinho). Texto do protótipo "[Nome da plataforma]" vira Aprumo; nome de funcionalidade que o RNF-020 proíbe não é usado.
+- Até o layout `(app)` de A chegar (25/11), monte as telas com as fixtures e os componentes base (entregues por A em 24/11); depois, encaixe-as no layout.
+- **Critério de pronto "fiel ao Figma":** comparação lado a lado de cada tela (desktop; celular quando o protótipo tiver) com a imagem de referência, salva em `docs/evidencias/faixa-d/` (ex.: `<tela>-lado-a-lado.png`, nossa tela ao lado do JPG de referência); diferenças aceitas ficam anotadas na PR. Sem a comparação, a tela não está "feita".
+- **A redação no protótipo tem 5 etapas; o RF-054 e o plano definem 3 partes** (introdução, desenvolvimento, conclusão): implemente as 3 partes, mantendo o visual, e relate a divergência. O aviso RN-014 e o rótulo "estimativa" continuam literais e do servidor.
+
+
 ## 2. Stack e comandos
 
 Next.js App Router + TypeScript + Tailwind; Supabase (SP); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar com o grupo. Os pacotes de IA (`ai` e um `@ai-sdk/<provedor>` por modelo candidato) são instalados por A na etapa 0 do dia 1; acréscimo depois só por PR a A (único lockfile; não crie lockfile novo).
