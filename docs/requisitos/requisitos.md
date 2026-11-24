@@ -86,7 +86,7 @@ RF-054 a RF-062 abaixo. Dos RF antigos, entram na fase H: RF-001, RF-002, RF-004
 | RNF-004 | LGPD | Base legal, minimização, transparência e atendimento a direitos do titular (acesso, correção, exclusão) para todos os usuários. |
 | RNF-005 | LGPD (menores) | Para menores de 18 anos: consentimento, guarda e acesso às fotos e retenção conforme D-006 e D-018; nenhuma foto de menor é tratada antes dessa definição. |
 | RNF-006 | LGPD | Fotos de resoluções, redações e mapas mentais com prazo de retenção definido e exclusão automática ao fim do prazo. |
-| RNF-007 | Segurança | Dados em região do Brasil (São Paulo); TLS; autenticação com papéis Aluno e Professor no mesmo usuário; acesso mínimo; log de acesso a fotos; sem segredos em repositório. |
+| RNF-007 | Segurança | Dados em região do Brasil (São Paulo); TLS; autenticação com papéis Aluno e Professor no mesmo usuário; acesso mínimo; log de acesso a fotos; sem segredos em repositório. Nota de desvio (D-046, 2026-11-24): o banco `aprumo-dev` está em us-east-2 (Ohio), por decisão do PO, e não em São Paulo; na fase H o requisito de região é aceito como risco (R-17), com dados só fictícios (RNF-017). Demais itens valem. |
 | RNF-008 | Segurança/Privacidade | Área de Professor só consulta agregados; nenhuma consulta expõe dados individuais de alunos (RN-005). |
 | RNF-009 | Métricas | Medir ativação e retenção desde o primeiro dia (eventos de produto). |
 | RNF-010 | Custo | Medir custo de IA por aluno e por recurso a partir da F2 (mentor usa IA), não só na F4; relatório consultável pelo time. |

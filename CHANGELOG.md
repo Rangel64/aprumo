@@ -16,6 +16,7 @@
 - 5 briefings das faixas A a D criados em docs/arquitetura/briefings/ (README.md, faixa-a-plataforma.md, faixa-b-mapa-jornada.md, faixa-c-estudo-conteudo.md, faixa-d-redacao-ia.md), a partir do plano da fase H; D-010, D-020 e D-030 seguem em aberto (M-018)
 - Pendências D-031 (regra de quem ajusta teste quebrado de outra faixa) e D-032 (possível divergência de Gherkin em US-010 e US-018), ambas abertas e de baixa prioridade (M-018)
 ### Alterado
+- Região do banco Supabase aprumo-dev em us-east-2 (Ohio), em desvio da D-009 (São Paulo); Vercel em iad1; RNF-007 com nota de desvio e risco R-17 aceito na fase H; D-046 resolvida (M-029)
 - Sprint 01: design system em T2 e T3, critério de fidelidade ao Figma nas tarefas de UI, risco R-16 e D-037/D-038 em aberto; matriz liga RNF-024 às histórias de UI da fase H (M-026)
 - Página do artefato plano-rumo-artefato.html sincronizada com plano e briefings (donos, datas, pacotes, migrations, esquema de exemplos); termo do modo de prova removido (M-023)
 - Plano e briefings: reposição da conta demo por apagar e reinserir as 2 redações (sem ON CONFLICT na tripla), ai_usage.submission_id com ON DELETE SET NULL, redações semeadas da conta demo não consomem o limite de 15 nem o teto, CHECK (is_example = (example_key IS NOT NULL)), db push de produção só de A (supabase link e dump antes), seed de config distinto do seed.ts v1 (M-022)

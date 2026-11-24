@@ -40,7 +40,7 @@ Modo: trunk-based, branch curta `faixa-x/...`, PR com CI verde, merge na main ao
 
 | Tarefa | Faixa | Histórias | Arquivos/faixa exclusiva | Depende de | Data alvo | Modo | Perfil DoD | Status |
 |---|---|---|---|---|---|---|---|---|
-| T1 Repositório novo e público, pnpm (política e lockfile), instala todos os pacotes, create-next-app, Supabase dev e prod, Vercel gru1, CI, deploy vazio, limites Free/Hobby | A | US-045 | `package.json`, lockfile, configs, `vercel.json`, `.github/`, `.env.example`, `supabase/config.toml`, `docs/adr/`, `docs/evidencias/` | - | 24/11 | workspace | infra | pendente (repositório remoto criado pelo orquestrador a pedido do PO; falta o restante da T1) |
+| T1 Repositório novo e público, pnpm (política e lockfile), instala todos os pacotes, create-next-app, Supabase dev e prod (região us-east-2, Ohio; D-046, desvio da D-009), Vercel iad1, CI, deploy vazio, limites Free/Hobby | A | US-045 | `package.json`, lockfile, configs, `vercel.json`, `.github/`, `.env.example`, `supabase/config.toml`, `docs/adr/`, `docs/evidencias/` | - | 24/11 | workspace | infra | pendente (repositório remoto criado pelo orquestrador a pedido do PO; falta o restante da T1) |
 | T2 Contratos v1, migration 0001, `app_config`, `config.ts`, `content/config.json`, seed de config; design system (tokens, componentes base, Entrada e layout fiéis ao Figma; RNF-024; 24/11 a 25/11) | A | base de todas | `src/contracts/*`, `src/lib/supabase/*`, `src/server/config.ts`, migration 0001, `content/config.json` | T1 | 24/11 até 14h | workspace | sensível (RLS) | pendente |
 | T3 Auth, layout e nav, trigger de profile, aviso de dados de teste, entrada; design system (tokens, componentes base, Entrada e layout fiéis ao Figma; RNF-024; 24/11 a 25/11), fiel ao Figma com evidência em `docs/evidencias/faixa-a/` | A | US-001, 002, 004, 005 | `actions/auth.ts`, `features/auth`, `(auth)`, `(app)/layout.tsx`, `page.tsx`, `proxy.ts`/`middleware.ts`, `components/ui` | T2; D-030 | 25/11 | worktree | hackathon | pendente |
 | T4 `seed.ts` v1 e conta demo | A | US-048 | `scripts/seed.ts` | T2, T12 (validador), T13 (conteúdos), T18 (`demo-essays.json`; ignora se faltar) | 25/11 | worktree | hackathon | pendente |
@@ -150,6 +150,7 @@ Correspondência com o Jira:
 |---|---|
 | Docker | não atendido: CLI presente (cliente 29.8.0, contexto desktop-linux), mas o daemon não responde (`docker info` falha). Pedir ao usuário para ligar o Docker Desktop; agentes não o iniciam. Impacto: só a faixa A usa Docker/Supabase local; B, C e D aplicam migrations no `aprumo-dev`. Não bloqueia a sprint, só a verificação local da faixa A (D-033) |
 | Git | repositório criado: github.com/Rangel64/aprumo (público, conta pessoal, não é fork, criado em 24/11/2026); origin existe; commit inicial 3ca1d5b com os docs; autor com e-mail noreply do GitHub |
+| Supabase | `aprumo-dev` criado em us-east-2 (Ohio) em 24/11, vinculado ao worktree da KAN-32 (T1); desvio da D-009 (São Paulo), decidido pelo PO (D-046) |
 | Portas 3000, 54321, 54322 | livres |
 | Navegadores | Chrome e Edge instalados |
 | Node e pnpm | Node v24.20.0, pnpm 11.25.0 |
@@ -197,6 +198,7 @@ Ver [pendencias.md](../pendencias.md).
 |---|---|---|
 | 2026-11-24 | Sprint aprovada e ativada pelo PO; repositório Rangel64/aprumo criado e docs enviados à main (3ca1d5b) | D-033 Docker desligado; D-029 dono do dump/monitor; contratos v1 previstos para 14h de 24/11 ainda pendentes |
 | 2026-11-24 | Épicos, histórias e tarefas criados no Jira (KAN-1 a KAN-56); sprint ainda não criada no quadro do Jira | Sprint a criar e iniciar pelo PO no Jira (D-039); ordem de pegada e quem pega a etapa 0 a definir (D-040) |
+| 2026-11-24 | `aprumo-dev` criado em us-east-2 (Ohio), vinculado ao worktree da KAN-32 (T1); região decidida pelo PO em desvio da D-009 (D-046; Vercel iad1, prod em us-east-2 na T8) | - |
 
 ## Review
 | US | Resultado (feito / não feito) | Motivo |

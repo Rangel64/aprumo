@@ -199,7 +199,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.9rem;max-width:70ch}
 
 <section id="stack">
   <h2>3. Stack</h2>
-  <p><strong>Um único app Next.js (App Router) + TypeScript + Tailwind, com Supabase (Postgres e Auth) em São Paulo, hospedado na Vercel. Gerenciador: pnpm, com um único <code>pnpm-lock.yaml</code>.</strong> Leituras em Server Components, escritas em Server Actions, um Route Handler para a IA. Não há serviço separado.</p>
+  <p><strong>Um único app Next.js (App Router) + TypeScript + Tailwind, com Supabase (Postgres e Auth) em us-east-2 (Ohio), por decisão do PO (desvio da D-009), hospedado na Vercel (iad1). Gerenciador: pnpm, com um único <code>pnpm-lock.yaml</code>.</strong> Leituras em Server Components, escritas em Server Actions, um Route Handler para a IA. Não há serviço separado.</p>
   <h3>Por que não NestJS nem Python</h3>
   <ul>
     <li>NestJS dobra deploy, CORS, autenticação e contratos. Nenhum requisito da fase H precisa disso, e a Vercel não roda servidor Nest persistente de forma idiomática.</li>
@@ -309,7 +309,7 @@ footer{margin-top:56px;color:var(--muted);font-size:.9rem;max-width:70ch}
   <div class="scroll"><table class="wide">
     <thead><tr><th>Dia</th><th>A Plataforma</th><th>B Mapa e Jornada</th><th>C Estudo e conteúdo</th><th>D Redação IA</th></tr></thead>
     <tbody>
-      <tr><td><strong>24/11</strong></td><td>Repo público novo com docs; create-next-app; Supabase dev e prod (sa-east-1); Vercel (gru1); instala todos os pacotes; contratos v1 (com <code>content.ts</code>), 0001, <code>app_config</code>, <code>src/server/config.ts</code> e <code>content/config.json</code> até as 14h (seed de config, que só lê <code>content/config.json</code>; não é o <code>seed.ts</code> v1); deploy vazio; CI</td><td>Revisa contratos; Mapa com React Flow sobre fixture</td><td>Revisa contratos; validador e testes de conteúdo sobre o formato de A; lista dos 18 conteúdos e fontes; <code>trail.json</code> e <code>essay-topics.json</code> (3 temas) até 18h</td><td>Adapter + Fake; prompt v1; corpus de 5 redações (3 temas provisórios próprios); comparação D-010 (tarde, timebox de 3 h); chaves nos 2 provedores</td></tr>
+      <tr><td><strong>24/11</strong></td><td>Repo público novo com docs; create-next-app; Supabase dev e prod (us-east-2, Ohio); Vercel (iad1); instala todos os pacotes; contratos v1 (com <code>content.ts</code>), 0001, <code>app_config</code>, <code>src/server/config.ts</code> e <code>content/config.json</code> até as 14h (seed de config, que só lê <code>content/config.json</code>; não é o <code>seed.ts</code> v1); deploy vazio; CI</td><td>Revisa contratos; Mapa com React Flow sobre fixture</td><td>Revisa contratos; validador e testes de conteúdo sobre o formato de A; lista dos 18 conteúdos e fontes; <code>trail.json</code> e <code>essay-topics.json</code> (3 temas) até 18h</td><td>Adapter + Fake; prompt v1; corpus de 5 redações (3 temas provisórios próprios); comparação D-010 (tarde, timebox de 3 h); chaves nos 2 provedores</td></tr>
       <tr><td><strong>25/11</strong></td><td>Auth (cadastro, entrar, sair, aviso de dados de teste, trigger de profile); layout e nav; <code>seed.ts</code> v1 (lê <code>demo-essays.json</code> se já existir, senão ignora) e conta demo</td><td>Mapa sobre fixtures até os 6 primeiros conteúdos de C; drawer, filtro por estado; Trilha</td><td>6 conteúdos completos; página de conteúdo (seções, fonte, pergunta rápida)</td><td>Decide o modelo (ADR-005); <code>content/essays/demo-essays.json</code> (<code>demoAccountEssays</code> e <code>fallbackExamples</code>); migration <code>reserve_ai_usage</code> aplicada em <code>aprumo-dev</code> com <code>db push</code>, tipos regenerados no mesmo PR; rota de feedback com pós-validação</td></tr>
       <tr><td><strong>26/11</strong></td><td><code>/api/health</code>; cron diário (keep-alive e reset da conta demo); esqueleto do smoke e2e (<code>app_config</code> já na etapa 0)</td><td>Fecha o Mapa real (<code>getMapView</code>); Criar Jornada (meta e prazo), <code>/jornada</code>; <code>addContentsToJourney</code></td><td>Mini-simulado, <code>submitQuizAttempt</code>, <code>mastery.ts</code> (RN-007, testado); nó acende</td><td>Tela <code>/redacao</code> (tema, parte, contador, aria-live); retorno com 5 competências e aviso</td></tr>
       <tr><td><strong>27/11</strong></td><td>Início (US-014); revisão de RLS com 2 usuários; primeiro dump de prod, depois <code>db push</code> de prod (religar com <code>supabase link</code>), deploy prod e seed prod</td><td><strong>Checkpoint: Jornada e Mapa ok? Se não, US-016 é cortada.</strong> Cronograma: disponibilidade + <code>schedule.ts</code></td><td>Conteúdos 7 a 12; flashcards (US-018) começam</td><td>Sugestão de competência fraca + "Adicionar à Jornada"; exemplos gravados; teto global e <code>ai_enabled</code></td></tr>
@@ -458,8 +458,8 @@ erDiagram
 <section id="deploy">
   <h2>9. Deploy e operação</h2>
   <ul>
-    <li><strong>Supabase:</strong> dois projetos em sa-east-1, <code>aprumo-dev</code> (time) e <code>aprumo-prod</code> (demo). Quem cria a migration a aplica no <code>aprumo-dev</code> com <code>supabase db push</code>, sem Docker. O <code>db push</code> de produção é só de A: religar com <code>supabase link</code> para <code>aprumo-prod</code>, dump antes, e o vínculo volta ao <code>aprumo-dev</code>. A também roda o seed de prod localmente, com env que nunca vai ao repositório.</li>
-    <li><strong>Vercel:</strong> <code>regions: ["gru1"]</code>; preview por PR apontando para <code>aprumo-dev</code> com <code>AI_PROVIDER=fake</code>; produção na <code>main</code>.</li>
+    <li><strong>Supabase:</strong> dois projetos em us-east-2 (Ohio), <code>aprumo-dev</code> (time) e <code>aprumo-prod</code> (demo), este último também em us-east-2. Quem cria a migration a aplica no <code>aprumo-dev</code> com <code>supabase db push</code>, sem Docker. O <code>db push</code> de produção é só de A: religar com <code>supabase link</code> para <code>aprumo-prod</code>, dump antes, e o vínculo volta ao <code>aprumo-dev</code>. A também roda o seed de prod localmente, com env que nunca vai ao repositório.</li>
+    <li><strong>Vercel:</strong> <code>regions: ["iad1"]</code>; preview por PR apontando para <code>aprumo-dev</code> com <code>AI_PROVIDER=fake</code>; produção na <code>main</code>.</li>
     <li><strong>Healthcheck:</strong> <code>GET /api/health</code> devolve status, banco, IA (habilitada e orçamento restante) e commit. Não chama a IA; 503 se o banco falhar.</li>
     <li><strong>Monitor (obrigatório):</strong> serviço externo gratuito no <code>/api/health</code> a cada 5 min, conferido todo dia por qualquer integrante do grupo, sem escala, e cron diário da Vercel em <code>/api/cron/daily</code> que faz keep-alive e repõe a conta demo, inclusive a senha.</li>
     <li><strong>Congelamento (30/11 a 12/12):</strong> sem commits nem deploy novo. Limites e kill switch mudam em <code>app_config</code> no painel do Supabase. Sem escala: qualquer integrante do grupo atende chamados até 12/12.</li>
@@ -475,7 +475,7 @@ erDiagram
       <tr><td>0:40 a 1:25</td><td>Conta demo, Mapa, criar Jornada com meta e prazo, estudar com fonte, mini-simulado e nó acendendo</td></tr>
       <tr><td>1:25 a 2:20</td><td>Redação (introdução), retorno pelas 5 competências, rótulo "estimativa" com aviso, competência fraca, "Adicionar à Jornada", contador de usos</td></tr>
       <tr><td>2:20 a 2:40</td><td>Flashcards e cronograma em cortes rápidos</td></tr>
-      <tr><td>2:40 a 2:55</td><td>Arquitetura em 1 slide: Next.js + Supabase SP, RLS, adapter de IA, limites de custo, dados fictícios</td></tr>
+      <tr><td>2:40 a 2:55</td><td>Arquitetura em 1 slide: Next.js + Supabase em Ohio (us-east-2), RLS, adapter de IA, limites de custo, dados fictícios</td></tr>
       <tr><td>2:55 a 3:00</td><td>Impacto (acesso à educação) e link</td></tr>
     </tbody>
   </table></div>
@@ -492,7 +492,8 @@ erDiagram
       <tr><td>Conta demo pública esgotada, bagunçada ou com senha trocada</td><td>Limite maior para a demo, reset diário por cron, README sugere cadastro livre</td></tr>
       <tr><td>RLS errada</td><td>Escritas "conquistadas" só pelo servidor, gabarito sem política, teste com 2 usuários no dia 27, Security Advisor</td></tr>
       <tr><td>Supabase Free pausa ou fica sem backup</td><td>Decidido: Free. Monitor obrigatório a cada 5 min (conferido por dia por qualquer integrante do grupo, sem escala) e cron geram atividade, primeiro dump em 27/11 (antes do primeiro <code>db push</code> de prod), depois antes de cada <code>db push</code> e diário de 29/11 a 12/12, fora do repo, recuperação pelo painel ou com migrations e <code>pnpm seed</code></td></tr>
-      <tr><td>Cold start da Vercel</td><td>Funções na gru1, monitor a cada 5 min, catálogo estático ou revalidado</td></tr>
+      <tr><td>Cold start da Vercel</td><td>Funções na iad1 junto ao banco (us-east-2), monitor a cada 5 min, catálogo estático ou revalidado</td></tr>
+      <tr><td>Desvio de região (D-009)</td><td>banco em Ohio por decisão do PO; Vercel em iad1; latência do navegador (Brasil) até a função maior; dados da demo fictícios</td></tr>
       <tr><td>Limites do Hobby</td><td>Um cron por dia basta, monitor externo faz o resto, uso não comercial</td></tr>
       <tr><td>Demo fora do ar na avaliação</td><td>Healthcheck e alerta, Instant Rollback, qualquer integrante do grupo, sem escala, até 12/12</td></tr>
       <tr><td>Integração tardia entre faixas</td><td>Contratos e fixtures no dia 1, merge 2 vezes por dia, preview por PR, checkpoints em 27, 28 e 29/11</td></tr>
@@ -521,7 +522,7 @@ erDiagram
     <li><strong>D-020 (teto global final):</strong> US$ 20 como referência; o valor final é fixado no dia 1 (<code>ai_global_budget_usd</code>).</li>
     <li><strong>Ponto de atenção (sem escala):</strong> sem dono definido, o dump diário e a conferência do monitor podem não ser feitos por ninguém. O grupo decide a mitigação. Sugestões a registrar, sem decisão: o alerta do monitor chega aos 4 integrantes; quem fizer o dump avisa no canal do grupo.</li>
   </ul>
-  <div class="note"><strong>Confirmar no dia 1:</strong> na documentação oficial, limites do Supabase Free (projetos ativos, armazenamento, tráfego, e-mails de Auth, pausa, backups e restauração), limites do Vercel Hobby (funções, 1 cron por dia, duração de função com Fluid compute, uso não comercial), região <code>gru1</code> e a API do AI SDK na versão instalada (<code>generateText</code> com <code>Output.object</code>, <code>NoObjectGeneratedError</code>).</div>
+  <div class="note"><strong>Confirmar no dia 1:</strong> na documentação oficial, limites do Supabase Free (projetos ativos, armazenamento, tráfego, e-mails de Auth, pausa, backups e restauração), limites do Vercel Hobby (funções, 1 cron por dia, duração de função com Fluid compute, uso não comercial), regiões <code>iad1</code> (Vercel) e us-east-2 (Supabase), e a API do AI SDK na versão instalada (<code>generateText</code> com <code>Output.object</code>, <code>NoObjectGeneratedError</code>).</div>
 </section>
 
 <footer>

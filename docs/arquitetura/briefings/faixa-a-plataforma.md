@@ -35,7 +35,7 @@ O design da aplicação segue o protótipo do Figma (https://object-study-606523
 
 ## 2. Stack e comandos
 
-Next.js App Router + TypeScript + Tailwind (com os tokens do Figma no tema) e `next/font` com Nunito e Quicksand; Supabase (São Paulo, sa-east-1); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar com o grupo (esta faixa cria o projeto, instala **todos** os pacotes na etapa 0 do dia 1 e fixa as versões no lockfile; as outras faixas pedem acréscimos por PR a A).
+Next.js App Router + TypeScript + Tailwind (com os tokens do Figma no tema) e `next/font` com Nunito e Quicksand; Supabase (us-east-2, Ohio); pnpm. **Um único lockfile.** Proibido criar segundo lockfile, trocar de gerenciador ou reinstalar `node_modules` sem combinar com o grupo (esta faixa cria o projeto, instala **todos** os pacotes na etapa 0 do dia 1 e fixa as versões no lockfile; as outras faixas pedem acréscimos por PR a A).
 
 | Comando | Faz |
 |---|---|
@@ -84,7 +84,7 @@ Migration 0001 inclui: todas as tabelas do plano, RLS em todas (catálogo só SE
 
 ## 6. Operação e entregas da faixa
 
-- **Supabase:** 2 projetos em sa-east-1: `aprumo-dev` (compartilhado) e `aprumo-prod` (demo). `pnpm db:push` usa o projeto vinculado: o `db push` de PRODUÇÃO exige religar o projeto (`supabase link` para `aprumo-prod`), com dump antes, e devolver o vínculo ao `aprumo-dev` depois; é tarefa só de A. **Vercel:** `vercel.json` com `regions: ["gru1"]`; preview por PR apontando para `aprumo-dev` e `AI_PROVIDER=fake`; produção na `main`.
+- **Supabase:** 2 projetos em us-east-2 (Ohio): `aprumo-dev` (compartilhado) e `aprumo-prod` (demo). `pnpm db:push` usa o projeto vinculado: o `db push` de PRODUÇÃO exige religar o projeto (`supabase link` para `aprumo-prod`), com dump antes, e devolver o vínculo ao `aprumo-dev` depois; é tarefa só de A. **Vercel:** `vercel.json` com `regions: ["iad1"]`; preview por PR apontando para `aprumo-dev` e `AI_PROVIDER=fake`; produção na `main`.
 - **CI** (GitHub Actions, PR e push na main): lint, typecheck, test. O build é o gate do preview da Vercel.
 - **Pendência técnica do dia 1:** conferir e anotar, com fonte, os limites do Supabase Free e do Vercel Hobby (lista no README dos briefings).
 - **Monitor externo gratuito** (ex.: UptimeRobot) em `/api/health` a cada 5 min, com alerta para os 4 integrantes (mitigação sugerida no plano, sem decisão do grupo ainda).
@@ -98,7 +98,7 @@ Migration 0001 inclui: todas as tabelas do plano, RLS em todas (catálogo só SE
 
 | Dia | Entregas |
 |---|---|
-| 24/11 | **Design system: tokens no tema do Tailwind, `next/font` (Nunito e Quicksand) e componentes base em `src/components/ui`, até o fim do dia.** Repo público novo com os docs; `create-next-app`; Supabase dev e prod; Vercel gru1; **instala todos os pacotes; contratos v1 (com `content.ts` e fixtures de `EssayQuota` e `FlashcardView`), 0001, `app_config` + `src/server/config.ts` + `content/config.json` e seed de config (lê só `content/config.json`) até 14h**; pastas `docs/evidencias/` e `docs/adr/` com `.gitkeep`; deploy vazio no ar; CI; confirmar limites (Free/Hobby). |
+| 24/11 | **Design system: tokens no tema do Tailwind, `next/font` (Nunito e Quicksand) e componentes base em `src/components/ui`, até o fim do dia.** Repo público novo com os docs; `create-next-app`; Supabase dev e prod; Vercel iad1; **instala todos os pacotes; contratos v1 (com `content.ts` e fixtures de `EssayQuota` e `FlashcardView`), 0001, `app_config` + `src/server/config.ts` + `content/config.json` e seed de config (lê só `content/config.json`) até 14h**; pastas `docs/evidencias/` e `docs/adr/` com `.gitkeep`; deploy vazio no ar; CI; confirmar limites (Free/Hobby). |
 | 25/11 | Auth (cadastro, entrar, sair, aviso de dados de teste, trigger de profile); layout `(app)` com menu lateral e tela de Entrada fiéis ao Figma (evidência em `docs/evidencias/faixa-a/`), antes de as outras faixas montarem telas; `seed.ts` v1 (25/11; distinto do seed de config da etapa 0) + conta demo (lê `content/essays/demo-essays.json` se D já o entregou em 25/11; senão ignora). |
 | 26/11 | `/api/health`; cron diário; esqueleto do smoke e2e (`app_config` já entrou na etapa 0, em 24/11). |
 | 27/11 | Início (US-014); revisão de segurança RLS com 2 usuários; primeiro dump de prod, depois `db push`, deploy prod e seed prod. **Checkpoint: Jornada e Mapa ok? Se não, US-016 é cortada.** |
