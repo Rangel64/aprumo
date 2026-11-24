@@ -27,6 +27,8 @@ Referência de implementação para os devs (Next.js + Tailwind). Imagens em `fi
 | Sombras | `--shadow` | 0 12px 36px #49368c17 |
 | | `--shadow-purple` | 0 15px 35px #7b5cff33 |
 
+Nota de contraste: texto pequeno usa `purple-dark` (token `purple-text` no tema). #7b5cff tem 4,36:1 sobre branco e 3,67:1 sobre `purple-light`, abaixo de 4,5:1; `purple-dark` tem 6,02:1 e 5,08:1.
+
 Tipografia (Google Fonts, via `next/font`): corpo **Nunito**; destaque e cartas **Quicksand**.
 
 Mapa de Conteúdos, estados do nó:
