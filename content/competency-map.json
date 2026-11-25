@@ -1,0 +1,49 @@
+{
+  "competencies": [
+    {
+      "competency": 1,
+      "contentSlugs": [
+        "concordancia-verbal-e-nominal",
+        "regencia-e-crase",
+        "pontuacao-virgula",
+        "registro-formal-e-oralidade"
+      ]
+    },
+    {
+      "competency": 2,
+      "contentSlugs": [
+        "tipologia-dissertativo-argumentativo",
+        "leitura-da-proposta-e-recorte-tematico",
+        "estrutura-em-4-paragrafos",
+        "repertorio-sociocultural",
+        "introducao-contextualizacao-e-tese"
+      ]
+    },
+    {
+      "competency": 3,
+      "contentSlugs": [
+        "tese-e-projeto-de-texto",
+        "tipos-de-argumento",
+        "desenvolvimento-topico-frasal",
+        "repertorio-sociocultural",
+        "introducao-contextualizacao-e-tese"
+      ]
+    },
+    {
+      "competency": 4,
+      "contentSlugs": [
+        "conectivos-e-coesao-sequencial",
+        "coesao-referencial",
+        "paragrafacao"
+      ]
+    },
+    {
+      "competency": 5,
+      "contentSlugs": [
+        "proposta-de-intervencao-5-elementos",
+        "direitos-humanos-na-proposta",
+        "conclusao-retomada-e-proposta"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "enem-redacao",
+  "name": "ENEM: Redação",
+  "objective": "Aprender, passo a passo, a escrever uma redação dissertativo-argumentativa no formato do ENEM, cobrindo as cinco competências avaliadas.",
+  "origin": "platform",
+  "color": "#7b5cff",
+  "contentSlugs": [
+    "tipologia-dissertativo-argumentativo",
+    "leitura-da-proposta-e-recorte-tematico",
+    "estrutura-em-4-paragrafos",
+    "repertorio-sociocultural",
+    "introducao-contextualizacao-e-tese",
+    "tese-e-projeto-de-texto",
+    "tipos-de-argumento",
+    "desenvolvimento-topico-frasal",
+    "paragrafacao",
+    "coesao-referencial",
+    "conectivos-e-coesao-sequencial",
+    "concordancia-verbal-e-nominal",
+    "regencia-e-crase",
+    "pontuacao-virgula",
+    "registro-formal-e-oralidade",
+    "proposta-de-intervencao-5-elementos",
+    "direitos-humanos-na-proposta",
+    "conclusao-retomada-e-proposta"
+  ]
+}
