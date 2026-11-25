@@ -54,6 +54,9 @@
 | D-049 | Reduzir deploys de produção na Vercel: cada push na main gera um deploy, inclusive commits só de docs. Avaliar "Ignored Build Step" para pular o deploy quando só `docs/` ou `*.md` mudou. Também fixar `engines.node` em "24.x" no `package.json` para evitar o aviso de upgrade automático (baixa). | sprint-01 | 2026-11-25 | aberta | - |
 | D-050 | Horário do cron diário de `/api/cron/daily` (`0 9 * * *` em UTC, que é 06h em Brasília): confirmar com o grupo antes do deploy (baixa). | sprint-01 | 2026-11-24 | aberta | - |
 | D-051 | Limite de tentativas do mini-simulado contra força bruta do gabarito: sem limite, ~15 chamadas de `submitQuizAttempt` deduzem as 5 respostas. Proposta: `app_config.quiz_max_attempts_per_day`, pausa mínima entre tentativas e migration aditiva de índice em `quiz_attempts`. Recomendação: adiar para depois do MVP e manter como risco conhecido (R-18 na sprint 01). Decide o PO. | US-013 | 2026-11-25 | aberta | - |
+| D-052 | Versionar ou não `verify-env/` (ambiente de verificação do Supabase local, hoje fora do repositório, no worktree escola-wt-verify), para o time reproduzir a verificação das tarefas T5, T9 e T14? Hoje o roteiro `verify-env/e2e/verify.mjs` é a única prova de US-012 e de parte da US-013. | sprint-01 | 2026-11-25 | aberta | - |
+| D-053 | As rotas de não encontrado (`/trilhas/[slug]` e `/conteudos/[slug]`) respondem HTTP 200 com a tela "não encontrada", porque o `loading.tsx` já enviou o status. Manter o padrão do repositório ou responder 404? O teste `e2e/faixa-b.spec.ts` (linha 107) diz "dá 404" no nome, mas confere só o texto (observação O1 da T9; baixa prioridade). | sprint-01 | 2026-11-25 | aberta | - |
+
 
 Nota (não é decisão, sem ID): o `server-only` pode falhar quando o seed roda sob `tsx` (T4). Conferir o comportamento no pacote instalado; se falhar, o script cria o client com `@supabase/supabase-js`, como prevê o passo 2 da T4.
 

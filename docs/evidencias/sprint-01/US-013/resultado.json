@@ -1,0 +1,25 @@
+{
+  "id": "US-013",
+  "titulo": "Mini-simulado (3 de 5 reprova, 4 de 5 domina, teclado, segurança)",
+  "status": "falhou",
+  "passos": [
+    { "n": 1, "criterio": "teclado", "descricao": "Tab entre grupos, setas/Espaço marcam, Enter no botão envia", "status": "passou", "foto": "US-013__03-respondido-por-teclado.jpg" },
+    { "n": 2, "criterio": "4 de 5", "descricao": "status 'Você acertou 4 de 5. Conteúdo dominado.', foco no h2, mastered no banco", "status": "passou", "foto": "US-013__04-resultado-4-de-5-dominado.jpg" },
+    { "n": 3, "criterio": "3 de 5", "descricao": "Reprova, status sem links, foco no h2, lista seções, não domina (conta nova)", "status": "passou", "foto": "US-013__07-resultado-3-de-5-conta-nova.jpg" },
+    { "n": 4, "criterio": "faltando", "descricao": "Envio sem respostas anuncia 'Faltam 5 respostas...' e foca q0-o0", "status": "passou", "foto": "US-013__06-faltam-respostas-anunciado.jpg" },
+    { "n": 5, "criterio": "RN-007", "descricao": "3 de 5 depois de 4 de 5 não rebaixa mastered", "status": "passou", "foto": "US-013__05-resultado-3-de-5-reprova-apos-dominar.jpg" },
+    { "n": 6, "criterio": "Mapa", "descricao": "'Ver no Mapa' leva a /mapa?estado=dominado, que deveria listar o conteúdo", "status": "falhou", "foto": "US-013__04b-mapa-dominado.jpg" }
+  ],
+  "fotos": ["US-013__01-abre-mini-simulado.jpg", "US-013__02-foco-visivel-no-radio.jpg", "US-013__03-respondido-por-teclado.jpg", "US-013__04-resultado-4-de-5-dominado.jpg", "US-013__04b-mapa-dominado.jpg", "US-013__05-resultado-3-de-5-reprova-apos-dominar.jpg", "US-013__06-faltam-respostas-anunciado.jpg", "US-013__07-resultado-3-de-5-conta-nova.jpg"],
+  "defeito": {
+    "descricao": "/mapa?estado=dominado é o placeholder 'Em construção' (T9): não lista o conteúdo dominado. O cartão de resultado promete 'Seu nó já aparece aceso no Mapa'. O e2e faixa-c 'Ver no Mapa' (linha 105) falha por isso.",
+    "arquivo_linha": "src/app/(app)/mapa/page.tsx:1 (placeholder); promessa em src/features/quiz/QuizForm.tsx:186",
+    "reproducao": "Conta nova, responder 4 de 5, clicar 'Ver no Mapa'; ou pnpm test:e2e e2e/faixa-c.spec.ts",
+    "severidade": "media",
+    "test_fail": false
+  },
+  "comando": "node verify-env/e2e/verify.mjs; pnpm test:e2e e2e/faixa-c.spec.ts",
+  "ambiente": "Supabase local verify-aprumo + next start :23000",
+  "branch": "main c41a892 (detached)",
+  "data": "2026-11-25"
+}
