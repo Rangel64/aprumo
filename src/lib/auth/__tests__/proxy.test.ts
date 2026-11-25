@@ -28,7 +28,28 @@ vi.mock("@supabase/ssr", () => ({
   }),
 }));
 
-import { proxy } from "@/proxy";
+import { config, proxy } from "@/proxy";
+
+// O matcher do Next é path-to-regexp; este padrão só usa grupos, então vale como RegExp.
+const matches = (path: string) => new RegExp(`^${config.matcher[0]}$`).test(path);
+
+describe("matcher do proxy", () => {
+  it("exclui api/health e api/cron (sem dependência do Supabase Auth)", () => {
+    expect(matches("/api/health")).toBe(false);
+    expect(matches("/api/cron/daily")).toBe(false);
+  });
+
+  it("mantém as demais rotas cobertas, inclusive outras /api", () => {
+    for (const p of ["/", "/inicio", "/api/essays", "/api/healthz", "/api/cronjob"]) {
+      expect(matches(p)).toBe(true);
+    }
+  });
+
+  it("continua excluindo estáticos", () => {
+    expect(matches("/_next/static/a.js")).toBe(false);
+    expect(matches("/logo.svg")).toBe(false);
+  });
+});
 
 beforeEach(() => {
   process.env.NEXT_PUBLIC_SUPABASE_URL = "https://example.supabase.co";
