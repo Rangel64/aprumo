@@ -14,7 +14,7 @@ import { expect, test, type Page } from "@playwright/test";
  * O gabarito sai de `content/<slug>.json` (a fonte do seed), lido aqui pelo Node do teste; a
  * página nunca o traz. O domínio é definitivo (RN-007): repetir o cenário 4 de 5 com a mesma
  * conta mantém passed=true e o teste segue verde, mas só uma conta nova prova a transição de
- * "não dominado" para "dominado". "Aceso" no Mapa depende da T9 (ver test.fixme abaixo).
+ * "não dominado" para "dominado". O teste do nó aceso no Mapa é real (T9 entregue).
  */
 const email = process.env.E2E_USER_EMAIL;
 const password = process.env.E2E_USER_PASSWORD;
@@ -105,10 +105,20 @@ test.describe("mini-simulado", () => {
     await expect(page.getByText(loadKey().title).first()).toBeVisible();
   });
 
-  // Depende da T9 (Mapa): o nó dominado ainda não usa MapNode (que expõe ", dominado" em texto
-  // sr-only). Quando existir, trocar por asserção do nó aceso e remover o fixme.
-  test.fixme("4 de 5: o nó do conteúdo está aceso (dominado) no Mapa", async ({ page }) => {
+  // O nó do Mapa (T9) usa o MapNode de A, que expõe ", dominado" em texto sr-only: o nome
+  // acessível do botão do nó é "<título> , dominado" (o sr-only absoluto deixa um espaço antes da vírgula; pode ter ", revisado hoje" depois).
+  test("4 de 5: o nó do conteúdo está aceso (dominado) no Mapa", async ({ page }) => {
+    // Garante o domínio nesta conta (idempotente, RN-007) antes de olhar o Mapa.
+    await page.goto(`/conteudos/${slug}/mini-simulado`);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await answer(page, 4);
+    await page.getByRole("button", { name: "Enviar respostas" }).click();
+    await expect(page.getByRole("heading", { level: 2, name: "Conteúdo dominado" })).toBeFocused();
+
     await page.goto("/mapa");
-    await expect(page.getByText(new RegExp(`${loadKey().title}, dominado`))).toBeVisible();
+    const title = loadKey().title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    await expect(
+      page.getByRole("button", { name: new RegExp(`^${title}\\s*,\\s*dominado`) }),
+    ).toBeVisible();
   });
 });

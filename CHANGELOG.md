@@ -2,9 +2,10 @@
 
 ## [Não lançado]
 ### Adicionado
-- T14 (KAN-45) em PR, aguardando merge: mini-simulado em /conteudos/[slug]/mini-simulado, regra de domínio pura (RN-007, 5 questões e 80% vindos do banco/config), correção só no servidor (gabarito fora do cliente), promoção a dominado sem rebaixar e e2e pulado sem credenciais de teste; US-013 implementada, não testada (sem e2e com banco) (M-037)
+- T9 (KAN-40) em PR, aguardando merge: mapa em /mapa com React Flow, filtro por estado, drawer acessível, Trilha em /trilhas/[slug] e teste do nó aceso; US-006, US-009 e US-010 testadas em e2e local com Supabase (M-038)
+- T14 (KAN-45) mergeada pelo PR #9 (merge c41a892): mini-simulado em /conteudos/[slug]/mini-simulado, regra de domínio pura (RN-007, 5 questões e 80% vindos do banco/config), correção só no servidor (gabarito fora do cliente), promoção a dominado sem rebaixar e e2e pulado sem credenciais de teste; US-013 testada em e2e local com Supabase (M-037, M-038)
 - T5 (KAN-36) mergeada pelo PR #8 (merge c2cf114): rotas GET /api/health e GET /api/cron/daily (Bearer CRON_SECRET, keep-alive, demoReset=skipped até a T4), cron diário 0 9 * * * (UTC) em vercel.json com iad1, health com contagem paginada de ai_usage, proxy que não atua em api/health e api/cron, configuração do Playwright (Chromium padrão, canal opcional por E2E_BROWSER_CHANNEL) e esqueleto do smoke e2e; vitest exclui e2e/** (M-036)
-- T13 (KAN-44) mergeada pelo PR #7 (merge 0eac146): 6 conteúdos com fonte da Cartilha A Redação do Enem 2026 (INEP), página /conteudos/[slug] e marcação de estudo que não rebaixa conteúdo dominado; US-012 e US-049 seguem abertas (M-035, M-036)
+- T13 (KAN-44) mergeada pelo PR #7 (merge 0eac146): 6 conteúdos com fonte da Cartilha A Redação do Enem 2026 (INEP), página /conteudos/[slug] e marcação de estudo que não rebaixa conteúdo dominado; US-012 testada em e2e local (M-038); US-049 segue parcial (M-035, M-036)
 - T12 (KAN-43) concluída pelo PR #6 (commit dbc5854): validador de content/ (scripts/validate-content.ts), trail.json, essay-topics.json, competency-map.json e lista de fontes; validador com 0 erros e 18 pendentes (M-034)
 - T3 (KAN-34) concluída pelo PR #5 (merge 8c02e64): cadastro, entrada, saída, proxy de sessão, layout com menu e Entrada fiel ao Figma; `pnpm run build` passa a ser obrigatório antes de reportar e de abrir PR; deploy de produção com throttling temporário da Vercel a confirmar (M-033)
 - T2 (KAN-33) concluída pelos PRs #2, #3 e #4: contratos v1, migration 0001 com RLS aplicada em aprumo-dev, clientes Supabase, config, seed de config, design system base e types.ts gerado do banco; RLS verificada em 75 de 77 casos após corrigir 2 falsos negativos do script (M-032)
@@ -23,6 +24,7 @@
 - 5 briefings das faixas A a D criados em docs/arquitetura/briefings/ (README.md, faixa-a-plataforma.md, faixa-b-mapa-jornada.md, faixa-c-estudo-conteudo.md, faixa-d-redacao-ia.md), a partir do plano da fase H; D-010, D-020 e D-030 seguem em aberto (M-018)
 - Pendências D-031 (regra de quem ajusta teste quebrado de outra faixa) e D-032 (possível divergência de Gherkin em US-010 e US-018), ambas abertas e de baixa prioridade (M-018)
 ### Alterado
+- Skill verify-in-docker (global, fora do repositório) ganha o modo Supabase local; cópia anterior em SKILL.md.bak-antes-supabase (M-039)
 - T1 (KAN-32) concluída: CI verde, deploy na Vercel, variáveis cadastradas, secret scanning e push protection ativos; resta verificar 3 itens do ADR-002 (M-031)
 - Região do banco Supabase aprumo-dev em us-east-2 (Ohio), em desvio da D-009 (São Paulo); Vercel em iad1; RNF-007 com nota de desvio e risco R-17 aceito na fase H; D-046 resolvida (M-029)
 - Sprint 01: design system em T2 e T3, critério de fidelidade ao Figma nas tarefas de UI, risco R-16 e D-037/D-038 em aberto; matriz liga RNF-024 às histórias de UI da fase H (M-026)

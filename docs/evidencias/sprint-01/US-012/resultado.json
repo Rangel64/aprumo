@@ -1,0 +1,16 @@
+{
+  "id": "US-012",
+  "titulo": "Página de conteúdo (/conteudos/<slug>): pergunta rápida, fontes, teclado",
+  "status": "passou",
+  "passos": [
+    { "n": 1, "criterio": "a11y", "descricao": "Região role=status aria-live=polite vazia antes; após Conferir (Enter) anuncia o resultado", "status": "passou", "foto": "US-012__03-pergunta-rapida-anunciada.jpg" },
+    { "n": 2, "criterio": "teclado", "descricao": "Setas/Espaço marcam o rádio; Tab chega ao Conferir; foco visível (outline 2px)", "status": "passou", "foto": "US-012__02-foco-no-conferir.jpg" },
+    { "n": 3, "criterio": "fontes", "descricao": "6 de 6 fontes com link http(s), target=_blank, rel noopener noreferrer; foco visível no link", "status": "passou", "foto": "US-012__04-foco-no-link-de-fonte.jpg" }
+  ],
+  "fotos": ["US-012__01-abre-conteudo.jpg", "US-012__02-foco-no-conferir.jpg", "US-012__03-pergunta-rapida-anunciada.jpg", "US-012__04-foco-no-link-de-fonte.jpg"],
+  "defeito": null,
+  "comando": "node verify-env/e2e/verify.mjs (Playwright, msedge)",
+  "ambiente": "Supabase local verify-aprumo + next start :23000",
+  "branch": "main c41a892 (detached)",
+  "data": "2026-11-25"
+}
