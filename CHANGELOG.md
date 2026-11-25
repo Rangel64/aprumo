@@ -2,6 +2,8 @@
 
 ## [Não lançado]
 ### Adicionado
+- Bateria completa da T16 (KAN-47): e2e de flashcards cobre a fila (cartão vencido aparece; cartão futuro e conteúdo sem content_progress não aparecem) e o reset da conta demo é repetível; lint, typecheck, 214 testes, build, e2e 14 de 14, smoke em 1024 px e 375 px, rls:check 77 de 77 e teste de flashcard_states entre dois usuários 8 de 8; T16 segue aguardando PR e aceite do PO (M-042)
+- T16 (KAN-47) implementada na branch faixa-c/KAN-47-flashcards, ainda sem merge: revisão de flashcards em /revisar com 4 níveis de confiança e agendamento simples, sem alterar o domínio do conteúdo (US-018, RF-025; e2e real com Playwright e evidência de tela verificados; aguardando PR e aceite do PO) (M-040)
 - T9 (KAN-40) em PR, aguardando merge: mapa em /mapa com React Flow, filtro por estado, drawer acessível, Trilha em /trilhas/[slug] e teste do nó aceso; US-006, US-009 e US-010 testadas em e2e local com Supabase (M-038)
 - T14 (KAN-45) mergeada pelo PR #9 (merge c41a892): mini-simulado em /conteudos/[slug]/mini-simulado, regra de domínio pura (RN-007, 5 questões e 80% vindos do banco/config), correção só no servidor (gabarito fora do cliente), promoção a dominado sem rebaixar e e2e pulado sem credenciais de teste; US-013 testada em e2e local com Supabase (M-037, M-038)
 - T5 (KAN-36) mergeada pelo PR #8 (merge c2cf114): rotas GET /api/health e GET /api/cron/daily (Bearer CRON_SECRET, keep-alive, demoReset=skipped até a T4), cron diário 0 9 * * * (UTC) em vercel.json com iad1, health com contagem paginada de ai_usage, proxy que não atua em api/health e api/cron, configuração do Playwright (Chromium padrão, canal opcional por E2E_BROWSER_CHANNEL) e esqueleto do smoke e2e; vitest exclui e2e/** (M-036)
