@@ -15,7 +15,7 @@ Projeto sem código. Status inicial: planejado. Coluna Fase: H = hackathon (vige
 | US-009 | H | UC-004 | RF-008 (RNF-024) | - | - | planejado |
 | US-010 | H | UC-003 | RF-010 (RN-020; RNF-024) | - | - | planejado |
 | US-011 | H | UC-003 | RF-011 a RF-016 (RNF-024) | - | - | planejado |
-| US-012 | H | UC-004 | RF-017, RF-018, RF-022 (RNF-024) | - | - | planejado |
+| US-012 | H | UC-004 | RF-017, RF-018, RF-022 (RNF-024) | src/app/(app)/conteudos/[slug] (page, loading, error, not-found), src/features/study, src/server/queries/content.ts, src/server/actions/study.ts, content/*.json (1 a 6, T13; em PR, não mergeado) | src/features/study/__tests__/safe-url.test.ts e quick-question.test.ts (sem teste da página; e2e pendente) | implementado (T13 em PR, aguardando merge) |
 | US-013 | H | UC-004 | RF-009, RF-020, RF-021 (RN-007; RNF-024) | - | - | planejado |
 | US-014 | H | - | RF-023 (RNF-024) | - | - | planejado |
 | US-015 | pós | UC-002 | RF-024 | - | - | planejado |
@@ -52,7 +52,7 @@ Projeto sem código. Status inicial: planejado. Coluna Fase: H = hackathon (vige
 | US-046 | H | - | RF-059 (RNF-016, RNF-018, RNF-022, RNF-023; D-025, D-026) | - | - | planejado |
 | US-047 | H | - | RF-061 | - | - | planejado |
 | US-048 | H | - | RF-060 (RNF-017) | - | - | planejado |
-| US-049 | H | - | RF-062 (RN-018) | - | - | planejado |
+| US-049 | H | - | RF-062 (RN-018) | scripts/validate-content.ts, src/domain/content/validate.ts, content/trail.json, content/essay-topics.json, content/competency-map.json, content/conteudos-e-fontes.md (T12, na main); content/*.json de 1 a 6 (T13, em PR) | src/domain/content/__tests__/validate.test.ts; validador com 0 erros e 18 pendentes (T12) | implementado parcial (T12 na main; 6 de 18 conteúdos em PR; 7 a 18 na T15) |
 
 Cobertura: RF-001 a RF-062 aparecem em pelo menos uma história.
 

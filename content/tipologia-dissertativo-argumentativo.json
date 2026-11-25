@@ -1,0 +1,154 @@
+{
+  "slug": "tipologia-dissertativo-argumentativo",
+  "title": "Tipologia e gêneros: o texto dissertativo-argumentativo",
+  "summary": "O que caracteriza o texto dissertativo-argumentativo exigido na redação do ENEM, por que ele não é uma narração nem uma simples exposição e como reconhecer quando o texto se afasta do tipo pedido.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 0,
+    "y": 200
+  },
+  "sort": 1,
+  "prerequisites": [],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Um texto que defende um ponto de vista",
+      "bodyMd": "A prova de redação pede um texto **dissertativo-argumentativo em prosa**. Isso significa que você assume um ponto de vista sobre o tema e o sustenta com argumentos, em vez de apenas descrever fatos ou contar uma história.\n\nPense assim: quem lê deve terminar o texto sabendo qual é a sua posição e por que ela faz sentido.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 14 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "A dupla natureza: dissertar e argumentar",
+      "bodyMd": "O tipo tem duas faces que trabalham juntas:\n\n- **Argumentativo**: há uma opinião a defender (a tese).\n- **Dissertativo**: há explicação, isto é, informações, exemplos e raciocínio que justificam a opinião.\n\nSó expor ideias, sem posicionamento claro, deixa o texto expositivo. Só opinar, sem explicar, deixa o texto frágil. O equilíbrio entre os dois é o que se espera.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 14 e 26 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Quando o texto sai do tipo pedido",
+      "bodyMd": "Se predominam traços de outro tipo textual, como a **narração** ou a **descrição**, o texto deixa de cumprir o que a proposta pede. Exemplos de desvio: virar um poema, uma carta pessoal ou o relato de uma experiência vivida.\n\nIsso não proíbe, dentro do argumento, um trecho curto que conte um episódio para ilustrar a ideia. O que não pode é o texto inteiro se reduzir a esse relato.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26 (quadro sobre tipo textual)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Do relato ao argumento (exemplo fictício)",
+      "bodyMd": "Tema fictício: **o uso do celular em sala de aula**.\n\n*Versão narrativa:* \"Ontem, na aula de Geografia, meu colega Davi ficou mexendo no celular e a professora pediu que guardasse.\"\n\n*Versão argumentativa:* \"O uso do celular em sala de aula deve ser regulado, pois, sem orientação, o aparelho concorre com a atenção dos estudantes e reduz o aproveitamento da aula.\"\n\nA segunda versão traz uma tese e já aponta uma razão. O episódio da primeira pode aparecer no texto, mas apenas como ilustração dessa razão.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26 (inspirado na distinção entre narração e dissertação)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Responda antes de seguir. Esta pergunta é só para você se autoavaliar e não conta para o domínio do conteúdo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26 (tipo dissertativo-argumentativo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "Qual alternativa descreve melhor o texto dissertativo-argumentativo?",
+        "options": [
+          "Conta uma história com personagens e final surpreendente.",
+          "Defende um ponto de vista e o justifica com argumentos.",
+          "Lista características de um objeto sem tomar posição.",
+          "Registra em versos a emoção do autor sobre o tema."
+        ],
+        "correctIndex": 1,
+        "explanation": "O tipo se organiza em torno da defesa de um ponto de vista, fundamentada em argumentos. Narrar, apenas descrever ou fazer poesia são outros tipos."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- O texto da redação defende um ponto de vista e o explica com argumentos.\n- É argumentativo (tem tese) e dissertativo (explica e justifica).\n- Narração, descrição ou poema como forma dominante afastam o texto do tipo pedido.\n- Um trecho curto de relato, a serviço do argumento, é aceitável.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 14 e 26 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Em uma redação do ENEM, o que significa dizer que o texto é argumentativo?",
+      "options": [
+        "Ele reproduz as opiniões dos textos motivadores.",
+        "Ele defende uma posição própria sobre o tema.",
+        "Ele evita qualquer tomada de posição.",
+        "Ele apresenta apenas dados numéricos."
+      ],
+      "correctIndex": 1,
+      "explanation": "A face argumentativa é a defesa de um ponto de vista. Copiar os textos motivadores, evitar posição ou só listar dados não cumpre isso.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 14 e 26",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Um estudante escreve um texto inteiro contando uma situação que viveu na escola, sem tese nem argumentos. O que se pode dizer desse texto?",
+      "options": [
+        "Ele atende ao tipo pedido, pois é pessoal.",
+        "Ele é dissertativo, pois fala de um tema.",
+        "Predomina a narração, afastando-se do tipo dissertativo-argumentativo.",
+        "Ele é argumentativo, pois tem emoção."
+      ],
+      "correctIndex": 2,
+      "explanation": "Quando o texto se reduz a um relato, predomina a narração, que não é o tipo solicitado.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Por que a expressão \"dupla natureza\" é usada para o texto dissertativo-argumentativo?",
+      "options": [
+        "Porque ele deve ter dois autores.",
+        "Porque exige duas versões do mesmo texto.",
+        "Porque une a defesa de um ponto de vista a explicações que o justificam.",
+        "Porque mistura narração e descrição em partes iguais."
+      ],
+      "correctIndex": 2,
+      "explanation": "A natureza é dupla porque argumenta (defende) e disserta (explica para justificar).",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual trecho tem característica mais próxima do tipo dissertativo-argumentativo?",
+      "options": [
+        "\"Choveu a tarde toda e a rua ficou vazia.\"",
+        "\"A cidade é grande, barulhenta e cheia de cores.\"",
+        "\"A bicicleta compartilhada deve ser ampliada, pois reduz o tempo de deslocamento e o custo para quem estuda.\"",
+        "\"Querida amiga, escrevo para contar como foi a viagem.\""
+      ],
+      "correctIndex": 2,
+      "explanation": "Só a terceira opção traz uma posição (ampliar) acompanhada de razões. As demais narram, descrevem ou são carta pessoal. Exemplos escritos para este material.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26",
+      "sectionPosition": 4
+    },
+    {
+      "stem": "Um participante usa, no segundo parágrafo, uma frase curta contando um fato local para ilustrar um argumento, e o restante do texto é argumentativo. Qual é a leitura mais adequada?",
+      "options": [
+        "O texto deixa de ser dissertativo-argumentativo por conter um fato narrado.",
+        "O trecho pontual a serviço do argumento é aceitável, pois o texto segue predominantemente argumentativo.",
+        "O texto deve ser anulado.",
+        "O fato narrado deve ocupar a maior parte do texto."
+      ],
+      "correctIndex": 1,
+      "explanation": "Trechos pontuais de narração podem sustentar a tese. O problema é a predominância de outro tipo textual.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 26",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é um texto dissertativo-argumentativo?",
+      "back": "Texto que defende um ponto de vista sobre um assunto e o justifica com argumentos e explicações."
+    },
+    {
+      "front": "Por que se fala em \"dupla natureza\" desse tipo textual?",
+      "back": "É argumentativo porque defende uma opinião e dissertativo porque explica para justificá-la."
+    },
+    {
+      "front": "Um relato pessoal curto pode aparecer na redação?",
+      "back": "Sim, como trecho pontual que ilustra o argumento. Não pode ocupar o texto todo nem substituir a tese."
+    }
+  ]
+}

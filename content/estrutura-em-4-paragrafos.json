@@ -1,0 +1,156 @@
+{
+  "slug": "estrutura-em-4-paragrafos",
+  "title": "Estrutura em 4 parágrafos",
+  "summary": "Um modelo de organização muito comum na redação: introdução, dois parágrafos de desenvolvimento e conclusão com proposta, ligado à ideia de proposição, argumentação e conclusão.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 320,
+    "y": 340
+  },
+  "sort": 3,
+  "prerequisites": [
+    "tipologia-dissertativo-argumentativo"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Proposição, argumentação e conclusão",
+      "bodyMd": "O texto dissertativo-argumentativo apresenta uma **proposição** (a ideia que será defendida), uma **argumentação** que a sustenta e uma **conclusão**. Essa é a base da estrutura esperada.\n\nA divisão em quatro parágrafos é uma forma prática de organizar essas três partes.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 27 (quadro de níveis da Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "O modelo em quatro parágrafos",
+      "bodyMd": "Um arranjo frequente, também visto nas redações de amostra comentadas pela Cartilha:\n\n1. **Introdução**: contextualiza o tema, apresenta a tese e antecipa os argumentos.\n2. **Desenvolvimento 1**: primeiro argumento, explicado e exemplificado.\n3. **Desenvolvimento 2**: segundo argumento, explicado e exemplificado.\n4. **Conclusão**: retoma a tese e apresenta a proposta de intervenção.\n\nEste é um modelo, não uma regra: o que importa é que as partes estejam claras e articuladas. Nas partes da Cartilha que consultamos, ela não fixa um número de parágrafos.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 e 48 (comentários de redações de amostra)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Cada parágrafo, uma função",
+      "bodyMd": "Um parágrafo é uma unidade do texto com uma ideia central. Ter um único bloco de texto, sem divisão em parágrafos, é apontado como problema na avaliação de coesão.\n\nNo modelo de quatro parágrafos, cada um tem uma tarefa bem delimitada, o que ajuda quem lê a seguir o raciocínio e ajuda quem escreve a não misturar ideias.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 33 (Competência IV)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Esqueleto de exemplo (fictício)",
+      "bodyMd": "Tema fictício: **o descarte de eletrônicos em cidades médias**.\n\n- *Introdução:* o consumo de aparelhos cresceu; tese: o descarte inadequado resulta de falta de informação e de pontos de coleta.\n- *Desenvolvimento 1:* falta de informação sobre como descartar.\n- *Desenvolvimento 2:* poucos pontos de coleta.\n- *Conclusão:* retoma a tese e propõe uma ação de um agente, com meio e finalidade.\n\nObserve que a introdução já antecipa os dois argumentos que virão.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (projeto argumentativo comentado)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (estrutura em parágrafos)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No modelo de quatro parágrafos, qual é a função do último parágrafo?",
+        "options": [
+          "Apresentar o primeiro argumento.",
+          "Contextualizar o tema.",
+          "Retomar a tese e apresentar a proposta de intervenção.",
+          "Repetir a introdução com as mesmas palavras."
+        ],
+        "correctIndex": 2,
+        "explanation": "A conclusão retoma a tese e traz a proposta de intervenção. Contextualizar é função da introdução."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- O texto tem proposição, argumentação e conclusão.\n- Quatro parágrafos é um modelo comum: introdução, dois desenvolvimentos e conclusão.\n- É um modelo, não uma regra fixa de número de parágrafos.\n- Cada parágrafo cumpre uma função e deve se articular aos demais.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 27 e 43 (quadro da Competência II e amostras)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Qual sequência corresponde ao modelo de quatro parágrafos apresentado?",
+      "options": [
+        "Conclusão, desenvolvimento, desenvolvimento, introdução.",
+        "Introdução, desenvolvimento 1, desenvolvimento 2, conclusão.",
+        "Introdução, conclusão, desenvolvimento, desenvolvimento.",
+        "Desenvolvimento, introdução, conclusão, conclusão."
+      ],
+      "correctIndex": 1,
+      "explanation": "A ordem natural é introdução, dois desenvolvimentos e conclusão.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "A proposta de intervenção aparece, nesse modelo, em qual parágrafo?",
+      "options": [
+        "Na introdução.",
+        "No primeiro desenvolvimento.",
+        "No segundo desenvolvimento.",
+        "Na conclusão."
+      ],
+      "correctIndex": 3,
+      "explanation": "Na conclusão, junto da retomada da tese.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "O que a introdução faz, além de contextualizar o tema?",
+      "options": [
+        "Apresenta a tese e antecipa os argumentos.",
+        "Apresenta apenas a proposta de intervenção.",
+        "Copia o texto motivador.",
+        "Narra uma experiência pessoal longa."
+      ],
+      "correctIndex": 0,
+      "explanation": "A introdução contextualiza, apresenta a tese e antecipa os argumentos que serão desenvolvidos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Sobre o número de parágrafos, qual afirmação está mais adequada ao que foi estudado?",
+      "options": [
+        "Quatro parágrafos é um modelo comum, mas o essencial é ter partes claras e articuladas.",
+        "Qualquer texto com mais de quatro parágrafos é anulado.",
+        "Um único parágrafo longo é o ideal.",
+        "O número de parágrafos nunca importa, nem a organização."
+      ],
+      "correctIndex": 0,
+      "explanation": "O material trata o modelo como uma organização frequente, não como regra. Ao mesmo tempo, texto sem divisão em parágrafos é apontado como problema de coesão.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 48",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "No esqueleto de exemplo sobre descarte de eletrônicos (fictício), qual é a função do desenvolvimento 2?",
+      "options": [
+        "Apresentar a tese pela primeira vez.",
+        "Explicar e exemplificar o segundo argumento, a falta de pontos de coleta.",
+        "Propor a intervenção.",
+        "Contextualizar o tema."
+      ],
+      "correctIndex": 1,
+      "explanation": "Cada desenvolvimento trata de um argumento. O segundo, no exemplo, é a falta de pontos de coleta.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 4
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Quais são as três partes básicas do texto dissertativo-argumentativo?",
+      "back": "Proposição, argumentação e conclusão."
+    },
+    {
+      "front": "O que cada parágrafo faz no modelo de quatro parágrafos?",
+      "back": "Introdução (contexto, tese, antecipação), dois desenvolvimentos (um argumento cada) e conclusão (retomada e proposta)."
+    },
+    {
+      "front": "Quatro parágrafos é obrigatório?",
+      "back": "Não. É um modelo comum. O importante é ter partes claras, articuladas e bem divididas em parágrafos."
+    }
+  ]
+}

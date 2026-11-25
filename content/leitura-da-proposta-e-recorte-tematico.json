@@ -1,0 +1,156 @@
+{
+  "slug": "leitura-da-proposta-e-recorte-tematico",
+  "title": "Leitura da proposta e recorte temático (fuga e tangenciamento)",
+  "summary": "Como ler a proposta de redação para identificar o recorte do tema, a diferença entre fuga total e tangenciamento, e como evitar que o texto fique fora do que foi pedido.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 320,
+    "y": 60
+  },
+  "sort": 2,
+  "prerequisites": [
+    "tipologia-dissertativo-argumentativo"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "O tema é um recorte de um assunto maior",
+      "bodyMd": "Toda proposta traz um **tema**: uma delimitação dentro de um assunto mais amplo. Por exemplo, o assunto amplo pode ser \"transporte\", mas o tema pode ser \"o acesso ao transporte escolar em áreas rurais\".\n\nDesenvolver bem o tema é atender a **todas as partes** desse recorte, e não só ao assunto geral.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Como ler a proposta",
+      "bodyMd": "Antes de escrever:\n\n1. Leia o enunciado e os textos motivadores com atenção.\n2. Sublinhe as palavras que delimitam o tema (quem, onde, o quê).\n3. Decida qual será o seu foco e qual ponto de vista vai defender.\n4. Use os textos motivadores como apoio, sem copiá-los: a cópia é avaliada negativamente.\n\nVá além dos textos motivadores com conhecimentos seus.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 (recomendações da Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Fuga total e tangenciamento",
+      "bodyMd": "- **Fuga total**: o texto não desenvolve nem o assunto amplo nem o tema específico.\n- **Tangenciamento**: o texto aborda só o assunto amplo, ou seja, trata o tema de forma parcial.\n\nA fuga total e a falta do tipo textual levam à nota zero na redação. O tangenciamento limita a pontuação em várias competências, por isso vale conferir o recorte a cada parágrafo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 25 e 27 (quadros de fuga e tangenciamento e níveis da Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Exemplo fictício de recorte",
+      "bodyMd": "Tema fictício: **o acesso de jovens de bairros periféricos a bibliotecas públicas**.\n\n- *Dentro do recorte:* discute por que jovens de bairros periféricos têm dificuldade de chegar a bibliotecas e o que isso causa.\n- *Tangenciamento:* fala só da importância da leitura em geral, sem tratar de acesso nem de bairros periféricos.\n- *Fuga:* fala de esportes escolares.\n\nNote que o tangenciamento ainda toca o assunto amplo (leitura), mas deixa de lado a parte específica.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 25 (conceitos de fuga e tangenciamento)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 25 (tangenciamento)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "Um texto trata somente do assunto amplo ao qual o tema pertence, ignorando o recorte específico. Como se chama isso?",
+        "options": [
+          "Fuga total ao tema.",
+          "Tangenciamento ao tema.",
+          "Repertório produtivo.",
+          "Coesão referencial."
+        ],
+        "correctIndex": 1,
+        "explanation": "Abordar apenas o assunto amplo, sem atender ao recorte, é tangenciar o tema. Na fuga total nem o assunto amplo é desenvolvido."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- O tema é um recorte; atenda a todas as suas partes.\n- Leia a proposta, marque o que delimita o tema e defina seu foco antes de escrever.\n- Não copie os textos motivadores.\n- Fuga total: nada do tema nem do assunto. Tangenciamento: só o assunto amplo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 e 25 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Qual é a relação entre assunto amplo e tema em uma proposta de redação?",
+      "options": [
+        "São sinônimos e podem ser trocados.",
+        "O tema é uma delimitação dentro do assunto mais amplo.",
+        "O assunto amplo é mais específico que o tema.",
+        "O tema só aparece nos textos motivadores."
+      ],
+      "correctIndex": 1,
+      "explanation": "O tema delimita um assunto maior. Por isso, tratar só do assunto amplo não basta.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Uma redação sobre \"o acesso de jovens de bairros periféricos a bibliotecas públicas\" fala apenas da importância da leitura para a vida. O que ocorreu?",
+      "options": [
+        "Desenvolvimento completo do tema.",
+        "Fuga total ao tema.",
+        "Tangenciamento ao tema.",
+        "Uso de repertório de bolso."
+      ],
+      "correctIndex": 2,
+      "explanation": "Há contato com o assunto amplo (leitura), mas o recorte (acesso, bairros periféricos, bibliotecas) foi ignorado: tangenciamento. Exemplo fictício.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 25",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual das atitudes ajuda a evitar o afastamento do tema?",
+      "options": [
+        "Escolher o repertório antes de ler a proposta.",
+        "Copiar os trechos principais dos textos motivadores.",
+        "Marcar as palavras que delimitam o tema e definir um foco antes de escrever.",
+        "Escrever sobre o assunto que você mais domina, mesmo que seja outro."
+      ],
+      "correctIndex": 2,
+      "explanation": "Ler a proposta, marcar o que delimita o tema e definir o foco são recomendações de leitura. As outras opções levam à cópia ou à fuga.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "O que a Cartilha diz sobre a cópia de trechos dos textos motivadores?",
+      "options": [
+        "É recomendada para garantir fidelidade ao tema.",
+        "É avaliada negativamente e pode reduzir a pontuação.",
+        "É permitida sem limite.",
+        "Só é problema na conclusão."
+      ],
+      "correctIndex": 1,
+      "explanation": "A cópia recorrente de trechos motivadores é avaliada negativamente. As ideias podem ser apropriadas, mas com palavras próprias e conhecimentos extras.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual par de definições está correto?",
+      "options": [
+        "Fuga: abordar parte do tema. Tangenciamento: não abordar o tema.",
+        "Fuga: não desenvolver nem o assunto amplo nem o tema. Tangenciamento: abordar só o assunto amplo.",
+        "Fuga e tangenciamento são a mesma coisa.",
+        "Fuga: usar muitos conectivos. Tangenciamento: usar poucos."
+      ],
+      "correctIndex": 1,
+      "explanation": "Fuga total é o afastamento do assunto e do tema. Tangenciamento é a abordagem parcial, só do assunto amplo.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 25",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é fuga total ao tema?",
+      "back": "Quando o texto não desenvolve nem o assunto amplo nem o tema específico da proposta."
+    },
+    {
+      "front": "O que é tangenciar o tema?",
+      "back": "Abordar só o assunto mais amplo ao qual o tema pertence, de forma parcial, sem atender ao recorte."
+    },
+    {
+      "front": "O que fazer com os textos motivadores?",
+      "back": "Usar como apoio, com palavras próprias, e ir além deles com conhecimentos seus. Não copiar trechos."
+    }
+  ]
+}

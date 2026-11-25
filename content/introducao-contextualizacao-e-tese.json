@@ -1,0 +1,157 @@
+{
+  "slug": "introducao-contextualizacao-e-tese",
+  "title": "Introdução: contextualização e tese",
+  "summary": "Como construir a introdução: contextualizar o tema, apresentar a tese e antecipar os argumentos que o desenvolvimento vai explorar.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 960,
+    "y": 200
+  },
+  "sort": 5,
+  "prerequisites": [
+    "estrutura-em-4-paragrafos",
+    "repertorio-sociocultural"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Três tarefas da introdução",
+      "bodyMd": "Nas redações de amostra comentadas pela Cartilha, a introdução aparece cumprindo três tarefas:\n\n1. **Contextualizar** o tema.\n2. **Apresentar a tese**, o ponto de vista defendido.\n3. **Antecipar os argumentos** que serão desenvolvidos.\n\nEssa organização dá ao leitor um mapa do que virá.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (projeto argumentativo comentado)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Contextualizar sem se perder",
+      "bodyMd": "A contextualização situa o tema: pode usar um fato histórico, uma obra, um dado, um conceito. Duas cautelas:\n\n- O contexto deve ter **relação direta** com o tema, para não virar repertório de bolso.\n- Deve ser **curto**: o espaço da redação é limitado e o desenvolvimento precisa de linhas.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 16 a 18 e 29 (repertório de bolso e limite de linhas)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "A tese e a antecipação",
+      "bodyMd": "A tese é a resposta do texto à pergunta que o tema levanta. Uma boa tese é **clara** e **defensável**. Ao antecipar dois eixos, por exemplo, você já indica a estrutura dos parágrafos seguintes.\n\nFórmula útil: *\"[Problema] persiste por causa de [argumento 1] e de [argumento 2].\"*",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (tese e antecipação dos argumentos)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Introdução de exemplo (fictícia)",
+      "bodyMd": "Tema fictício: **a escassez de áreas de lazer em bairros densamente povoados**.\n\n\"Em muitas cidades, o crescimento urbano ocupou terrenos antes livres e reduziu os espaços públicos de convivência. Nesse cenário, a escassez de áreas de lazer nos bairros densamente povoados persiste tanto pela falta de planejamento urbano quanto pelo baixo investimento em manutenção.\"\n\nContexto (crescimento urbano), tese (a escassez persiste) e antecipação (planejamento e manutenção) estão no mesmo parágrafo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (estrutura da introdução em amostras comentadas)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (tese e antecipação)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No exemplo, qual trecho antecipa os argumentos do desenvolvimento?",
+        "options": [
+          "\"O crescimento urbano ocupou terrenos antes livres.\"",
+          "\"Tanto pela falta de planejamento urbano quanto pelo baixo investimento em manutenção.\"",
+          "\"Em muitas cidades.\"",
+          "Nenhum trecho antecipa argumentos."
+        ],
+        "correctIndex": 1,
+        "explanation": "Os dois eixos (planejamento e manutenção) indicam o que será desenvolvido nos parágrafos seguintes."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A introdução contextualiza, apresenta a tese e antecipa argumentos.\n- O contexto é pertinente ao tema e curto.\n- A tese é clara e defensável.\n- Antecipar eixos prepara o desenvolvimento.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 (amostras comentadas)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Qual das opções traz as três tarefas da introdução?",
+      "options": [
+        "Narrar, descrever e concluir.",
+        "Contextualizar, apresentar a tese e antecipar os argumentos.",
+        "Copiar o texto motivador, citar e agradecer.",
+        "Propor a intervenção, resumir e encerrar."
+      ],
+      "correctIndex": 1,
+      "explanation": "É o conjunto descrito nas redações de amostra comentadas.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Por que a contextualização deve ser pertinente ao tema?",
+      "options": [
+        "Para ocupar mais linhas.",
+        "Para não parecer uma referência genérica, de bolso, sem relação com a discussão.",
+        "Porque o contexto substitui a tese.",
+        "Porque a contextualização é opcional."
+      ],
+      "correctIndex": 1,
+      "explanation": "O contexto ligado ao tema ajuda a discussão. Já a referência genérica enfraquece o texto.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 16 a 18",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual alternativa é uma tese defensável para o tema fictício \"escassez de áreas de lazer em bairros densamente povoados\"?",
+      "options": [
+        "\"Lazer é bom.\"",
+        "\"A escassez de áreas de lazer decorre da falta de planejamento urbano e do baixo investimento em manutenção.\"",
+        "\"Eu gosto de parques.\"",
+        "\"O Brasil tem muitas cidades.\""
+      ],
+      "correctIndex": 1,
+      "explanation": "A segunda é clara, ligada ao recorte e indica razões a desenvolver. As outras são vagas ou pessoais.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Para que serve antecipar os argumentos na introdução?",
+      "options": [
+        "Para dar ao leitor um mapa do que será desenvolvido.",
+        "Para dispensar o desenvolvimento.",
+        "Para repetir a conclusão.",
+        "Para evitar ter uma tese."
+      ],
+      "correctIndex": 0,
+      "explanation": "A antecipação mostra a estrutura do texto e indica um projeto de texto claro.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Por que é importante que a contextualização seja curta?",
+      "options": [
+        "Porque o espaço é limitado e o desenvolvimento precisa de linhas.",
+        "Porque a introdução não pode ter mais de uma frase.",
+        "Porque contexto longo é proibido por lei.",
+        "Porque o corretor só lê o primeiro parágrafo."
+      ],
+      "correctIndex": 0,
+      "explanation": "Há um número limite de linhas e é preciso escolher bem as informações.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Quais são as três tarefas da introdução?",
+      "back": "Contextualizar o tema, apresentar a tese e antecipar os argumentos."
+    },
+    {
+      "front": "O que deve ter a contextualização?",
+      "back": "Relação direta com o tema e brevidade, para não virar referência genérica nem tomar linhas do desenvolvimento."
+    },
+    {
+      "front": "Que fórmula ajuda a montar tese e antecipação?",
+      "back": "\"[Problema] persiste por causa de [argumento 1] e de [argumento 2].\""
+    }
+  ]
+}

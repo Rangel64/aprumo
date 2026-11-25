@@ -1,0 +1,156 @@
+{
+  "slug": "repertorio-sociocultural",
+  "title": "Repertório sociocultural legitimado e produtivo",
+  "summary": "O que é repertório sociocultural, quando ele é legitimado (pertinente ao tema) e produtivo (usado para sustentar o argumento) e por que o repertório de bolso enfraquece o texto.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 640,
+    "y": 60
+  },
+  "sort": 4,
+  "prerequisites": [
+    "leitura-da-proposta-e-recorte-tematico"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "O que é repertório sociocultural",
+      "bodyMd": "É uma informação, um fato, uma citação ou uma experiência vivida que se relaciona ao tema e **contribui como argumento** para a discussão. Pode vir de áreas variadas: história, literatura, cinema, ciência, música, vivências.\n\nO repertório deve ir além do que está nos textos motivadores.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Legitimado e produtivo",
+      "bodyMd": "Dois critérios ajudam a avaliar um repertório:\n\n- **Legitimado**: é pertinente e tem relação real com o tema.\n- **Produtivo**: é articulado ao argumento e serve para validar o ponto de vista. Não basta citar; é preciso explicar a ligação.\n\nUma referência solta, por mais interessante que seja, não ajuda o texto.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 e 19 a 22 (Competência II e exemplos de uso produtivo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "O risco do repertório de bolso",
+      "bodyMd": "\"Repertório de bolso\" é a referência decorada, genérica, que o participante leva pronta para qualquer tema. Como não nasce do tema, costuma soar forçada, e a Cartilha desestimula esse uso.\n\nPara evitar: escolha referências com relação específica ao tema, ligue-as aos seus argumentos e mostre que entende o que cita. Você já tem conhecimentos válidos: filmes, livros, notícias, estudos, o que viveu.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 16 a 18 (repertório de bolso)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Do solto ao produtivo (exemplo fictício)",
+      "bodyMd": "Tema fictício: **o acesso à água tratada em comunidades isoladas**.\n\n*Solto:* \"Como dizia um filósofo famoso, tudo flui.\" (sem ligação com o tema)\n\n*Produtivo:* \"Segundo dados de saneamento divulgados por um instituto de pesquisa (dado fictício), parte dos domicílios rurais não recebe água tratada, o que expõe crianças a doenças evitáveis. Assim, a falta de infraestrutura transforma um direito básico em privilégio.\"\n\nNo segundo caso, o dado sustenta a ideia e conduz ao argumento.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 19 a 22 (exemplos de repertório produtivo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 e 19 a 22 (repertório produtivo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "Quando um repertório é considerado produtivo?",
+        "options": [
+          "Quando é uma citação famosa, qualquer que seja o tema.",
+          "Quando é articulado ao argumento e ajuda a defender o ponto de vista.",
+          "Quando aparece no primeiro parágrafo.",
+          "Quando vem dos textos motivadores, copiado."
+        ],
+        "correctIndex": 1,
+        "explanation": "A produtividade vem da articulação com o argumento, não da fama da referência nem de sua posição no texto."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- Repertório é informação, fato, citação ou vivência ligada ao tema.\n- Legitimado: pertinente. Produtivo: serve ao argumento.\n- Evite o repertório de bolso, decorado e genérico.\n- Explique a ligação entre a referência e a sua tese.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 a 22 (Competência II)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Qual alternativa define melhor repertório sociocultural na redação?",
+      "options": [
+        "Qualquer frase bonita, sem relação com o tema.",
+        "Informação, fato, citação ou experiência ligados ao tema que contribuem como argumento.",
+        "Apenas citações de autores estrangeiros.",
+        "A repetição dos textos motivadores."
+      ],
+      "correctIndex": 1,
+      "explanation": "O repertório se relaciona ao tema e contribui como argumento. A origem pode ser variada.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "O que caracteriza um repertório legitimado?",
+      "options": [
+        "Ter sido usado em muitas redações.",
+        "Ter pertinência e relação real com o tema.",
+        "Ser mencionado somente na conclusão.",
+        "Ser sempre de natureza científica."
+      ],
+      "correctIndex": 1,
+      "explanation": "Legitimado é o repertório pertinente ao tema. A frequência de uso não é critério.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 15 e 19 a 22",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "O que é repertório de bolso?",
+      "options": [
+        "Uma referência pensada especificamente para o tema do dia.",
+        "Uma referência decorada e genérica, levada pronta para qualquer tema.",
+        "Um dado estatístico atualizado.",
+        "Uma citação dos textos motivadores."
+      ],
+      "correctIndex": 1,
+      "explanation": "Repertório de bolso é a referência genérica e decorada, que não nasce do tema e tende a ser forçada.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 16 a 18",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual atitude torna um repertório produtivo?",
+      "options": [
+        "Citá-lo sem comentar.",
+        "Explicar como ele sustenta o argumento defendido.",
+        "Colocá-lo no fim do texto.",
+        "Usá-lo no lugar da tese."
+      ],
+      "correctIndex": 1,
+      "explanation": "É preciso articular a referência ao ponto de vista, mostrando por que ela ajuda a validá-lo.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 19 a 22",
+      "sectionPosition": 4
+    },
+    {
+      "stem": "Um participante cita um dado sobre saneamento, fictício, e explica que ele mostra desigualdade no acesso à água tratada, ponto central do seu argumento. Como classificar o uso?",
+      "options": [
+        "Repertório de bolso.",
+        "Repertório legitimado e produtivo.",
+        "Fuga ao tema.",
+        "Cópia dos textos motivadores."
+      ],
+      "correctIndex": 1,
+      "explanation": "O dado é pertinente ao tema e foi usado para sustentar o argumento: legitimado e produtivo.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 19 a 22",
+      "sectionPosition": 4
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é repertório sociocultural?",
+      "back": "Informação, fato, citação ou vivência ligada ao tema, usada como argumento e que vai além dos textos motivadores."
+    },
+    {
+      "front": "Repertório legitimado x produtivo?",
+      "back": "Legitimado: pertinente ao tema. Produtivo: articulado ao argumento para defender o ponto de vista."
+    },
+    {
+      "front": "O que é repertório de bolso?",
+      "back": "Referência decorada e genérica, levada pronta para qualquer tema. Tende a soar forçada e reduz a produtividade."
+    }
+  ]
+}
