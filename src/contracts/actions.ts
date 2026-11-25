@@ -7,7 +7,12 @@ const HH_MM = /^([01]\d|2[0-3]):[0-5]\d$/;
 // Auth (faixa A). Regras de senha: D-030 em aberto; aqui só o mínimo do Supabase (6).
 export const AuthInputSchema = z.object({
   email: z.string().trim().toLowerCase().pipe(z.email()),
-  password: z.string().min(6).max(72),
+  // bcrypt (Supabase) lê no máximo 72 BYTES; acentos e emojis ocupam mais de 1.
+  password: z
+    .string()
+    .min(6)
+    .max(72)
+    .refine((v) => new TextEncoder().encode(v).length <= 72),
   displayName: z.string().trim().min(1).max(80).optional(),
 });
 export type AuthInput = z.infer<typeof AuthInputSchema>;

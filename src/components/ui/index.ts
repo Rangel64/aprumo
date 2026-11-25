@@ -9,3 +9,4 @@ export { MapNode } from "./MapNode";
 export type { MapNodeProps, MapNodeStatus } from "./MapNode";
 export { ProgressBar } from "./ProgressBar";
 export type { ProgressBarProps } from "./ProgressBar";
+export { Brand } from "./Brand";
