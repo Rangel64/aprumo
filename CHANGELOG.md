@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- T16 (KAN-47) concluída pelo PR #11 (merge 5cd789c), aceita pelo PO em 2026-11-25: flashcards em /revisar com 4 níveis de confiança (Errei, Rever, Quase, Sabia!) e agendamento simples; US-018 feita; D-043 resolvida (M-043)
 - Bateria completa da T16 (KAN-47): e2e de flashcards cobre a fila (cartão vencido aparece; cartão futuro e conteúdo sem content_progress não aparecem) e o reset da conta demo é repetível; lint, typecheck, 214 testes, build, e2e 14 de 14, smoke em 1024 px e 375 px, rls:check 77 de 77 e teste de flashcard_states entre dois usuários 8 de 8; T16 segue aguardando PR e aceite do PO (M-042)
 - T16 (KAN-47) implementada na branch faixa-c/KAN-47-flashcards, ainda sem merge: revisão de flashcards em /revisar com 4 níveis de confiança e agendamento simples, sem alterar o domínio do conteúdo (US-018, RF-025; e2e real com Playwright e evidência de tela verificados; aguardando PR e aceite do PO) (M-040)
 - T9 (KAN-40) em PR, aguardando merge: mapa em /mapa com React Flow, filtro por estado, drawer acessível, Trilha em /trilhas/[slug] e teste do nó aceso; US-006, US-009 e US-010 testadas em e2e local com Supabase (M-038)

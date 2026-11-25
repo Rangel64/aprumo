@@ -29,7 +29,7 @@ Fase vigente: H (Hackathon, 24 a 30/11/2026, 4 devs). A tabela H está na ordem 
 | US-047 | Vídeo e descrição da submissão (H) | P | Must | em sprint | 01 |
 | US-014 | Ver o Início (H; cortável) | M | Should | em sprint | 01 |
 | US-016 | Cronograma mínimo (H; cortável 1º) | M | Should | em sprint | 01 |
-| US-018 | Revisar com flashcards (H; cortável) | G | Should | em sprint | 01 |
+| US-018 | Revisar com flashcards (H; cortável) | G | Should | feita | 01 |
 
 ## Pós-hackathon
 
