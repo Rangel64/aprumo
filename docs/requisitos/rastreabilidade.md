@@ -16,7 +16,7 @@ Projeto sem código. Status inicial: planejado. Coluna Fase: H = hackathon (vige
 | US-010 | H | UC-003 | RF-010 (RN-020; RNF-024) | - | - | planejado |
 | US-011 | H | UC-003 | RF-011 a RF-016 (RNF-024) | - | - | planejado |
 | US-012 | H | UC-004 | RF-017, RF-018, RF-022 (RNF-024) | src/app/(app)/conteudos/[slug] (page, loading, error, not-found), src/features/study, src/server/queries/content.ts, src/server/actions/study.ts, content/*.json (1 a 6, T13; mergeado pelo PR #7, 0eac146) | src/features/study/__tests__/safe-url.test.ts e quick-question.test.ts (sem teste da página; e2e pendente) | implementado (T13 mergeada, PR #7; US-012 segue parcial: e2e, Figma e mini-simulado pendentes) |
-| US-013 | H | UC-004 | RF-009, RF-020, RF-021 (RN-007; RNF-024) | - | - | planejado |
+| US-013 | H | UC-004 | RF-009, RF-020, RF-021 (RN-007; RNF-024) | src/domain/mastery.ts, src/features/quiz (QuizForm.tsx, quiz-state.ts), src/server/actions/quiz.ts, src/server/queries/quiz.ts, src/app/(app)/conteudos/[slug]/mini-simulado/ (T14, em PR) | src/domain/mastery.test.ts; src/features/quiz/__tests__/quiz-state.test.ts; src/server/actions/__tests__/quiz.test.ts; e2e/faixa-c.spec.ts (pulado sem E2E_USER_EMAIL/E2E_USER_PASSWORD; "aceso" em test.fixme até a T9) | implementado (T14 em PR, aguardando merge; não testado: sem e2e com banco; nó aceso no Mapa depende da T9) |
 | US-014 | H | - | RF-023 (RNF-024) | - | - | planejado |
 | US-015 | pós | UC-002 | RF-024 | - | - | planejado |
 | US-016 | H | UC-009 | RF-043 (F1; RNF-024) | - | - | planejado |

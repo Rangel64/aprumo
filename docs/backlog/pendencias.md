@@ -53,6 +53,7 @@
 | D-048 | Índice único de Jornada ativa por usuário: hoje não há índice único; decisão da faixa B com o PO (baixa). | sprint-01 | 2026-11-25 | aberta | - |
 | D-049 | Reduzir deploys de produção na Vercel: cada push na main gera um deploy, inclusive commits só de docs. Avaliar "Ignored Build Step" para pular o deploy quando só `docs/` ou `*.md` mudou. Também fixar `engines.node` em "24.x" no `package.json` para evitar o aviso de upgrade automático (baixa). | sprint-01 | 2026-11-25 | aberta | - |
 | D-050 | Horário do cron diário de `/api/cron/daily` (`0 9 * * *` em UTC, que é 06h em Brasília): confirmar com o grupo antes do deploy (baixa). | sprint-01 | 2026-11-24 | aberta | - |
+| D-051 | Limite de tentativas do mini-simulado contra força bruta do gabarito: sem limite, ~15 chamadas de `submitQuizAttempt` deduzem as 5 respostas. Proposta: `app_config.quiz_max_attempts_per_day`, pausa mínima entre tentativas e migration aditiva de índice em `quiz_attempts`. Recomendação: adiar para depois do MVP e manter como risco conhecido (R-18 na sprint 01). Decide o PO. | US-013 | 2026-11-25 | aberta | - |
 
 Nota (não é decisão, sem ID): o `server-only` pode falhar quando o seed roda sob `tsx` (T4). Conferir o comportamento no pacote instalado; se falhar, o script cria o client com `@supabase/supabase-js`, como prevê o passo 2 da T4.
 
