@@ -2,7 +2,8 @@
 
 ## [Não lançado]
 ### Adicionado
-- T13 (KAN-44) em PR, aguardando merge: 6 conteúdos com fonte da Cartilha A Redação do Enem 2026 (INEP), página /conteudos/[slug] e marcação de estudo que não rebaixa conteúdo dominado; US-012 e US-049 seguem abertas (M-035)
+- T5 (KAN-36) em PR, aguardando merge: rotas GET /api/health e GET /api/cron/daily (Bearer CRON_SECRET, keep-alive, demoReset=skipped até a T4), cron diário 0 9 * * * (UTC) em vercel.json com iad1, health com contagem paginada de ai_usage, proxy que não atua em api/health e api/cron, configuração do Playwright (Chromium padrão, canal opcional por E2E_BROWSER_CHANNEL) e esqueleto do smoke e2e; vitest exclui e2e/** (M-036)
+- T13 (KAN-44) mergeada pelo PR #7 (merge 0eac146): 6 conteúdos com fonte da Cartilha A Redação do Enem 2026 (INEP), página /conteudos/[slug] e marcação de estudo que não rebaixa conteúdo dominado; US-012 e US-049 seguem abertas (M-035, M-036)
 - T12 (KAN-43) concluída pelo PR #6 (commit dbc5854): validador de content/ (scripts/validate-content.ts), trail.json, essay-topics.json, competency-map.json e lista de fontes; validador com 0 erros e 18 pendentes (M-034)
 - T3 (KAN-34) concluída pelo PR #5 (merge 8c02e64): cadastro, entrada, saída, proxy de sessão, layout com menu e Entrada fiel ao Figma; `pnpm run build` passa a ser obrigatório antes de reportar e de abrir PR; deploy de produção com throttling temporário da Vercel a confirmar (M-033)
 - T2 (KAN-33) concluída pelos PRs #2, #3 e #4: contratos v1, migration 0001 com RLS aplicada em aprumo-dev, clientes Supabase, config, seed de config, design system base e types.ts gerado do banco; RLS verificada em 75 de 77 casos após corrigir 2 falsos negativos do script (M-032)
