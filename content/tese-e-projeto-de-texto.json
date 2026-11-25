@@ -1,0 +1,156 @@
+{
+  "slug": "tese-e-projeto-de-texto",
+  "title": "Tese e projeto de texto",
+  "summary": "Como definir a tese e planejar o texto antes de escrever: escolher os argumentos, ordenar e garantir que cada parte sustente o ponto de vista.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 1280,
+    "y": 200
+  },
+  "sort": 6,
+  "prerequisites": [
+    "introducao-contextualizacao-e-tese"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "O que é projeto de texto",
+      "bodyMd": "Projeto de texto é o **planejamento prévio** à escrita. Nele você define quais argumentos vai usar para defender o ponto de vista e em que ordem apresentá-los, para que o texto fique articulado, claro e coerente.\n\nUm bom texto deixa perceber, de modo implícito, que houve um projeto por trás.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29 (Competência III)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Da tese aos argumentos",
+      "bodyMd": "Passos simples de planejamento, alinhados às recomendações da Cartilha:\n\n1. Defina o ponto de vista que vai defender, a partir do tema.\n2. Reúna as ideias que surgirem e **selecione** as pertinentes.\n3. Organize em uma estrutura coerente: quais argumentos, em que ordem.\n4. Confira se cada informação ajuda a defender a tese.\n\nCada argumento será desenvolvido com explicações, exemplos ou dados.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 (recomendações da Competência III)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Desenvolvimento e economia de linhas",
+      "bodyMd": "O desenvolvimento é a fundamentação dos argumentos: exemplos, definições, comparações, estatísticas. Tudo deve se ligar ao ponto de vista, para nenhuma informação parecer solta.\n\nComo o número de linhas é limitado, escolha poucos argumentos bons e explique cada um até não restarem lacunas de sentido para o leitor.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 (desenvolvimento)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Rascunho de projeto (fictício)",
+      "bodyMd": "Tema fictício: **o uso responsável de redes sociais por adolescentes**.\n\n- *Tese:* o uso responsável depende de educação digital na escola e de diálogo na família.\n- *Argumento 1:* a escola pode ensinar a checar informações (exemplo: oficina de verificação de notícias).\n- *Argumento 2:* a família pode combinar regras de uso (exemplo: horários sem tela).\n- *Conclusão:* retoma a tese e propõe uma ação.\n\nSe um dos argumentos não ajudasse a tese, seria cortado.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29 (projeto de texto e desenvolvimento)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 (projeto de texto)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "O que é um projeto de texto?",
+        "options": [
+          "Um resumo escrito depois da redação pronta.",
+          "O planejamento prévio que define argumentos e a ordem em que serão apresentados.",
+          "Uma lista de citações decoradas.",
+          "A cópia dos textos motivadores."
+        ],
+        "correctIndex": 1,
+        "explanation": "É o planejamento feito antes de escrever, com a escolha e a ordenação dos argumentos."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- Projeto de texto é o planejamento prévio da redação.\n- Parta da tese, selecione e ordene argumentos.\n- Desenvolva cada argumento com explicação, exemplo ou dado.\n- Corte o que não ajuda a tese e economize linhas.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29 (Competência III)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Qual é a função do projeto de texto?",
+      "options": [
+        "Dispensar a escrita da introdução.",
+        "Definir os argumentos e a ordem em que serão apresentados.",
+        "Aumentar o número de citações.",
+        "Substituir a conclusão."
+      ],
+      "correctIndex": 1,
+      "explanation": "Ele organiza estrategicamente os argumentos para um texto articulado, claro e coerente.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Qual é o primeiro passo recomendado no planejamento?",
+      "options": [
+        "Escrever a conclusão.",
+        "Definir o ponto de vista que será defendido a partir do tema.",
+        "Escolher os conectivos.",
+        "Contar as linhas."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sem ponto de vista definido, não há como selecionar argumentos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Ao revisar o projeto, você encontra uma ideia interessante que não ajuda a defender a tese. O que fazer?",
+      "options": [
+        "Mantê-la, pois é interessante.",
+        "Cortá-la ou ligá-la explicitamente à tese.",
+        "Movê-la para o título.",
+        "Repeti-la em cada parágrafo."
+      ],
+      "correctIndex": 1,
+      "explanation": "Todas as informações devem estar a serviço do ponto de vista; o que não ajuda deve sair ou ser relacionado à tese.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Por que escolher poucos argumentos e desenvolvê-los bem?",
+      "options": [
+        "Porque o número de linhas é limitado e é preciso evitar lacunas de sentido.",
+        "Porque mais argumentos são proibidos.",
+        "Porque o desenvolvimento deve ter só uma frase.",
+        "Porque a tese deve ser omitida."
+      ],
+      "correctIndex": 0,
+      "explanation": "O limite de linhas obriga a selecionar. Cada argumento precisa ser explicado.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "No rascunho fictício sobre redes sociais, qual item é a tese?",
+      "options": [
+        "A oficina de verificação de notícias.",
+        "O uso responsável depende de educação digital na escola e de diálogo na família.",
+        "Os horários sem tela.",
+        "A proposta de ação final."
+      ],
+      "correctIndex": 1,
+      "explanation": "A tese é a posição geral. Oficina e horários são exemplos que apoiam os argumentos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29",
+      "sectionPosition": 4
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é projeto de texto?",
+      "back": "Planejamento prévio à escrita: define os argumentos que defendem o ponto de vista e a melhor ordem para apresentá-los."
+    },
+    {
+      "front": "Que passos levam da tese aos argumentos?",
+      "back": "Definir o ponto de vista, reunir e selecionar ideias, organizar a estrutura e conferir se cada informação ajuda a tese."
+    },
+    {
+      "front": "O que é desenvolvimento?",
+      "back": "A fundamentação dos argumentos, com exemplos, definições, comparações ou dados, sempre ligados ao ponto de vista."
+    }
+  ]
+}
