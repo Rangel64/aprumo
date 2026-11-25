@@ -14,6 +14,7 @@
     "db:types": "supabase gen types typescript --remote > src/lib/supabase/types.ts",
     "seed": "tsx scripts/seed.ts",
     "seed:config": "tsx scripts/seed-config.ts",
+    "rls:check": "tsx scripts/rls-check.ts",
     "eval:essay": "tsx scripts/eval-essay.ts"
   },
   "dependencies": {

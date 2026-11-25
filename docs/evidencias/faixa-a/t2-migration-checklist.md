@@ -1,5 +1,7 @@
 # T2: roteiro para aplicar e conferir a migration 0001 (aprumo-dev)
 
+> Verificação automatizada: `pnpm exec tsx --env-file=.env.local scripts/rls-check.ts` (cobre os casos do bloco 4.6); os casos de grants e o Security Advisor continuam no painel.
+
 Quem executa: o PO (a senha do banco e as chaves são dele). Nada aqui deve ser colado em chat, PR, log ou screenshot: **senha do banco, `SUPABASE_SERVICE_ROLE_KEY` e tokens ficam só no seu terminal**.
 
 Migration: `supabase/migrations/20261124230000_0001_schema.sql` (não executada pelo agente: sem Docker nem acesso ao banco).
