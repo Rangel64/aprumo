@@ -1,0 +1,12 @@
+{
+  "quiz_question_count": 5,
+  "quiz_pass_threshold_pct": 80,
+  "essay_daily_limit_per_user": 3,
+  "essay_daily_limit_demo": 15,
+  "ai_global_budget_usd": 20,
+  "ai_enabled": true,
+  "essay_min_chars": 200,
+  "essay_max_chars": 3000,
+  "essay_weak_score_threshold": 120,
+  "flashcard_intervals_days": { "1": 1, "2": 2, "3": 4, "4": 7 }
+}
