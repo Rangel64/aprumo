@@ -4,10 +4,10 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 
 ## Regra e fluxo
 - **Cada pessoa pega uma tarefa por vez no Jira** (só pega a próxima ao fechar a atual). Agentes de IA seguem a mesma regra e trabalham em `git worktree` próprio.
-- Fluxo curto: 1) mover a issue para em andamento; 2) branch `faixa-x/KAN-nn-slug`; 3) fazer só nos arquivos da faixa; 4) PR com CI verde (merge na main só com ok explícito, D-034); 5) evidência em `docs/evidencias/faixa-x/`; 6) fechar a issue; 7) se alterou arquivo, registrar o M-nnn em `docs/backlog/mudancas.md` e no CHANGELOG.
-- Comandos comuns (sempre na RAIZ): `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e` (com `AI_PROVIDER=fake`). Nunca build, dev server e testes ao mesmo tempo no mesmo diretório; encerrar o que subir.
+- Fluxo curto: 1) mover a issue para em andamento; 2) branch `faixa-x/KAN-nn-slug`; 3) fazer só nos arquivos da faixa; 4) com `pnpm run build` verde localmente antes de abrir o PR, PR com CI verde (merge na main só com ok explícito, D-034); 5) evidência em `docs/evidencias/faixa-x/`; 6) fechar a issue; 7) se alterou arquivo, registrar o M-nnn em `docs/backlog/mudancas.md` e no CHANGELOG.
+- Comandos comuns (sempre na RAIZ): `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build`, `pnpm test:e2e` (com `AI_PROVIDER=fake`). **`pnpm run build` é obrigatório antes de reportar a tarefa como pronta e antes de abrir o PR**, junto de lint, typecheck e test (regra do PO, 2026-11-25: o deploy de produção quebrou por limite temporário da Vercel após o PR #5, e o build local é a verificação de referência). Nunca build, dev server e testes ao mesmo tempo no mesmo diretório; encerrar o que subir.
 - Ninguém lê nem cria `.env`; variáveis só por nome em `.env.example`. Sem segredo em código, log, commit, screenshot ou dump.
-- Ao terminar: relato curto com a DoD nos seis estados (executado, passou, falhou, não executado, não verificável, pendência que impede "feita") e o bloco "Para o registro" (o quê, por quê, arquivos, verificação). Teste não executado nunca é aprovado.
+- Ao terminar: confirmar que lint, typecheck, test e `pnpm run build` passaram na raiz (o build é obrigatório, sem exceção); relato curto com a DoD nos seis estados (executado, passou, falhou, não executado, não verificável, pendência que impede "feita") e o bloco "Para o registro" (o quê, por quê, arquivos, verificação). Teste não executado nunca é aprovado.
 - Em aberto (não decidir): D-010 (modelo de IA; usar o `FakeEssayModel`), D-020 (teto global; manter US$ 20 provisório), D-030 (senha/recuperação), D-031 (quem ajusta teste de outra faixa; proposta: o dono do teste), D-032 (US-010 e US-018; seguir a leitura do plano e relatar), D-037 (divergências do Figma; seguir o Gherkin e relatar), D-038 (só telas da fase H).
 
 ## Índice
@@ -57,7 +57,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 10. Publicar um deploy vazio (página padrão) e anotar a URL. Conferir na documentação oficial, com a fonte e a data anotadas em `docs/adr/` (rascunho do ADR-002): limites do Supabase Free (projetos ativos, armazenamento, tráfego, e-mails de Auth, pausa por inatividade, backups e restauração) e do Vercel Hobby (funções, duração, 1 cron por dia, uso não comercial); iad1 e us-east-2 disponíveis no plano gratuito.
 **Entregáveis:** `package.json`, `pnpm-lock.yaml`, configs (eslint, tsconfig, next, postcss/tailwind), `vercel.json`, `.github/workflows/ci.yml`, `.env.example`, `supabase/config.toml`, `docs/adr/` e `docs/evidencias/` com `.gitkeep`, nota dos limites.
 **Critério de pronto:** Dado o PR, Então o CI roda lint, typecheck e test verdes. Dado o deploy, Então a URL abre sem erro. Dado `git ls-files`, Então não há `.env` nem chave. Limites anotados com fonte. Secret scanning e push protection ligados (US-045, RNF-019, RNF-021, RNF-022).
-**Como verificar:** `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`; abrir a URL do deploy; `git ls-files | grep -i env` só mostra `.env.example`.
+**Como verificar:** `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); abrir a URL do deploy; `git ls-files | grep -i env` só mostra `.env.example`.
 **Não fazer:** criar outro repositório; segundo lockfile; ler ou criar `.env`; colar chave em doc, screenshot ou PR; plano pago (Supabase Pro foi recusado); tocar em `content/` ou `src/` além do esqueleto.
 **Perfil DoD e revisão:** infra (build, healthcheck do deploy, rollback descrito: Instant Rollback da Vercel).
 **Depende de / libera:** nada / T2 e todas as demais.
@@ -75,7 +75,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 7. Design system (até o fim do dia): tokens do Figma no tema do Tailwind (purple #7b5cff, purple-dark #6243e8, purple-light #ede9ff, coral, yellow, mint, blue, pink, orange e suas versões light, cream #fff9f2, ink #1f1b2e, muted #6b6880, line #e9e5ef; raios 8/16/24/999; sombras `--shadow` e `--shadow-purple`) conforme [docs/design/README.md](../../design/README.md); `next/font` com Nunito (corpo) e Quicksand (destaque) em `src/app/layout.tsx` (confirmar a API na versão instalada); componentes base em `src/components/ui`: botão pill roxo, cartão raio 24 com sombra, chips, barra de progresso, nó do Mapa nos estados não iniciado, estudando, dominado e revisado hoje. Sem tema escuro.
 **Entregáveis:** `src/contracts/*`, migration 0001, `src/lib/supabase/*`, `src/server/config.ts`, `content/config.json`, script do seed de config, `src/app/layout.tsx` (fontes), tema Tailwind, `src/components/ui/*`.
 **Critério de pronto:** Dado o `aprumo-dev`, Então todas as tabelas existem com RLS ligada e `app_config` tem os valores. Dado um usuário autenticado, Então não lê `question_keys` nem `app_config` e não escreve em `content_progress`, `quiz_attempts`, `ai_usage`, `essay_feedbacks`. Dado um insert em `essay_submissions` sem `user_id` e `is_example=false`, Então é rejeitado. Fixtures compilam; as 3 faixas conseguem importar. Revisão dos 3 consumidores antes das 14h. Componentes usam só tokens, sem cor solta (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`; SQL no painel do `aprumo-dev` para os CHECKs; Security Advisor sem alerta de tabela sem RLS.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); SQL no painel do `aprumo-dev` para os CHECKs; Security Advisor sem alerta de tabela sem RLS.
 **Não fazer:** `reserve_ai_usage` (é da T18); lógica de negócio fora de contrato; chave em arquivo; Google, submetas, nivelamento; editar migration já mergeada (depois só aditiva).
 **Perfil DoD e revisão:** sensível (RLS): perfil base mais revisão de segurança com o `revisor` em opus (roteiro da T7 sobre a 0001).
 **Depende de / libera:** T1 / T3, T4, T5, T9, T12, T17, T18 e todas as faixas.
@@ -94,7 +94,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 8. Teste Vitest dos schemas zod de entrada; evidência lado a lado.
 **Entregáveis:** `src/server/actions/auth.ts`, `src/features/auth/*`, `src/app/(auth)/*`, `src/app/(app)/layout.tsx`, `src/app/page.tsx`, `proxy.ts`/`middleware.ts`, ajustes em `src/components/ui/*`, `docs/evidencias/faixa-a/entrada-lado-a-lado.png` (desktop e celular).
 **Critério de pronto:** Dado a Entrada, Quando clico "Começar agora", Então vou ao cadastro; no celular, sem rolagem horizontal. Dado e-mail e senha válidos, Quando cadastro, Então a conta já está ativa, sem e-mail de confirmação, e caio em `/jornada/nova`. Dado e-mail repetido, Então vejo mensagem e a opção de entrar. Dado a sessão encerrada, Então `/inicio` redireciona a `/entrar`. Fiel ao Figma: comparação com `01-entrada.jpg` em `docs/evidencias/faixa-a/`, diferenças anotadas na PR (contraste do roxo em texto pequeno: usar `purple-dark`).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `pnpm dev` e percorrer cadastro, saída, entrada, e-mail repetido; teclado (Tab, foco visível) e janela estreita.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `pnpm dev` e percorrer cadastro, saída, entrada, e-mail repetido; teclado (Tab, foco visível) e janela estreita.
 **Não fazer:** Google, escolha de perfil, consentimento de menores, recuperação de senha sem decisão do D-030, nome "Modo prova" (RNF-020), tema escuro, "[Nome da plataforma]".
 **Perfil DoD e revisão:** hackathon (frontend: evidência de tela, foco e teclado conferidos).
 **Depende de / libera:** T2, D-030 / T5, T6, T7 e o encaixe das telas de B, C e D no layout.
@@ -111,7 +111,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Rodar duas vezes no `aprumo-dev` e contar linhas de cada tabela antes e depois da segunda execução (igual).
 **Entregáveis:** `scripts/seed.ts`, `src/server/demo-reset.ts`, `docs/evidencias/faixa-a/seed-idempotencia.md` (contagens, sem chave).
 **Critério de pronto:** Dado um ambiente novo, Quando `pnpm seed`, Então Mapa, Trilha, conteúdos, questões, flashcards e conta demo existem. Dado o seed já rodado, Quando roda de novo, Então nada duplica. Dado o seed, Então nomes, e-mails e textos são fictícios (RNF-017). Sem `demo-essays.json`, o seed termina sem erro.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `pnpm seed` duas vezes contra `aprumo-dev`; entrar como conta demo e ver 3 dominados, Jornada e redações.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `pnpm seed` duas vezes contra `aprumo-dev`; entrar como conta demo e ver 3 dominados, Jornada e redações.
 **Não fazer:** rodar em `aprumo-prod` (é da T8); editar `content/`; hardcode de e-mail ou senha; `ON CONFLICT` por (`user_id`, `topic_id`, `part`); alterar `ai_usage`.
 **Perfil DoD e revisão:** hackathon (usa service role: conferir que nada vai ao cliente).
 **Depende de / libera:** T2, T12, T13, T18 (opcional) / T8.
@@ -126,7 +126,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 4. `playwright.config.ts` com `baseURL` de `E2E_BASE_URL` e `e2e/smoke.spec.ts` esqueleto: abre `/`, vê "Começar agora", `GET /api/health` retorna 200. O fluxo completo entra na T22.
 **Entregáveis:** `src/app/api/health/*`, `src/app/api/cron/*`, `vercel.json`, `playwright.config.ts`, `e2e/smoke.spec.ts`.
 **Critério de pronto:** Dado o banco ok, Então `/api/health` retorna 200 com os 4 campos; com o banco inacessível, 503. Dado o cron sem o segredo, Então 401; com o segredo, repõe a demo (conferir as 2 redações sem duplicar). `GET /api/health` não faz chamada de IA.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `pnpm dev` e `curl` no health e no cron (segredo só no shell local, fora de log); `pnpm test:e2e` com `E2E_BASE_URL` do preview.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `pnpm dev` e `curl` no health e no cron (segredo só no shell local, fora de log); `pnpm test:e2e` com `E2E_BASE_URL` do preview.
 **Não fazer:** chamar IA no health; expor `CRON_SECRET`; segundo cron; teste e2e do fluxo completo (T22).
 **Perfil DoD e revisão:** infra (healthcheck, rollback descrito).
 **Depende de / libera:** T2, T3 / T22.
@@ -142,7 +142,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 5. Omitir do protótipo o que não é da fase H ou não tem contrato: "Meta de simulado", "Grupo de estudo", "Sequência de estudos", "Outras Jornadas", submetas; anotar na PR como diferenças aceitas.
 **Entregáveis:** `src/server/queries/home.ts`, `src/features/home/*`, `src/app/(app)/inicio/*`, `docs/evidencias/faixa-a/inicio-lado-a-lado.png`.
 **Critério de pronto:** Dado Jornada ativa, Quando abro o Início, Então vejo meta e próximo conteúdo. Dado nenhuma Jornada, Então vejo convite para criar uma. Dado flashcards vencidos, Então o aviso mostra a quantidade. Fiel ao Figma: comparação com `02-inicio.jpg` em `docs/evidencias/faixa-a/`; só componentes de `src/components/ui` e tokens (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `pnpm dev` com a conta demo (com Jornada) e com conta nova (sem Jornada); teclado e celular sem rolagem horizontal.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `pnpm dev` com a conta demo (com Jornada) e com conta nova (sem Jornada); teclado e celular sem rolagem horizontal.
 **Não fazer:** editar queries de B, C e D; submetas; elementos pós-hackathon; texto "Modo prova".
 **Perfil DoD e revisão:** hackathon (frontend: evidência, foco, teclado).
 **Depende de / libera:** T9, T10, T16, T18 / T23.
@@ -159,7 +159,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Correções: migration aditiva (T2/faixa A); nunca editar a 0001. Repetir o teste afetado.
 **Entregáveis:** `docs/evidencias/faixa-a/seguranca-rls.md` com tabela tabela x operação x resultado esperado e obtido, e o relatório do Advisor (sem tokens, sem chaves).
 **Critério de pronto:** todas as linhas dos passos 2 a 4 com resultado esperado; zero alerta crítico no Advisor; achados corrigidos ou registrados como pendência que impede "feita". Sem segredo na evidência (RNF-021).
-**Como verificar:** repetir 3 itens do relatório; `pnpm lint`, `pnpm typecheck`, `pnpm test` se houve migration.
+**Como verificar:** repetir 3 itens do relatório; `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório) se houve migration ou código.
 **Não fazer:** testar em `aprumo-prod`; guardar token; relaxar uma política para "passar".
 **Perfil DoD e revisão:** sensível: revisor em opus e, havendo código novo, `/security-review`.
 **Depende de / libera:** T2, T3, T18 / T8.
@@ -193,7 +193,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. `e2e/faixa-b.spec.ts`: abre `/mapa`, vê nós, filtra, abre drawer.
 **Entregáveis:** `src/server/queries/{map,trail}.ts`, `src/app/(app)/{mapa,trilhas}/*`, `src/features/map/*`, `e2e/faixa-b.spec.ts`, `docs/evidencias/faixa-b/mapa-lado-a-lado.png`.
 **Critério de pronto:** Dado conteúdos do seed, Quando abro o Mapa, Então nós e ligações aparecem (18 ao final). Dado um nó, Quando clico, Então drawer com estado, pré-requisitos, Trilhas e as duas ações. Dado filtro sem resultado, Então mensagem e limpar. Dado a Trilha, Então nome, objetivo, quantidade e origem. Fiel ao Figma: comparação com `04-mapa.jpg` (desktop; celular sem rolagem horizontal) em `docs/evidencias/faixa-b/` (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; `pnpm dev` com a conta demo (nós dominados acesos).
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; `pnpm dev` com a conta demo (nós dominados acesos).
 **Não fazer:** editar `src/components/ui` (pedir variante a A por PR), `content/`, contratos; criar Trilha; buscas e áreas do protótipo fora da fase H; escrever em `content_progress`.
 **Perfil DoD e revisão:** hackathon (frontend: evidência, foco, teclado).
 **Depende de / libera:** T2, `trail.json` da T12 / T10, T6.
@@ -210,7 +210,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Acessibilidade: erros de campo anunciados; foco visível; teclado no formulário.
 **Entregáveis:** `src/server/actions/journey.ts`, `src/server/queries/journey.ts`, `src/features/journey/*`, `src/app/(app)/jornada/*`, `docs/evidencias/faixa-b/jornada-*.png` e comparação de estilo com as referências, teste em `e2e/faixa-b.spec.ts`.
 **Critério de pronto:** Dado base, meta e prazo, Quando clico "Começar", Então a Jornada aparece em `/jornada` e no Início. Dado sem meta, Quando avanço, Então bloqueado com mensagem. Dado "Prefiro sem metodologia", Então criada sem metodologia. Dado sem Jornada ativa e `addContentsToJourney`, Então `NO_ACTIVE_JOURNEY` e a UI leva a `/jornada/nova` com o conteúdo escolhido; recusar não adiciona nada (RN-001). Sem submetas, nivelamento e limite de 2 Jornadas. Estilo conferido contra o Figma, diferenças anotadas (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; criar Jornada na conta nova e na demo.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; criar Jornada na conta nova e na demo.
 **Não fazer:** escrever em `content_progress`; contratos; submetas; limite de Jornadas; `src/components/ui`.
 **Perfil DoD e revisão:** hackathon.
 **Depende de / libera:** T9, T2 / T11, T6, T20.
@@ -227,7 +227,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Estados: sem disponibilidade leva ao formulário; sem Jornada, convite a `/jornada/nova`; dia sem sessões; erro ao regerar. Sem cota nem cobrança (RN-009).
 **Entregáveis:** `src/domain/schedule.ts` e teste, `src/server/actions/schedule.ts`, `src/server/queries/schedule.ts`, `src/features/schedule/*`, `src/app/(app)/cronograma/*`, `docs/evidencias/faixa-b/cronograma-lado-a-lado.png`.
 **Critério de pronto:** Dado Jornada e disponibilidade, Quando gero, Então vejo sessões com data, horário e conteúdo da Jornada. Dado a sessão do dia, Quando "Começar sessão", Então abre o conteúdo. Dado sem disponibilidade ou sem Jornada, Então o fluxo leva a informar ou a criar. Dado disponibilidade insuficiente, Então aviso de prazo e sessões geradas. Fiel ao Figma com `03-cronograma.jpg`, sem "Estudo em grupo", "Bloquear dia" e sessões de grupo (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test` (inclui `schedule.test.ts`), `pnpm test:e2e`; manual com a conta demo.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório) (inclui `schedule.test.ts`), `pnpm test:e2e`; manual com a conta demo.
 **Não fazer:** metodologias, tipos de sessão, ajustes, cota ou cobrança (F4); duração de estudo inventada fora da premissa registrada.
 **Perfil DoD e revisão:** hackathon (teste unitário do crítico).
 **Depende de / libera:** T10 / T23.
@@ -244,7 +244,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. `src/domain/content/__tests__/*`: testes Vitest do validador, incluindo ciclo sintético rejeitado (US-006) e seção sem fonte reprovada.
 **Entregáveis:** `scripts/validate-content.ts`, `src/domain/content/__tests__/*`, `content/trail.json`, `content/essay-topics.json`, `content/competency-map.json`, `content/conteudos-e-fontes.md`.
 **Critério de pronto:** Dado seção sem fonte, Então o teste falha (RN-018). Dado questão sem `origin`/fonte, Então falha (RF-062). Dado ciclo, Então falha. Dado conteúdo com menos de 5 questões, Então falha. `trail.json` e `essay-topics.json` disponíveis às 18h de 24/11.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; rodar o validador sobre `content/`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); rodar o validador sobre `content/`.
 **Não fazer:** mudar `src/contracts/content.ts` (pedir a A por PR); `content/config.json` (A) e `content/essays/` (D); questão licenciada de terceiros; inventar página ou citação.
 **Perfil DoD e revisão:** hackathon (teste do crítico).
 **Depende de / libera:** T2 / T13, T4, T9, T19 (temas).
@@ -261,7 +261,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Rodar o validador e o `pnpm test`; avisar A para o seed (T4) carregar.
 **Entregáveis:** `content/*.json` (6), `src/server/queries/content.ts`, `src/server/actions/study.ts`, `src/features/study/*`, `src/app/(app)/conteudos/*`, `docs/evidencias/faixa-c/conteudo-lado-a-lado.png`.
 **Critério de pronto:** Dado o drawer, o roadmap ou uma sessão, Quando clico em estudar, Então abre o conteúdo. Dado uma seção, Então a fonte aparece. Dado o fim das seções, Então sigo ao mini-simulado. Validador verde: fonte em toda seção, 5 questões por conteúdo. Fiel ao Figma com `05-conteudo.jpg` (RNF-024). Teclado e foco visíveis.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `pnpm dev` abrindo um conteúdo do `aprumo-dev` após o seed.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `pnpm dev` abrindo um conteúdo do `aprumo-dev` após o seed.
 **Não fazer:** publicar sem fonte; questão licenciada; editar `src/components/ui`, `content/essays/` ou `content/config.json`; texto que sugira burlar prova (RNF-020).
 **Perfil DoD e revisão:** hackathon (frontend: evidência, foco, teclado).
 **Depende de / libera:** T12 / T14, T15, T20, T4.
@@ -278,7 +278,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 **Entregáveis:** `src/domain/mastery.ts` e teste, `src/server/queries/quiz.ts`, `src/server/actions/quiz.ts`, `src/features/quiz/*`, `src/app/(app)/conteudos/[slug]/mini-simulado/*`, `e2e/faixa-c.spec.ts`, `docs/evidencias/faixa-c/` (telas e `seguranca-quiz.md`).
 **Critério de pronto:** Dado 5 questões, Quando acerto 4 ou mais, Então dominado e nó aceso. Dado 3 ou menos, Então seções a rever e volta ao estudo. Dado outros valores em `app_config`, Então a regra os usa sem alterar código. Evidência de runtime: 3 de 5 e 4 de 5. Fiel ao Figma no estilo de `05-conteudo.jpg`, diferenças anotadas.
 **Roteiro de segurança (obrigatório):** 1) a resposta da página, o payload RSC e o Network não trazem `correct_index`; 2) com o token do usuário, `select` em `question_keys` via REST é negado; 3) insert ou update em `content_progress` e `quiz_attempts` via REST é negado; 4) `answers` forjadas (questão de outro conteúdo, repetida, índice fora da faixa) são rejeitadas; 5) o chute no cliente não muda o resultado (correção só no servidor); 6) `SUPABASE_SERVICE_ROLE_KEY` não aparece em `.next/static`; 7) reprovação posterior não rebaixa `mastered`.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; roteiro acima, resultado em `docs/evidencias/faixa-c/seguranca-quiz.md`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; roteiro acima, resultado em `docs/evidencias/faixa-c/seguranca-quiz.md`.
 **Não fazer:** gabarito no cliente; escrita de domínio pelo cliente; hardcode de 5 e 80; flashcards alterando domínio.
 **Perfil DoD e revisão:** sensível (gabarito, escrita só servidor): revisor em opus e `/security-review`.
 **Depende de / libera:** T13 / T16, T23.
@@ -294,7 +294,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 5. Avisar A para recarregar o seed (dev; prod na T23).
 **Entregáveis:** `content/*.json` (12 novos), `trail.json`, `competency-map.json`, `content/conteudos-e-fontes.md` atualizado.
 **Critério de pronto:** Dado cada conteúdo, Então tem ao menos 1 seção e 5 questões (90 no total) e 3 flashcards (54). Dado uma seção, Então tem fonte (RN-018); dado uma questão, Então é `original` ou pública com fonte (RF-062). Grafo sem ciclo. Toda competência de 1 a 5 com ao menos 1 conteúdo. Dado o Mapa, Então 18 nós.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test` (validador verde); `pnpm seed` no `aprumo-dev` e conferir os 18 nós em `/mapa`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório) (validador verde); `pnpm seed` no `aprumo-dev` e conferir os 18 nós em `/mapa`.
 **Não fazer:** reduzir fonte ou número de questões para ganhar tempo (pedir ajuda no canal); conteúdo sem fonte; dados reais de alunos; tocar em `src/`.
 **Perfil DoD e revisão:** hackathon.
 **Depende de / libera:** T13 / T23.
@@ -310,7 +310,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 5. Conferir com B que `reviewedToday` do Mapa usa `flashcard_states.reviewed_at`.
 **Entregáveis:** `src/domain/flashcard-scheduler.ts` e teste, `src/server/queries/flashcards.ts`, `src/server/actions/flashcards.ts`, `src/features/flashcards/*`, `src/app/(app)/revisar/*`, `docs/evidencias/faixa-c/flashcards-lado-a-lado.png`.
 **Critério de pronto:** Dado flashcards do dia, Quando respondo, viro e avalio, Então a próxima revisão é agendada. Dado o último cartão, Então os conteúdos revisados aparecem com "revisado hoje" no Mapa. Dado nenhuma revisão do dia, Então mensagem de nada pendente. Fiel ao Figma com `06-flashcards.jpg` (RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; manual com a conta demo (cartões vencidos hoje).
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; manual com a conta demo (cartões vencidos hoje).
 **Não fazer:** alterar domínio por flashcard; tipos de revisão pós-hackathon (áudio, quiz relâmpago, erros); hardcode dos intervalos.
 **Perfil DoD e revisão:** hackathon.
 **Depende de / libera:** T14 / T6, T23.
@@ -328,7 +328,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 7. Regra de decisão do plano (eliminar quem reescrever ou ficar abaixo de 100% de saídas válidas; entre os restantes, maior nota com p95 <= 20 s e custo <= US$ 0,02; empate, o mais barato). A decisão é do grupo; o ADR-005 é do documentador.
 **Entregáveis:** `src/server/ai/**`, `scripts/eval-essay.ts`, `content/essays/corpus-d010.json`, `docs/arquitetura/avaliacao-modelos.md`.
 **Critério de pronto:** Dado `AI_PROVIDER=fake`, Então o adapter devolve saída válida pelo schema `EssayFeedbackAI` sem chave. Dado o corpus, Então 30 chamadas executadas e tabela gravada. Preço com fonte e data. Nenhuma chave no repositório, log ou doc. Caso de injeção não reescreve (senão, ajustar o prompt e repetir).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test` (Fake determinístico, schema, custo); `pnpm eval:essay` uma vez, com chave local da pessoa.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório) (Fake determinístico, schema, custo); `pnpm eval:essay` uma vez, com chave local da pessoa.
 **Não fazer:** gravar chave ou resposta bruta; rodar `eval:essay` em CI ou em laço (custa dinheiro do grupo); escolher o modelo sozinho; editar `v1` depois de usada (nova versão é arquivo novo).
 **Perfil DoD e revisão:** sensível (IA com custo, segredos): revisor em opus (segredos, custo, injeção).
 **Depende de / libera:** T2, D-010 (em aberto) / T18.
@@ -346,7 +346,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 **Entregáveis:** `src/domain/quota.ts` e teste, migration, `src/lib/supabase/types.ts` regenerado, `src/app/api/essays/*`, `src/server/queries/essay.ts`, `content/essays/demo-essays.json`.
 **Critério de pronto:** Dado o limite esgotado, Então 429 e nenhuma chamada de IA (conferido em `ai_usage` e no contador do Fake). Dado texto curto, Então 400 e nada consumido. Dado falha ou timeout, Então reserva `failed` e o uso não conta. Dado retorno, Então 5 competências, `isEstimate`, aviso e sem reescrita (teste da pós-validação). Valores só de `app_config`.
 **Roteiro de segurança (obrigatório):** 1) 10 requisições paralelas com limite 3 gastam no máximo 3; 2) `reserve_ai_usage` por rpc com token de usuário é negada; 3) insert ou update em `ai_usage` e `essay_feedbacks` por REST negado; 4) limite por usuário e teto global bloqueiam sem chamar a IA; 5) `ai_enabled=false` bloqueia; 6) a resposta de erro não traz texto do provedor; 7) nenhuma chave em log ou resposta.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; chamar a rota com `AI_PROVIDER=fake` em `aprumo-dev`; roteiro acima registrado em `docs/evidencias/faixa-d/seguranca-ia.md`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); chamar a rota com `AI_PROVIDER=fake` em `aprumo-dev`; roteiro acima registrado em `docs/evidencias/faixa-d/seguranca-ia.md`.
 **Não fazer:** editar a 0001 ou migrations mergeadas; reservar depois da IA; contratos sem PR a A; chamada real de IA em teste automatizado.
 **Perfil DoD e revisão:** sensível (RLS, custo): revisor em opus e `/security-review`.
 **Depende de / libera:** T17, T2 / T19, T4 (opcional), T6, T7.
@@ -363,7 +363,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. `e2e/faixa-d.spec.ts` com `AI_PROVIDER=fake`: texto curto, retorno com 5 competências e aviso literal, estado `aria-live`.
 **Entregáveis:** `src/app/(app)/redacao/*`, `src/features/essay/*`, `e2e/faixa-d.spec.ts`, `docs/evidencias/faixa-d/redacao-lado-a-lado.png`.
 **Critério de pronto:** Dado tema e parte, Quando envio, Então vejo retorno por competência sem travar a tela. Dado texto curto, Então orientação e uso não consumido. Dado falha, Então erro e nova tentativa. Dado o retorno, Então nota rotulada "estimativa" com o aviso literal e nada reescrito. Dado a tela, Então contador de usos ao abrir. Fiel ao Figma com `07-redacao.jpg`, sem texto "Modo prova" (RNF-020, RNF-024).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; manual com a conta nova (3 usos) e teclado.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; manual com a conta nova (3 usos) e teclado.
 **Não fazer:** nota sem rótulo "estimativa"; 5 etapas antes da decisão do D-037; editar a rota (T18) ou `src/components/ui`; texto do aluno em log.
 **Perfil DoD e revisão:** hackathon (frontend: evidência, foco, teclado, `aria-live`).
 **Depende de / libera:** T18 / T20.
@@ -381,7 +381,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 **Entregáveis:** `src/features/essay/*`, `src/server/queries/essay.ts`, ajustes em `src/server/ai/**`, `e2e/faixa-d.spec.ts`, `docs/evidencias/faixa-d/` (telas e `seguranca-reservas.md`).
 **Critério de pronto:** Dado competência fraca, Então sugestão e "Adicionar à Jornada". Dado sem Jornada, Então vai a `/jornada/nova` com o conteúdo escolhido. Dado competência sem conteúdo, Então sem sugestão. Dado IA desligada ou teto atingido, Então aviso e exemplo, sem erro técnico. Dado limite esgotado, Então nenhuma chamada de IA (`ai_usage` inalterado). Fiel ao Figma no estilo de `07-redacao.jpg`.
 **Roteiro de segurança (obrigatório):** 1) com o token de usuário, REST em `essay_submissions` nunca devolve linha com `user_id` nulo (reserva); 2) a reserva só é lida no servidor com service role; 3) `ai_enabled=false` é checado no servidor (chamar a rota direto também bloqueia); 4) limite esgotado não chama o provedor (contador do Fake); 5) sugestões vêm de `competency_contents`, não do modelo; 6) nada de chave ou texto de aluno em log.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`; manual no `aprumo-dev` alternando `app_config`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`; manual no `aprumo-dev` alternando `app_config`.
 **Não fazer:** expor reservas por RLS; o modelo escolher conteúdo; reescrever a rota (T18); tocar `src/components/ui`.
 **Perfil DoD e revisão:** sensível (custo, kill switch): revisor em opus.
 **Depende de / libera:** T19, T10, T13 / T21.
@@ -398,7 +398,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 6. Rever `router.refresh` a cada 3 s em `pending` (para quando concluir ou falhar).
 **Entregáveis:** ajustes em `src/server/ai/**` e `src/app/api/essays/*`, testes, registro do p95.
 **Critério de pronto:** Dado timeout, Então 504, mensagem amigável e uso não consumido. Dado saída inválida, Então 1 nova tentativa e depois `AI_INVALID_OUTPUT`. Dado falha do provedor, Então 503 sem texto do provedor. p95 registrado.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm test:e2e`.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório), `pnpm test:e2e`.
 **Não fazer:** nova tentativa fora do orçamento; streaming sem p95 > 15 s; chamadas reais em CI.
 **Perfil DoD e revisão:** hackathon.
 **Depende de / libera:** T20 / T23.
@@ -413,7 +413,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 4. Rodar o smoke contra a URL de produção e salvar o resultado.
 **Entregáveis:** `e2e/smoke.spec.ts`, `README.md`, `docs/evidencias/faixa-a/smoke-prod.md` (saída do teste, sem credenciais).
 **Critério de pronto:** Dado a URL de prod, Quando `pnpm test:e2e`, Então verde. Dado o README, Então traz descrição, trilha, demo, conta, como rodar e arquitetura. Dado o monitor, Então alerta ao derrubar o health e há atividade a cada 5 minutos. Repositório sem segredo.
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `E2E_BASE_URL=<url de prod> pnpm test:e2e`; ler o README seguindo os passos em clone limpo.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `E2E_BASE_URL=<url de prod> pnpm test:e2e`; ler o README seguindo os passos em clone limpo.
 **Não fazer:** chave ou senha real no README; smoke em laço; dados pessoais reais no cadastro de teste.
 **Perfil DoD e revisão:** infra.
 **Depende de / libera:** T8 / T23.
@@ -431,7 +431,7 @@ Cada seção abaixo pode ser colada na descrição da issue do Jira. Quem pega a
 7. Achados: bug crítico vira PR curta; o restante, lista de limitações.
 **Entregáveis:** `docs/evidencias/faixa-a/qa-cruzado.md` (tabela de itens com resultado e screenshots sem dados pessoais) e nota do RC com SHA.
 **Critério de pronto:** todos os itens do passo 2 com resultado registrado nos seis estados; seed de prod com 18; dump do dia feito; RC identificado. Fluxo completo percorrido na demo publicada com dados fictícios (perfil hackathon).
-**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`; `E2E_BASE_URL=<url de prod> pnpm test:e2e`; roteiro do passo 2.
+**Como verificar:** `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm run build` (obrigatório); `E2E_BASE_URL=<url de prod> pnpm test:e2e`; roteiro do passo 2.
 **Não fazer:** funcionalidade nova depois das 12h; deploy sem ok; dump ou print com segredo; testar o limite da IA além do necessário.
 **Perfil DoD e revisão:** hackathon.
 **Depende de / libera:** T15, T21, T22 / T24.

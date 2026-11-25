@@ -2,6 +2,9 @@
 
 ## [Não lançado]
 ### Adicionado
+- T3 (KAN-34) concluída pelo PR #5 (merge 8c02e64): cadastro, entrada, saída, proxy de sessão, layout com menu e Entrada fiel ao Figma; `pnpm run build` passa a ser obrigatório antes de reportar e de abrir PR; deploy de produção com throttling temporário da Vercel a confirmar (M-033)
+- T2 (KAN-33) concluída pelos PRs #2, #3 e #4: contratos v1, migration 0001 com RLS aplicada em aprumo-dev, clientes Supabase, config, seed de config, design system base e types.ts gerado do banco; RLS verificada em 75 de 77 casos após corrigir 2 falsos negativos do script (M-032)
+- Entrega da T1 (KAN-32) pelo PR #1, merge 73c91a3: app Next.js com TypeScript e Tailwind, pnpm com lockfile, CI, vercel.json, supabase/config.toml, ADR-002 rascunho e projeto Supabase aprumo-dev em us-east-2; Vercel, secret scanning e CI verde pendentes (M-030)
 - Especificação executável das tarefas T1 a T25 da Sprint 01 em docs/backlog/sprints/tarefas-sprint-01.md, copiada para a descrição das issues KAN-32 a KAN-56 no Jira (M-028)
 - Sprint 01 com execução por issue do Jira (KAN-1 a KAN-56), chaves Jira nos épicos e pendências D-039 e D-040, abertas e de baixa prioridade (M-027)
 - RNF-024 (interface segue o protótipo do Figma na fase H; fidelidade com evidência por faixa), D-036 resolvida e D-037/D-038 abertas (M-026)
@@ -16,6 +19,7 @@
 - 5 briefings das faixas A a D criados em docs/arquitetura/briefings/ (README.md, faixa-a-plataforma.md, faixa-b-mapa-jornada.md, faixa-c-estudo-conteudo.md, faixa-d-redacao-ia.md), a partir do plano da fase H; D-010, D-020 e D-030 seguem em aberto (M-018)
 - Pendências D-031 (regra de quem ajusta teste quebrado de outra faixa) e D-032 (possível divergência de Gherkin em US-010 e US-018), ambas abertas e de baixa prioridade (M-018)
 ### Alterado
+- T1 (KAN-32) concluída: CI verde, deploy na Vercel, variáveis cadastradas, secret scanning e push protection ativos; resta verificar 3 itens do ADR-002 (M-031)
 - Região do banco Supabase aprumo-dev em us-east-2 (Ohio), em desvio da D-009 (São Paulo); Vercel em iad1; RNF-007 com nota de desvio e risco R-17 aceito na fase H; D-046 resolvida (M-029)
 - Sprint 01: design system em T2 e T3, critério de fidelidade ao Figma nas tarefas de UI, risco R-16 e D-037/D-038 em aberto; matriz liga RNF-024 às histórias de UI da fase H (M-026)
 - Página do artefato plano-rumo-artefato.html sincronizada com plano e briefings (donos, datas, pacotes, migrations, esquema de exemplos); termo do modo de prova removido (M-023)
