@@ -285,3 +285,108 @@ test.describe("jornada", () => {
     }
   });
 });
+
+/**
+ * Faixa B, Cronograma (T11, KAN-42, US-016). Os testes gravam disponibilidade e sessões na conta
+ * de teste do `aprumo-dev`; a limpeza (service role) devolve o estado anterior da conta: apaga as
+ * linhas atuais de availability_slots e schedule_sessions e reinsere as que existiam antes.
+ * Sem Jornada ativa na conta, os testes que dependem dela são pulados (o convite é verificado).
+ */
+test.describe("cronograma", () => {
+  test.skip(!email || !password, SKIP_REASON);
+
+  let uid: string | null = null;
+  let slotsBefore: Record<string, unknown>[] | null = null;
+  let sessionsBefore: Record<string, unknown>[] | null = null;
+
+  async function findUid() {
+    const list = await admin("/auth/v1/admin/users?per_page=200");
+    return (
+      (list.users as { id: string; email: string }[]).find((u) => u.email === email)?.id ?? null
+    );
+  }
+
+  test.beforeAll(async () => {
+    if (!supaUrl || !serviceKey) return;
+    try {
+      uid = await findUid();
+      if (!uid) return;
+      slotsBefore = await admin(`/rest/v1/availability_slots?select=*&user_id=eq.${uid}`);
+      sessionsBefore = await admin(`/rest/v1/schedule_sessions?select=*&user_id=eq.${uid}`);
+    } catch {
+      uid = null;
+      console.warn("e2e cronograma: falha ao registrar o estado inicial.");
+    }
+  });
+
+  test.afterAll(async () => {
+    // Só limpa se o estado inicial foi registrado (senão não há como restaurar).
+    if (!supaUrl || !serviceKey || !uid || !slotsBefore || !sessionsBefore) return;
+    try {
+      await admin(`/rest/v1/schedule_sessions?user_id=eq.${uid}`, "DELETE");
+      await admin(`/rest/v1/availability_slots?user_id=eq.${uid}`, "DELETE");
+      if (slotsBefore.length > 0) await admin("/rest/v1/availability_slots", "POST", slotsBefore);
+      if (sessionsBefore.length > 0) {
+        await admin("/rest/v1/schedule_sessions", "POST", sessionsBefore);
+      }
+    } catch {
+      console.warn("e2e cronograma: falha na limpeza do cronograma de teste.");
+    }
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await login(page);
+  });
+
+  test("abre o cronograma com o convite ou com as ações da tela", async ({ page }) => {
+    await page.goto("/cronograma");
+    await expect(page.getByRole("heading", { level: 1, name: "Seu cronograma" })).toBeVisible();
+    const invite = page.getByRole("link", { name: "Criar Jornada" });
+    if (await invite.isVisible()) {
+      await expect(invite).toHaveAttribute("href", "/jornada/nova");
+      return;
+    }
+    await expect(page.locator("#schedule-availability-button")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Regerar cronograma", exact: true })).toBeVisible();
+  });
+
+  test("valida o formulário, salva a disponibilidade e gera o cronograma", async ({ page }) => {
+    test.skip(!supaUrl || !serviceKey || !uid, "sem service role para limpar a conta de teste");
+    await page.goto("/cronograma");
+    // Id do botão que abre o formulário (o nome "Disponibilidade" casa também com "Salvar disponibilidade").
+    const availability = page.locator("#schedule-availability-button");
+    test.skip(!(await availability.isVisible()), "conta de teste sem Jornada ativa");
+    // Sem disponibilidade prévia o formulário já abre sozinho: só clica se estiver fechado.
+    if ((await availability.getAttribute("aria-expanded")) !== "true") {
+      await availability.click();
+    }
+    await expect(availability).toHaveAttribute("aria-expanded", "true");
+    const save = page.getByRole("button", { name: "Salvar disponibilidade", exact: true });
+
+    // Salvar vazio: o erro aparece na região viva do campo, ligada por aria-describedby.
+    await save.click();
+    await expect(page.locator("#slot-0-time-msg")).toContainText("HH:mm");
+    await expect(page.locator("#slot-0-time-msg")).toHaveAttribute("aria-live", "polite");
+    await expect(page.locator("#slot-0-minutes-msg")).toContainText("15 a 240");
+
+    await page.getByLabel("Horário", { exact: true }).fill("19:30");
+    await page.getByLabel("Duração (min)").fill("30");
+    await save.click();
+    await expect(page.getByRole("status").filter({ hasText: "Disponibilidade salva" })).toBeVisible();
+
+    await page.getByRole("button", { name: "Regerar cronograma", exact: true }).click();
+    await expect(page.getByRole("status").filter({ hasText: /Cronograma/ })).toBeVisible();
+    await page.getByRole("button", { name: "Semana", exact: true }).click();
+    await expect(page.getByRole("heading", { level: 2, name: "Próximos 7 dias" })).toBeVisible();
+  });
+
+  test("no celular /cronograma não ganha rolagem horizontal", async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 700 });
+    await page.goto("/cronograma");
+    await expect(page.getByRole("heading", { level: 1, name: "Seu cronograma" })).toBeVisible();
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    );
+    expect(overflow).toBeLessThanOrEqual(0);
+  });
+});
