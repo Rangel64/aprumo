@@ -2,6 +2,8 @@
 
 ## [Não lançado]
 ### Adicionado
+- Drawer do Mapa adiciona o conteúdo à Jornada ativa, e criar Jornada arquiva a anterior para manter só uma ativa por aluno (T10, KAN-41, US-011; D-060 e D-061; PR #16 aguardando aceite do PO) (M-052)
+- T10 (KAN-41, US-011) implementada e verificada na branch faixa-b/KAN-41-jornada, aguardando PR e aceite do PO: Jornada com meta e prazo obrigatórios (RN-002) em /jornada/nova e /jornada com roadmap; addContentsToJourney e getActiveJourney no servidor; metodologia recusável (RN-001); nivelamento e submetas ainda sem código (D-063) (M-051)
 - Seed (T4, KAN-35) executado no aprumo-dev em 2026-11-25, duas vezes com contagens iguais: 18 conteúdos, 90 questões, 54 flashcards e conta demo com estado-base; migration 0002 segue pendente no aprumo-dev (M-049)
 - T15 (KAN-46) fechada: PR #13 (merge b03ed7e, lote 1) e PR #14 (merge 5a8e246, lote 2) mergeados e aceitos pelo PO em 2026-11-25; US-049 feita com 18 de 18 conteúdos; B-010 resolvido; conferência humana das fontes segue em D-054 a D-059 (M-048)
 - T15 (KAN-46), lote 2 (conteúdos 13 a 18), implementado e verificado na branch faixa-c/KAN-46-conteudos-13-18, aguardando PR e aceite do PO: 6 conteúdos com fontes da Cartilha do Participante da Redação do Enem 2026 (INEP), páginas conferidas no PDF oficial, 30 questões e 18 flashcards; US-049 com 18 de 18 conteúdos (90 questões, 54 flashcards); livros citados só por obra e tema; B-010 corrigido na branch (M-047)
