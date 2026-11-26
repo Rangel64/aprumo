@@ -56,6 +56,11 @@
 | D-051 | Limite de tentativas do mini-simulado contra força bruta do gabarito: sem limite, ~15 chamadas de `submitQuizAttempt` deduzem as 5 respostas. Proposta: `app_config.quiz_max_attempts_per_day`, pausa mínima entre tentativas e migration aditiva de índice em `quiz_attempts`. Recomendação: adiar para depois do MVP e manter como risco conhecido (R-18 na sprint 01). Decide o PO. | US-013 | 2026-11-25 | aberta | - |
 | D-052 | Versionar ou não `verify-env/` (ambiente de verificação do Supabase local, hoje fora do repositório, no worktree escola-wt-verify), para o time reproduzir a verificação das tarefas T5, T9 e T14? Hoje o roteiro `verify-env/e2e/verify.mjs` é a única prova de US-012 e de parte da US-013. | sprint-01 | 2026-11-25 | aberta | - |
 | D-053 | As rotas de não encontrado (`/trilhas/[slug]` e `/conteudos/[slug]`) respondem HTTP 200 com a tela "não encontrada", porque o `loading.tsx` já enviou o status. Manter o padrão do repositório ou responder 404? O teste `e2e/faixa-b.spec.ts` (linha 107) diz "dá 404" no nome, mas confere só o texto (observação O1 da T9; baixa prioridade). | sprint-01 | 2026-11-25 | aberta | - |
+| D-054 | Conferência humana das páginas e capítulos de Bechara, Cunha, Cintra e Manual de Redação nos conteúdos 8 a 12. Decisão do PO: citar "capítulo sem página" (capítulo e página a conferir) até a conferência (baixa) | US-049 | 2026-11-25 | aberta | - |
+| D-055 | Fonte do termo "tópico frasal" (conteúdo desenvolvimento-topico-frasal): definir a obra ou referência de apoio (baixa) | US-049 | 2026-11-25 | aberta | - |
+| D-056 | Revisão por professor do lote 1: cinco famílias de argumento (tipos-de-argumento), "precisa-se de professores" x "vendem-se casas" e "bastante" e "meio" (baixa) | US-049 | 2026-11-25 | aberta | - |
+| D-057 | Mapa: no viewport inicial, os controles de zoom do React Flow cobrem o nó "Coesão referencial", e arestas longas cruzam nós. Rever na T11 ou no ajuste de viewport (baixa prioridade) | US-006 | 2026-11-25 | aberta | - |
+| D-058 | Coluna "Fontes sugeridas" de content/conteudos-e-fontes.md ainda prevê BECHARA no conteúdo 8 e MANUAL nos conteúdos 9 e 12, que os JSON não citam: manter a previsão ou alinhá-la aos JSON | US-049 | 2026-11-25 | aberta | - |
 
 
 Nota (não é decisão, sem ID): o `server-only` pode falhar quando o seed roda sob `tsx` (T4). Conferir o comportamento no pacote instalado; se falhar, o script cria o client com `@supabase/supabase-js`, como prevê o passo 2 da T4.
@@ -72,3 +77,4 @@ Nota (não é decisão, sem ID): o `server-only` pode falhar quando o seed roda 
 | B-007 | Risco (baixa): a guarda do seed recusa "prod" só pelo nome; um host de produção com outro nome não é pego. Considerar allowlist de host. | US-048 | 2026-11-25 | aberto | - |
 | B-008 | Risco (baixa): o upsert do seed nunca remove itens apagados do JSON de conteúdo; a linha antiga continua no banco. | US-048 | 2026-11-25 | aberto | - |
 | B-009 | Risco (baixa): a migration 0002 (20261125140000_0002_demo_replace_essays.sql) pode colidir de numeração com a reserve_ai_usage da faixa D (T18). | sprint-01 | 2026-11-25 | aberto | - |
+| B-010 | Competência C5 sem conteúdo existente até o lote 2 da T15 (conteúdos 13 a 18). | US-049 | 2026-11-25 | aberto | Resolve com o lote 2 da T15 (KAN-46). |

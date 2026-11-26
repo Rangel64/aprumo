@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- T15 (KAN-46), lote 1 (conteúdos 7 a 12), implementado e verificado na branch faixa-c/KAN-46-conteudos-7-12, aguardando PR e aceite do PO: 6 conteúdos com fontes da Cartilha do Participante da Redação do Enem 2026 (INEP), páginas conferidas no PDF oficial, 30 questões e 18 flashcards; US-049 com 12 de 18 conteúdos; livros citados só por obra e tema (M-046)
 - T4 (KAN-35) mergeada pelo PR #12 (merge d7dd8c9), aceita pelo PO em 2026-11-25: `pnpm seed` com conta demo, guarda contra host remoto e produção, reset transacional das redações por RPC (migration 0002); US-048 testada em Supabase local, não verificada no aprumo-dev; seed de prod na T8 (M-044, M-045)
 - T16 (KAN-47) concluída pelo PR #11 (merge 5cd789c), aceita pelo PO em 2026-11-25: flashcards em /revisar com 4 níveis de confiança (Errei, Rever, Quase, Sabia!) e agendamento simples; US-018 feita; D-043 resolvida (M-043)
 - Bateria completa da T16 (KAN-47): e2e de flashcards cobre a fila (cartão vencido aparece; cartão futuro e conteúdo sem content_progress não aparecem) e o reset da conta demo é repetível; lint, typecheck, 214 testes, build, e2e 14 de 14, smoke em 1024 px e 375 px, rls:check 77 de 77 e teste de flashcard_states entre dois usuários 8 de 8; T16 segue aguardando PR e aceite do PO (M-042)

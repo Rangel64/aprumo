@@ -46,4 +46,27 @@ Observações:
 - A ordem da tabela é a ordem de `content/trail.json` e é uma ordenação topológica válida do grafo.
 - Questões: 5 por conteúdo, originais do time (`origin: "original"`), com `sourceCitation` apontando a fonte consultada (RF-062). Flashcards: 3 por conteúdo.
 - Quando uma competência ou fonte da tabela não puder ser confirmada no documento aberto, ajustar aqui e em `content/competency-map.json` no mesmo PR.
-- Pendente de conferência humana: abrir cada fonte, anotar edição e página, e só então citar em `sourceCitation`.
+- Pendente de conferência humana: abrir cada fonte, anotar edição e página, e só então citar em `sourceCitation`. Para os conteúdos 7 a 12, ver a seção "Revisão de fontes (lote 1)" abaixo.
+
+## Revisão de fontes (lote 1)
+
+Data: 2026-11-25. Escopo: conteúdos 7 a 12 (T15, KAN-46). Os conteúdos 1 a 6 e 13 a 18 não mudam nesta seção. Legenda: CONFERIDA, A CONFERIR, A DEFINIR.
+
+**Cartilha (CART): CONFERIDA.** Citada nos JSON como "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026", com página impressa e URL oficial (`https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf`). Conferida por leitura do PDF em 2026-11-25 (página impressa = página do PDF menos 2).
+
+**Gramáticas e Manual (BECHARA, CUNHA, MANUAL): A CONFERIR.** Citados só por obra e tema, sem página (decisão do PO: "capítulo sem página"), com a marcação "capítulo e página a conferir" nos JSON. Conferir com o exemplar físico.
+
+| # | Conteúdo | CART (páginas impressas citadas) | BECHARA / CUNHA / MANUAL | Observações |
+|---|---|---|---|---|
+| 7 | `tipos-de-argumento` | CONFERIDA: p. 28 a 32 e 40 | Não citados | A Cartilha não traz classificação nominal de tipos de argumento. As cinco famílias são sistematização didática da plataforma (conferir com professor). |
+| 8 | `desenvolvimento-topico-frasal` | CONFERIDA: p. 28 a 30, 32 e 43 | BECHARA previsto na tabela, mas não citado nos JSON | "Tópico frasal" não consta na Cartilha; fonte do termo A DEFINIR. A Cartilha cobre só ideia principal e ideias secundárias do parágrafo (p. 32). O plano previa Bechara, mas o termo vem de manuais de redação. O roteiro em quatro passos e o de fechamento são sugestão didática da plataforma. |
+| 9 | `paragrafacao` | CONFERIDA: p. 31 a 33, 40 e 43 | MANUAL previsto na tabela, mas não citado nos JSON | Sem pendência de fonte além do MANUAL previsto. A p. 43 é comentário de redação-modelo, não regra: a questão Q5 cita só a p. 40. |
+| 10 | `coesao-referencial` | CONFERIDA: p. 33 e 34 | A CONFERIR: BECHARA e CUNHA; CINTRA (tema: pronomes e retomada), na ambiguidade do pronome | A Cartilha não trata a ambiguidade do pronome. |
+| 11 | `conectivos-e-coesao-sequencial` | CONFERIDA: p. 31 a 34 | A CONFERIR: BECHARA e CUNHA; CINTRA (conjunções e orações coordenadas e subordinadas) | Lista ampliada de conectivos e relações vêm da gramática, não da Cartilha. |
+| 12 | `concordancia-verbal-e-nominal` | CONFERIDA: p. 13 e 14 (desvios gramaticais, níveis da Competência I) | A CONFERIR: BECHARA e CUNHA; CINTRA (concordância verbal e nominal) | As regras de concordância não constam na Cartilha, só o critério de avaliação. MANUAL previsto na tabela, mas não citado nos JSON. |
+
+Pendências para conferência humana:
+
+- Abrir BECHARA, CUNHA e CINTRA e o MANUAL no exemplar físico e anotar edição, capítulo e página nas citações dos conteúdos 10, 11 e 12.
+- Definir a fonte do termo "tópico frasal" (conteúdo 8) e preencher a citação; decidir se BECHARA e MANUAL, previstos na tabela para os conteúdos 8, 9 e 12, entram ou saem da coluna "Fontes sugeridas".
+- Validar com professor a sistematização em cinco famílias de argumento (conteúdo 7).

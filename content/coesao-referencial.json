@@ -1,0 +1,156 @@
+{
+  "slug": "coesao-referencial",
+  "title": "Coesão referencial",
+  "summary": "Como apresentar e retomar pessoas, coisas e ideias no texto, com pronomes, sinônimos, expressões resumitivas e elipse, sem repetir palavras nem deixar a retomada ambígua.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 0,
+    "y": 740
+  },
+  "sort": 10,
+  "prerequisites": [
+    "paragrafacao"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Apresentar e retomar",
+      "bodyMd": "Ao falar da Competência 4, a Cartilha descreve a **referenciação**: pessoas, coisas, lugares e fatos são **apresentados** no texto e depois **retomados** ao longo dele. Essa retomada liga frases e parágrafos e permite ao leitor acompanhar *de quem* ou *do quê* se está falando.\n\nSem retomada, o texto vira uma lista de frases soltas. Com retomada bem feita, a ideia caminha de um trecho a outro.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 (referenciação)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Recursos de retomada",
+      "bodyMd": "A Cartilha cita vários recursos para retomar o que já foi dito:\n\n- **Pronomes** (pessoais, possessivos, demonstrativos), **advérbios de lugar** e **artigos**: *\"A escola ampliou o horário. Ela também...\"*.\n- **Sinônimos, hipônimos, hiperônimos** e **expressões resumitivas**: *\"cães, gatos e coelhos\"* pode ser retomado por *\"esses animais\"*.\n- **Conectivos ou expressões** que retomam o que foi dito.\n- **Elipse**: omitir o termo já citado ou fácil de identificar, como em *\"Os moradores chegaram e (os moradores) organizaram a reunião\"*, que fica *\"Os moradores chegaram e organizaram a reunião\"*.\n\nO ideal é alternar os recursos, em vez de usar sempre o mesmo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 (recursos de referenciação e elipse)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Cuidados: repetição e ambiguidade",
+      "bodyMd": "Entre os problemas apontados na Cartilha está a **repetição ou substituição inadequada de palavras**, sem usar pronome, advérbio, artigo ou sinônimo.\n\nA retomada também pode ser inadequada, seja por repetição desnecessária, seja por substituição que gera ambiguidade. Se um pronome pode apontar para dois termos, o leitor se perde. Em *\"O diretor falou com o professor, e ele anunciou a mudança\"*, não se sabe quem anunciou. A saída é repetir o termo ou reescrever: *\"O diretor falou com o professor e anunciou a mudança\"* (o sujeito, aqui, é o diretor).\n\nTambém evite trocar a palavra por um sinônimo que mude o sentido: a retomada deve apontar para a mesma coisa.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 34 (repetição ou substituição inadequada); ambiguidade do pronome: gramática de referência (BECHARA, Moderna Gramática Portuguesa, e/ou CUNHA; CINTRA, Nova Gramática do Português Contemporâneo; tema: pronomes e retomada; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Parágrafo de exemplo (fictício)",
+      "bodyMd": "Tema fictício: **bibliotecas comunitárias**.\n\n\"As bibliotecas comunitárias ampliam o acesso à leitura em bairros afastados do centro. Esses espaços, mantidos em geral por voluntários, enfrentam a falta de acervo atualizado. Tal carência afasta o público jovem, que ali encontraria apoio aos estudos.\"\n\nObserve as retomadas: *\"bibliotecas comunitárias\"* vira *\"esses espaços\"* (expressão demonstrativa); *\"a falta de acervo atualizado\"* é resumida por *\"tal carência\"*; *\"ali\"* (advérbio de lugar) retoma as bibliotecas. Nenhum termo foi repetido sem necessidade.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 (recursos de retomada; exemplo original fictício)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 (referenciação)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No exemplo, qual expressão resume a ideia de \"falta de acervo atualizado\"?",
+        "options": [
+          "\"Esses espaços\"",
+          "\"Tal carência\"",
+          "\"Ali\"",
+          "\"Em geral\""
+        ],
+        "correctIndex": 1,
+        "explanation": "\"Tal carência\" é uma expressão resumitiva: retoma em poucas palavras o que foi dito na frase anterior."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- Referenciação: apresentar e depois retomar pessoas, coisas, lugares e fatos.\n- Recursos: pronomes, advérbios, artigos, sinônimos, hiperônimos, expressões resumitivas e elipse.\n- Evite repetir a mesma palavra sem necessidade.\n- Evite também a retomada ambígua: o leitor precisa saber a quem o pronome se refere.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 34 (referenciação e inadequações)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Na coesão referencial, o que significa \"retomar\" um termo?",
+      "options": [
+        "Mudar a ordem das frases do parágrafo na hora de revisar o texto.",
+        "Repetir exatamente a mesma palavra em todas as frases do texto.",
+        "Trocar o termo por outro de sentido diferente, só para variar o texto.",
+        "Voltar ao que já foi dito, por pronome, sinônimo ou outro recurso."
+      ],
+      "correctIndex": 3,
+      "explanation": "Retomar é voltar ao mesmo referente por outro meio. Repetir sempre a mesma palavra é um problema apontado na Cartilha; mudar a ordem das frases ou trocar o termo por outro de sentido diferente não retoma o referente.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Em \"Cães, gatos e coelhos vivem em muitas casas. Esses animais exigem cuidados diários\", o termo \"esses animais\" funciona como:",
+      "options": [
+        "Expressão resumitiva que retoma os três substantivos.",
+        "Elipse do sujeito, omitido na segunda frase do trecho lido.",
+        "Conectivo de oposição entre as duas frases do trecho lido.",
+        "Repetição desnecessária do mesmo termo usado antes dele."
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Esses animais\" reúne e retoma \"cães, gatos e coelhos\" em uma só expressão. Não há omissão de termo (elipse), nem relação de oposição, e a repetição aqui não ocorre, pois o termo é diferente.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia o trecho fictício: \"A coordenadora conversou com a aluna, e ela decidiu mudar o horário das aulas.\" Qual é o problema de coesão referencial?",
+      "options": [
+        "Repetição do mesmo substantivo em todas as frases, o que torna o texto monótono.",
+        "Excesso de sinônimos, que afasta o leitor do referente original no trecho.",
+        "\"Ela\" pode retomar a coordenadora ou a aluna, e o leitor fica em dúvida.",
+        "Uso de elipse do sujeito em ponto onde a norma-padrão não permite omiti-lo."
+      ],
+      "correctIndex": 2,
+      "explanation": "O pronome tem dois possíveis referentes, o que gera ambiguidade. A correção é repetir o termo (\"a coordenadora decidiu\") ou reescrever a frase. Não há repetição do substantivo, excesso de sinônimos nem elipse indevida no trecho.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 (retomada por pronome); ambiguidade do pronome: gramática de referência (BECHARA, Moderna Gramática Portuguesa, e/ou CUNHA; CINTRA, Nova Gramática do Português Contemporâneo; tema: pronomes e retomada; capítulo e página a conferir)",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual versão evita a repetição desnecessária em \"A empresa anunciou o projeto. A empresa investirá no projeto neste ano.\"?",
+      "options": [
+        "\"A empresa anunciou o projeto. A empresa investirá no projeto neste ano.\" (sem mudança)",
+        "\"A empresa anunciou o projeto e investirá nele neste ano.\"",
+        "\"A empresa anunciou o projeto. Eles investirão no projeto neste ano.\"",
+        "\"A empresa anunciou o projeto, que será financiado por ela neste ano, ela mesma, a empresa.\""
+      ],
+      "correctIndex": 1,
+      "explanation": "A versão correta usa elipse do sujeito (\"e (a empresa) investirá\") e o pronome \"nele\" para retomar o projeto. A que usa \"eles\" (plural) não concorda com \"empresa\". A versão com \"ela mesma, a empresa\" repete ainda mais e fica confusa, e a sem mudança mantém a repetição.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 34",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Por que alternar os recursos de retomada (pronome, sinônimo, expressão resumitiva, elipse) é uma boa prática?",
+      "options": [
+        "Porque a variedade evita a repetição e mantém a ligação entre as ideias.",
+        "Porque a coesão só é avaliada se todos os recursos aparecem em cada parágrafo.",
+        "Porque o pronome é proibido em redações e precisa ser sempre substituído.",
+        "Porque sinônimos podem ser usados mesmo quando mudam o sentido do termo."
+      ],
+      "correctIndex": 0,
+      "explanation": "A variedade de recursos evita repetir palavras e ajuda o leitor a acompanhar o fio do texto. Não é exigido ter todos em cada parágrafo, o pronome não é proibido e o sinônimo precisa manter o sentido.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 34",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é referenciação?",
+      "back": "Apresentar pessoas, coisas, lugares e fatos e retomá-los ao longo do texto."
+    },
+    {
+      "front": "Cite recursos de retomada.",
+      "back": "Pronomes, advérbios, artigos, sinônimos, hiperônimos, expressões resumitivas e elipse."
+    },
+    {
+      "front": "Que dois problemas a retomada deve evitar?",
+      "back": "A repetição desnecessária da mesma palavra e o pronome ambíguo, que não deixa claro a quem se refere."
+    }
+  ]
+}

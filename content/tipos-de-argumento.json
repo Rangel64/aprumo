@@ -1,0 +1,162 @@
+{
+  "slug": "tipos-de-argumento",
+  "title": "Tipos de argumento",
+  "summary": "Como fundamentar a tese com autoridade, dados, exemplificação, comparação e causa e consequência, escolhendo argumentos pertinentes e ligados ao ponto de vista.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 0,
+    "y": 540
+  },
+  "sort": 7,
+  "prerequisites": [
+    "repertorio-sociocultural",
+    "tese-e-projeto-de-texto"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Argumentar é fundamentar o ponto de vista",
+      "bodyMd": "Na Competência III, a Cartilha trata do modo como o participante seleciona, relaciona, organiza e interpreta informações, fatos, opiniões e argumentos para **defender um ponto de vista**. Defender não é apenas afirmar: o desenvolvimento explicita e explica as ideias, sem deixar lacunas de sentido para o leitor.\n\nPor isso, o argumento é a peça que **liga a tese a uma justificativa**. Sem ela, a tese fica solta; sem a tese, o argumento perde o rumo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29 (Competência III e desenvolvimento)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Cinco caminhos para argumentar",
+      "bodyMd": "A Cartilha lista formas de desenvolver as ideias e estratégias argumentativas, como exemplos, definições, comparações, analogias, dados estatísticos, pesquisas, fatos comprováveis, citações ou depoimentos de especialistas, pequenas narrativas ilustrativas e alusões históricas (p. 29 e 40). Para estudar, vale agrupá-las em cinco caminhos:\n\n- **Autoridade**: apoiar-se na fala ou no estudo de alguém com conhecimento reconhecido sobre o assunto.\n- **Dados e fatos comprováveis**: usar informações verificáveis para sustentar a afirmação.\n- **Exemplificação**: mostrar um caso concreto que ilustra a ideia.\n- **Comparação e analogia**: aproximar situações, épocas ou lugares para esclarecer o ponto.\n- **Causa e consequência**: explicar por que o problema ocorre e o que ele provoca.\n\nAtenção: esses cinco nomes são uma **organização didática** feita pela plataforma. A Cartilha não traz essa classificação nominal em cinco caminhos. Ela lista as estratégias acima como formas de desenvolver as ideias (p. 29 e 40) e, na p. 32, cita a causa-consequência (junto de comparação, exemplificação e detalhamento) como forma de desenvolver um parágrafo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 40 (formas de desenvolvimento e estratégias argumentativas) e p. 32 (causa-consequência como forma de desenvolver o parágrafo). Os cinco nomes de agrupamento são sistematização didática da plataforma, não constam na Cartilha (conferir com professor)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Como escolher e conferir o argumento",
+      "bodyMd": "Antes de escrever, a Cartilha recomenda reunir ideias, selecionar as **pertinentes para a defesa do seu ponto de vista** e checar se elas convergem para a tese. Em termos práticos:\n\n1. O argumento responde ao recorte do tema ou foge dele?\n2. Ele sustenta a tese, ou é uma informação solta?\n3. Há mais de um caminho (por exemplo, causa e consequência junto a um exemplo), ou o texto repete a mesma ideia com outras palavras?\n4. Ele vai além do que os textos motivadores já dizem? Nos descritores da Cartilha (p. 31), a limitação aos argumentos dos textos motivadores aparece nos níveis de 120 pontos e de 80 pontos.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29, 30 e 31 (seleção de informações e descritores da Competência III)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Exemplo fictício: dois caminhos para a mesma tese",
+      "bodyMd": "Tese fictícia: *a escassez de áreas de lazer em bairros densamente povoados persiste por falta de planejamento urbano.*\n\n**Causa e consequência:** \"Sem planejamento, novos conjuntos de moradias são aprovados sem reservar terrenos para praças. Como consequência, as crianças do bairro passam a brincar em ruas movimentadas.\"\n\n**Comparação:** \"Em um bairro vizinho, projetado com praças desde o início, as famílias se reúnem ao ar livre aos fins de semana. A diferença mostra que o planejamento precede o uso do espaço.\"\n\nOs dois trechos são inventados, sem dados reais. Repare que ambos terminam voltando à tese (planejamento).",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 40 (desenvolvimento por comparação) e p. 32 (causa-consequência como forma de desenvolver o parágrafo). Exemplo original e fictício da plataforma",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 (argumentos pertinentes ao ponto de vista)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No exemplo, o trecho \"em um bairro vizinho, projetado com praças desde o início\" usa qual caminho?",
+        "options": [
+          "Autoridade.",
+          "Comparação.",
+          "Dado estatístico.",
+          "Nenhum: é uma opinião sem apoio."
+        ],
+        "correctIndex": 1,
+        "explanation": "O trecho aproxima dois bairros para esclarecer o ponto, o que caracteriza uma comparação."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- Argumentar é fundamentar o ponto de vista, sem lacunas de sentido.\n- Caminhos úteis: autoridade, dados e fatos comprováveis, exemplificação, comparação e causa e consequência (agrupamento didático da plataforma).\n- Todo argumento deve ser pertinente e convergir para a tese.\n- Evite informações soltas e a limitação aos argumentos dos textos motivadores (descritores de 120 e 80 pontos, p. 31).",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29, 30 e 40 (desenvolvimento e estratégias argumentativas), p. 31 (descritores) e p. 32 (causa-consequência no parágrafo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a lógica da Competência III, qual é a função de um argumento na redação?",
+      "options": [
+        "Enfeitar o texto com informações interessantes, mesmo sem relação com a tese.",
+        "Substituir a proposta de intervenção no fechamento do texto dissertativo.",
+        "Repetir o texto motivador com outras palavras, sem acrescentar nada novo.",
+        "Fundamentar o ponto de vista defendido, ligando a tese a uma justificativa.",
+        "Reduzir o número de parágrafos do texto para economizar linhas de escrita."
+      ],
+      "correctIndex": 3,
+      "explanation": "O argumento sustenta a tese. Informação sem ligação com ela é solta; copiar os motivadores não demonstra seleção própria; e argumento não substitui a proposta nem altera a quantidade de parágrafos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28 e 29",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Qual alternativa descreve um argumento por exemplificação?",
+      "options": [
+        "Narrar um caso concreto e fictício de uma escola que reduziu faltas.",
+        "Explicar que a falta de verba gera filas em um serviço público e atrasos no atendimento.",
+        "Citar um estudioso reconhecido do tema para apoiar a afirmação feita no parágrafo.",
+        "Afirmar que o assunto é muito importante para toda a sociedade brasileira atual.",
+        "Comparar duas cidades de épocas diferentes para esclarecer o ponto defendido."
+      ],
+      "correctIndex": 0,
+      "explanation": "Exemplificar é mostrar um caso concreto que ilustra a ideia. A segunda opção explica uma causa e sua consequência, a terceira recorre a uma autoridade, a quarta é só uma opinião sem apoio e a última é comparação.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 40 (exemplos e comparações) e p. 32 (causa-consequência)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia o trecho fictício: \"A cidade de Vale Verde, imaginária, trocou a iluminação de suas praças e, meses depois, moradores passaram a usá-las à noite. Logo, iluminar espaços públicos amplia o seu uso.\" Qual caminho argumentativo predomina?",
+      "options": [
+        "Autoridade, pois o trecho cita a fala de um especialista no assunto.",
+        "Apelo emocional, pois o trecho tenta comover o leitor com uma história triste.",
+        "Dado estatístico com fonte, pois traz porcentagens e números verificáveis.",
+        "Nenhum, porque o trecho não tem relação com uma tese possível sobre o tema.",
+        "Exemplificação (caso concreto) com relação de causa e consequência."
+      ],
+      "correctIndex": 4,
+      "explanation": "O trecho apresenta um caso concreto (exemplo) e dele extrai um efeito (iluminar leva ao maior uso). Não há especialista, nem apelo emocional, nem dado numérico, e o trecho se liga a uma tese possível sobre espaços públicos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 40 (exemplos) e p. 32 (causa-consequência). Trecho original e fictício da plataforma",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Um participante reúne várias informações, mas elas não se ligam à tese escolhida. Qual é o melhor passo?",
+      "options": [
+        "Manter todas, porque quanto mais informações houver, melhor será o texto.",
+        "Selecionar as pertinentes ao ponto de vista e checar se convergem para a tese.",
+        "Trocar a tese por uma frase vaga que acomode todas as informações reunidas.",
+        "Copiar trechos dos textos motivadores para preencher as linhas restantes.",
+        "Deixar todo o desenvolvimento para o último parágrafo do texto."
+      ],
+      "correctIndex": 1,
+      "explanation": "A recomendação é selecionar o que é pertinente ao ponto de vista e conferir a convergência. Manter tudo gera informações soltas, tese vaga enfraquece o texto, copiar motivadores limita a autoria e o desenvolvimento não pertence só ao último parágrafo.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 30",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Por que ficar limitado aos argumentos dos textos motivadores é um risco na Competência III?",
+      "options": [
+        "Porque os textos motivadores não podem ser lidos durante a prova do exame.",
+        "Porque o texto motivador sempre traz informações falsas sobre o tema proposto.",
+        "Porque os descritores de 120 e 80 pontos citam a limitação aos motivadores.",
+        "Porque os argumentos precisam ser longos para receber uma boa avaliação do texto.",
+        "Porque a banca desconsidera qualquer relação com o tema da proposta de redação."
+      ],
+      "correctIndex": 2,
+      "explanation": "Na p. 31, o descritor de 120 pontos fala em informações limitadas aos argumentos dos textos motivadores, e o de 80 pontos também. As demais opções afirmam o que a Cartilha não diz: os motivadores podem ser lidos e usados como apoio, não são falsos por definição, o tamanho não é critério e a relação com o tema é desejada.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Que caminhos argumentativos a plataforma agrupa?",
+      "back": "Autoridade, dados e fatos comprováveis, exemplificação, comparação e causa e consequência."
+    },
+    {
+      "front": "O que torna um argumento adequado?",
+      "back": "Ser pertinente ao tema, fundamentar o ponto de vista e convergir para a tese."
+    },
+    {
+      "front": "Que risco há em se limitar aos textos motivadores?",
+      "back": "Os descritores de 120 e 80 pontos da Competência III (p. 31) citam a limitação aos argumentos dos textos motivadores."
+    }
+  ]
+}
