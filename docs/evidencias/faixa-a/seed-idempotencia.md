@@ -109,3 +109,47 @@ Mesmo banco; `pnpm seed` rodado a partir de uma cópia de `content/` com 2 reda�
 ## Resultado
 
 25/11/2026, ambiente `local` (Supabase via Docker), executado pelo agente qa. Conclusão: a 2ª execução não altera nenhuma contagem; `ai_usage` preservado; guardas e validação recusam sem escrever. Não executado no `aprumo-dev` (fora do escopo desta verificação).
+
+## Execução no aprumo-dev (2026-11-25)
+
+Contexto: execução feita pelo orquestrador a pedido do PO, que confirmou que o projeto é o aprumo-dev e adicionou `DEMO_USER_EMAIL` (domínio reservado) e `DEMO_USER_PASSWORD` ao `.env.local`. Credenciais nunca foram lidas nem registradas aqui.
+
+Comando (com `SEED_CONFIRM_REMOTE` definida no ambiente; só o nome da variável, sem valor):
+
+```
+pnpm exec tsx --env-file=.env.local scripts/seed.ts --allow-remote
+```
+
+Saída: `Destino: Supabase remoto de desenvolvimento (confirmado)`.
+
+Contagens por tabela (ANTES do seed e APÓS a 1ª e a 2ª execução; as duas execuções produziram contagens idênticas):
+
+| Tabela | Antes | Após exec. 1 | Após exec. 2 |
+|---|---|---|---|
+| contents | 0 | 18 | 18 |
+| content_edges | 0 | 22 | 22 |
+| content_sections | 0 | 108 | 108 |
+| questions | 0 | 90 | 90 |
+| question_keys | 0 | 90 | 90 |
+| flashcards | 0 | 54 | 54 |
+| trails | 0 | 1 | 1 |
+| trail_contents | 0 | 18 | 18 |
+| competency_contents | 0 | 20 | 20 |
+| essay_topics | 0 | 3 | 3 |
+| profiles | 1 | 2 (1 demo) | 2 (1 demo) |
+| content_progress | 0 | 3 | 3 |
+| journeys | 0 | 1 | 1 |
+| journey_contents | 0 | 18 | 18 |
+| flashcard_states | 0 | 9 | 9 |
+| essay_submissions | 0 | 0 | 0 |
+| essay_feedbacks | 0 | 0 | 0 |
+
+`app_config`: 10 chaves já existentes, não alteradas pelo seed.
+
+Resultado: idempotente (a 2ª execução não alterou nenhuma contagem). Conta demo: 3 conteúdos dominados; Jornada ativa com prazo 2026-12-25; 9 `flashcard_states` com `due_on` = hoje.
+
+Reservas e redações da demo foram ignoradas por falta de `content/essays/demo-essays.json` (T18 pendente), com aviso e exit 0.
+
+Pendências:
+- migration 0002 ainda não aplicada no aprumo-dev (B-012);
+- rodar o seed de novo quando `content/essays/demo-essays.json` existir.
