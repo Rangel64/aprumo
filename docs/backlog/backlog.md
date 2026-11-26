@@ -9,13 +9,13 @@ Fase vigente: H (Hackathon, 24 a 30/11/2026, 4 devs). A tabela H está na ordem 
 
 | ID | Título | Tamanho (P/M/G) | Prioridade (MoSCoW) | Status (refinar/pronta/em sprint/feita/devolvida) | Sprint (NN ou -) |
 |---|---|---|---|---|---|
-| US-048 | Seed de dados fictícios (H; seed v1 feita na T4, PR #12; seed de prod na T8 e conteúdos 7 a 18 na T15 pendentes) | M | Must | em sprint | 01 |
+| US-048 | Seed de dados fictícios (H; seed v1 feita na T4, PR #12; carga dos 18 conteúdos no aprumo-dev e seed de prod na T23 pendentes; conteúdos 7 a 18 mergeados pela T15 (PRs #13 e #14)) | M | Must | em sprint | 01 |
 | US-045 | Repositório público e README (H) | P | Must | em sprint | 01 |
 | US-002 | Cadastrar-me com e-mail e senha (H; Google pós, D-028) | M | Must | em sprint | 01 |
 | US-005 | Entrar (H) | M | Must | em sprint | 01 |
 | US-004 | Escolher perfil inicial (H: só Aluno) | P | Must | em sprint | 01 |
 | US-001 | Conhecer a plataforma (H) | P | Must | em sprint | 01 |
-| US-049 | Escrever conteúdo de exemplo com fonte (H; matéria Português/Redação, D-019) | G | Must | em sprint | 01 |
+| US-049 | Escrever conteúdo de exemplo com fonte (H; 18 de 18 conteúdos, T15 mergeada pelos PRs #13 e #14; pendente: conferência humana das fontes, D-054 a D-059) | G | Must | feita | 01 |
 | US-006 | Ver o Mapa com conteúdos de exemplo (H) | M | Must | em sprint | 01 |
 | US-010 | Usar Trilha da plataforma (H) | P | Must | em sprint | 01 |
 | US-009 | Explorar o Mapa (H) | M | Must | em sprint | 01 |
