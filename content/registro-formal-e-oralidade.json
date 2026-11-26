@@ -1,0 +1,155 @@
+{
+  "slug": "registro-formal-e-oralidade",
+  "title": "Registro formal e desvios de oralidade",
+  "summary": "O que a Cartilha chama de escolha de registro (ausência de registro informal e de marcas de oralidade), como reconhecer marcas comuns da fala e como reescrevê-las com vocabulário preciso.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 520,
+    "y": 940
+  },
+  "sort": 15,
+  "prerequisites": [
+    "tipologia-dissertativo-argumentativo"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Escolha de registro na Competência 1",
+      "bodyMd": "A Competência 1 avalia o domínio da **modalidade escrita formal** da língua portuguesa, e a proposta de redação exige essa modalidade. O avaliador considera, entre outros aspectos, desvios de **escolha de registro** e de **escolha vocabular**.\n\nSegundo a Cartilha, a escolha de registro é a adequação à modalidade escrita formal, ou seja, a **ausência de registro informal e/ou de marcas de oralidade**. A escolha vocabular envolve vocabulário preciso, com palavras em sentido correto e apropriadas ao contexto. Na leitura guiada, a Cartilha recomenda redigir sem informalidades e marcas de oralidade.\n\nA Cartilha nomeia esses termos, mas não traz lista nem exemplos de marcas de oralidade; as próximas seções são sistematização da plataforma.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 12 e 13 (modalidade escrita formal, escolha de registro e escolha vocabular), p. 14 (níveis da Competência I) e p. 40 (leitura guiada)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Registro formal não é o mesmo que rebuscado",
+      "bodyMd": "A língua varia conforme a situação: falamos de um jeito com amigos e de outro em um texto que será avaliado. Esse ajuste ao contexto é o **registro**. Na redação, o registro adequado é o **formal**: claro e correto na norma-padrão.\n\n**Formal não quer dizer difícil.** Palavras raras, usadas sem necessidade, podem soar artificiais e até errar o sentido. O que se busca é **precisão**: a palavra certa, no sentido certo, para o leitor entender sem esforço.\n\nPara revisar, pergunte a cada trecho: \"eu escreveria isso em um documento oficial ou em um artigo de opinião?\" Se a resposta for não, provavelmente é uma marca de fala.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: variação linguística e níveis de linguagem; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: variação linguística e níveis de linguagem; capítulo e página a conferir)"
+    },
+    {
+      "kind": "text",
+      "title": "Marcas de oralidade mais comuns",
+      "bodyMd": "Esta lista é da plataforma, não da Cartilha, e reúne marcas frequentes de fala:\n\n- **Contrações e formas reduzidas da fala:** *pra*, *tá*, *né*. Em texto formal: *para*, *está*, e a pergunta final é retirada.\n- **Abreviações de conversa em redes:** *vc*, *tb*, *q*. Em texto formal: *você* (ou, melhor, uma construção impessoal), *também*, *que*.\n- **Gírias e expressões coloquiais:** *de boa*, *tá ligado*, *mano*. Troque por termos neutros, como *sem problemas*, e retire vocativos de conversa.\n- **Marcadores de conversa:** *tipo assim*, *aí*, *daí*, *né*. Em geral, basta retirá-los.\n- **\"A gente\" no lugar de \"nós\"**, em geral evitado em texto formal; muitas vezes se prefere a construção impessoal: *\"é preciso\"*.\n- **\"Ter\" no sentido de existir:** *\"Tem muitos problemas\"* vira *\"Há muitos problemas\"* ou *\"Existem muitos problemas\"*.\n- **Palavras vagas:** *coisa*, *negócio*. Troque pelo termo exato.",
+      "sourceCitation": "Lista elaborada pela plataforma a partir do conceito de marcas de oralidade (INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13, que nomeia o termo sem exemplificar); BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: variação linguística e níveis de linguagem; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: variação linguística e níveis de linguagem; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Trecho com e sem marcas de oralidade (fictício)",
+      "bodyMd": "Trecho com marcas de oralidade:\n\n\"Tipo assim, tem muita gente que não liga pra coisa do lixo na rua, né? A gente precisa fazer alguma coisa, senão vai ficar um negócio horrível.\"\n\nVersão ajustada:\n\n\"Há muitas pessoas que não se preocupam com o descarte inadequado de lixo nas ruas. É necessário que a sociedade se mobilize, pois, caso contrário, o problema tende a se agravar.\"\n\nO que mudou: saíram o marcador *tipo assim* e o *né*; *tem* virou *há*; *pra* deixou de ser necessário na nova redação; *coisa* e *negócio* deram lugar a termos precisos; *a gente* foi substituído por construção impessoal.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: variação linguística e níveis de linguagem; capítulo e página a conferir); exemplo original e fictício"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: variação linguística e níveis de linguagem; capítulo e página a conferir)",
+      "quickQuestion": {
+        "prompt": "Qual trecho está no registro formal?",
+        "options": [
+          "\"A gente tem que cuidar mais do meio ambiente, né.\"",
+          "\"Vc concorda que o lixo nas ruas é um problema sério?\"",
+          "\"Os moradores precisam cuidar do meio ambiente local.\"",
+          "\"Tipo, o lixo nas ruas é um negócio que ninguém resolve.\""
+        ],
+        "correctIndex": 2,
+        "explanation": "\"Os moradores precisam cuidar do meio ambiente local\" usa vocabulário neutro, claro e correto na norma-padrão. Os demais trazem \"a gente\", \"tem que\" e \"né\"; a abreviação \"vc\"; e \"tipo\" e \"negócio\", marcas de fala."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A Cartilha define escolha de registro como ausência de registro informal e/ou de marcas de oralidade.\n- Formal não é rebuscado: a Cartilha pede vocabulário preciso, em sentido correto e adequado ao contexto.\n- Marcas comuns de fala: pra, tá, né, vc, gírias, tipo assim, a gente, \"tem\" no lugar de \"há\", coisa, negócio (lista da plataforma).\n- Releia o texto procurando trechos que você não escreveria em um documento oficial.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 40 (escolha de registro e vocabular); lista de marcas e orientações de revisão: plataforma, com gramática de referência (BECHARA e CUNHA; CINTRA, tema: variação linguística; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a Cartilha, o que caracteriza a escolha de registro adequada na redação?",
+      "options": [
+        "Uso de vocabulário raro e rebuscado, para impressionar o corretor.",
+        "Presença obrigatória de citações de autores consagrados no texto.",
+        "Quantidade mínima de linhas escritas em cada parágrafo do texto.",
+        "Escolha do gênero textual que melhor combine com o tema proposto.",
+        "Ausência de registro informal e de marcas de oralidade no texto."
+      ],
+      "correctIndex": 4,
+      "explanation": "A Cartilha descreve a escolha de registro como adequação à modalidade escrita formal, isto é, sem registro informal nem marcas de oralidade. Vocabulário rebuscado, citações obrigatórias, número de linhas por parágrafo e escolha de gênero não definem registro.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Leia o trecho fictício: \"Tipo assim, a violência nas escolas é um problema que a gente precisa resolver, né?\" Quais expressões são marcas de oralidade?",
+      "options": [
+        "\"Violência\", \"escolas\" e \"problema\", por serem palavras abstratas.",
+        "\"Precisa\" e \"resolver\", por serem verbos no presente e no infinitivo.",
+        "\"Tipo assim\", \"a gente\" e \"né\", típicas da fala cotidiana.",
+        "Nenhuma, pois a frase está completa e tem sujeito e verbo."
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Tipo assim\" e \"né\" são marcadores de conversa, e \"a gente\" é forma típica da fala. Palavras abstratas e formas verbais comuns não indicam oralidade. Frase completa também pode ter marcas de oralidade, então ter sujeito e verbo não basta.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 (conceito de marcas de oralidade); exemplos da plataforma",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual reescrita de \"Pra resolver isso, o governo tem que investir mais.\" está no registro formal?",
+      "options": [
+        "\"Pra solucionar esse problema, o governo precisa investir mais.\"",
+        "\"Para solucionar esse problema, o governo precisa investir mais.\"",
+        "\"Pra resolver esse problema aí, o governo tem que investir mais.\"",
+        "\"Pra nós resolvermos isso, o governo tem de investir mais mesmo.\""
+      ],
+      "correctIndex": 1,
+      "explanation": "Só a que começa com \"Para solucionar\" troca \"pra\" por \"para\" e retira o resto do tom coloquial. As demais mantêm \"pra\"; uma ainda traz \"aí\" e outra acrescenta \"mesmo\", que reforça o tom de conversa.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13; exemplos da plataforma",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual afirmação sobre o registro formal na redação é correta?",
+      "options": [
+        "Exige clareza e precisão, sem palavras raras usadas sem necessidade.",
+        "Exige palavras raras e rebuscadas, que comprovem o domínio da língua.",
+        "Dispensa o cuidado com a pontuação, que só importa na fala cotidiana.",
+        "Vale só para a conclusão; a introdução pode ter marcas de oralidade."
+      ],
+      "correctIndex": 0,
+      "explanation": "A Cartilha fala em vocabulário preciso, com palavras em sentido correto e apropriadas ao contexto, e não em palavras rebuscadas. A pontuação faz parte da escrita formal, e a exigência de registro vale para o texto inteiro, não só para a conclusão.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 12 e 13",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Em qual trecho fictício NÃO há marca de oralidade?",
+      "options": [
+        "\"O jovem fica perdido, né, quando não tem apoio nenhum.\"",
+        "\"Os alunos ficaram de boa com a decisão tomada pela escola.\"",
+        "\"Vc pode ajudar a combater o desperdício de água no bairro.\"",
+        "\"Os alunos receberam a decisão da escola com serenidade.\"",
+        "\"Tipo, o bairro é muito bagunçado e ninguém liga pra isso.\""
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Os alunos receberam a decisão...\" usa vocabulário neutro e construção formal. Nas demais há \"né\", \"de boa\" (gíria), \"vc\" (abreviação de conversa em rede) e \"tipo\" com \"pra\".",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 40; exemplos da plataforma",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que a Cartilha chama de escolha de registro?",
+      "back": "Adequação à modalidade escrita formal, ou seja, ausência de registro informal e/ou de marcas de oralidade."
+    },
+    {
+      "front": "Dê exemplos de marcas de oralidade e a forma formal.",
+      "back": "pra (para), tá (está), vc (você), \"tem\" (há/existem), \"a gente\" (nós ou construção impessoal), tipo assim e né (retirar)."
+    },
+    {
+      "front": "Registro formal significa usar palavras rebuscadas?",
+      "back": "Não. Pede vocabulário preciso, em sentido correto e adequado ao contexto, e linguagem clara."
+    }
+  ]
+}

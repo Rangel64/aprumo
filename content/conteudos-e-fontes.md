@@ -70,3 +70,39 @@ Pendências para conferência humana:
 - Abrir BECHARA, CUNHA e CINTRA e o MANUAL no exemplar físico e anotar edição, capítulo e página nas citações dos conteúdos 10, 11 e 12.
 - Definir a fonte do termo "tópico frasal" (conteúdo 8) e preencher a citação; decidir se BECHARA e MANUAL, previstos na tabela para os conteúdos 8, 9 e 12, entram ou saem da coluna "Fontes sugeridas".
 - Validar com professor a sistematização em cinco famílias de argumento (conteúdo 7).
+
+## Revisão de fontes (lote 2)
+
+Data: 2026-11-25. Escopo: conteúdos 13 a 18 (T15, KAN-46). Os conteúdos 1 a 12 não mudam nesta seção. Legenda: CONFERIDA, A CONFERIR, A DEFINIR.
+
+**Cartilha (CART): CONFERIDA.** Mesma citação e URL oficial do lote 1; páginas conferidas por leitura do PDF em 2026-11-25 (página impressa = página do PDF menos 2).
+
+**Gramáticas (BECHARA, CUNHA): A CONFERIR.** Citadas só por obra e tema, sem página, com a marcação "capítulo e página a conferir" nos JSON. Conferir com o exemplar físico.
+
+| # | Conteúdo | CART (páginas impressas citadas) | BECHARA / CUNHA | Observações |
+|---|---|---|---|---|
+| 13 | `regencia-e-crase` | CONFERIDA: p. 13, 14 e 40 | A CONFERIR: BECHARA e CUNHA; CINTRA (regência verbal e nominal; crase) | A Cartilha só nomeia regência e crase como desvios da Competência I (p. 13) e recomenda atenção a eles na leitura guiada (p. 40). As regras de regência e de crase não constam nela. Nos níveis (p. 14) ela usa "poucos, alguns, muitos" e "reincidência". Casos de uso controverso (por exemplo, "assistir" no sentido de ver) ficaram fora do conteúdo: o item de regência "assistir" não entrou por não ser consenso, e "assistiram à uma palestra" (Q2 de regência) é usado só pela crase antes de "uma". |
+| 14 | `pontuacao-virgula` | CONFERIDA: p. 13, 14, 40 e 61 | A CONFERIR: BECHARA e CUNHA; CINTRA (pontuação, emprego da vírgula; aposto; orações adjetivas) | A Cartilha não traz regras da vírgula: só a pontuação entre os desvios (p. 13), a vírgula no lugar de ponto-final como falha de estrutura sintática (p. 13) e um comentário de vírgula sem justificativa sintática (p. 61). |
+| 15 | `registro-formal-e-oralidade` | CONFERIDA: p. 12, 13, 14 e 40 | A CONFERIR: BECHARA e CUNHA; CINTRA (variação linguística e níveis de linguagem) | A Cartilha define escolha de registro e escolha vocabular (p. 13), mas não traz lista nem exemplos de marcas de oralidade. A lista é da plataforma. |
+| 16 | `proposta-de-intervencao-5-elementos` | CONFERIDA: p. 35, 36, 38, 40 e 44 | Não citados | A Cartilha descreve os elementos em prosa (p. 35 e 36) e fala em "cinco elementos" ao comentar uma redação (p. 44), mas não traz quadro de definições com nomes fixos. Numeração e ordem de 1 a 5 são da plataforma. |
+| 17 | `direitos-humanos-na-proposta` | CONFERIDA: p. 5 a 8, 35, 37, 38 e 40 | Não citados | O desrespeito aos direitos humanos gera nota 0 apenas na Competência V (p. 38). A lista de situações de nota 0 da redação inteira (p. 7 e 8) não o inclui. |
+| 18 | `conclusao-retomada-e-proposta` | CONFERIDA: p. 27, 29, 35, 36, 40, 43, 51, 58 e 65 | Não citados | A Cartilha pede conclusão que feche a discussão (p. 40), sem fórmula. "Retomada da tese" e "proposta no último parágrafo" aparecem só como prática descrita em redações comentadas de 2025 com boas notas (amostra), nunca como regra. A redação da p. 43 é comentada como não atingindo o nível máximo; as demais são citadas só como prática observada. |
+
+Não consta na Cartilha:
+
+- As regras de regência, de crase e de vírgula (conteúdos 13 e 14).
+- A lista de marcas de oralidade (conteúdo 15).
+- O quadro de definições dos cinco elementos da proposta (conteúdo 16).
+- "Retomada da tese" e "proposta no último parágrafo" como regra (conteúdo 18).
+
+Sistematização didática da plataforma (conferir com professor):
+
+- Numeração e ordem de 1 a 5 dos elementos da proposta (conteúdo 16).
+- Roteiro em três passos da conclusão: retomar, propor, fechar (conteúdo 18).
+- Lista de marcas de oralidade e suas reescritas (conteúdo 15).
+
+Pendências para conferência humana:
+
+- Abrir BECHARA e CUNHA; CINTRA no exemplar físico e anotar edição, capítulo e página nas citações dos conteúdos 13, 14 e 15, e validar os casos de consenso de regência e de crase.
+- Validar com professor a lista de marcas de oralidade (15), a numeração dos cinco elementos (16) e o roteiro da conclusão (18).
+- Confirmar com professor ou humano a leitura da p. 37 e 38 sobre direitos humanos antes de ampliar o conteúdo 17 além do que a Cartilha diz.
