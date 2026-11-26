@@ -129,7 +129,7 @@ describe("funções puras do eval", () => {
   });
 
   it("parseArgs recusa argumento desconhecido", () => {
-    expect(parseArgs(["--dry-run"])).toEqual({ dryRun: true, confirmSpend: false });
+    expect(parseArgs(["--dry-run"])).toEqual({ dryRun: true, confirmSpend: false, fake: false, allowPartial: false });
     expect(() => parseArgs(["--vai"])).toThrow(/desconhecido/);
   });
 });
