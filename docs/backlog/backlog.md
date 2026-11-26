@@ -9,7 +9,7 @@ Fase vigente: H (Hackathon, 24 a 30/11/2026, 4 devs). A tabela H está na ordem 
 
 | ID | Título | Tamanho (P/M/G) | Prioridade (MoSCoW) | Status (refinar/pronta/em sprint/feita/devolvida) | Sprint (NN ou -) |
 |---|---|---|---|---|---|
-| US-048 | Seed de dados fictícios (H) | M | Must | em sprint | 01 |
+| US-048 | Seed de dados fictícios (H; seed v1 feita na T4, PR #12; seed de prod na T8 e conteúdos 7 a 18 na T15 pendentes) | M | Must | em sprint | 01 |
 | US-045 | Repositório público e README (H) | P | Must | em sprint | 01 |
 | US-002 | Cadastrar-me com e-mail e senha (H; Google pós, D-028) | M | Must | em sprint | 01 |
 | US-005 | Entrar (H) | M | Must | em sprint | 01 |
