@@ -855,7 +855,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      demo_replace_essays: {
+        Args: { p_essays: Json; p_user_id: string }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never

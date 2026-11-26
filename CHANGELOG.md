@@ -32,6 +32,7 @@
 - 5 briefings das faixas A a D criados em docs/arquitetura/briefings/ (README.md, faixa-a-plataforma.md, faixa-b-mapa-jornada.md, faixa-c-estudo-conteudo.md, faixa-d-redacao-ia.md), a partir do plano da fase H; D-010, D-020 e D-030 seguem em aberto (M-018)
 - Pendências D-031 (regra de quem ajusta teste quebrado de outra faixa) e D-032 (possível divergência de Gherkin em US-010 e US-018), ambas abertas e de baixa prioridade (M-018)
 ### Alterado
+- Migration 0002 (`demo_replace_essays`) aplicada no aprumo-dev com `supabase db push --remote --yes`, a pedido do PO, e tipos do banco regenerados em `src/lib/supabase/types.ts` (M-050)
 - Skill verify-in-docker (global, fora do repositório) ganha o modo Supabase local; cópia anterior em SKILL.md.bak-antes-supabase (M-039)
 - T1 (KAN-32) concluída: CI verde, deploy na Vercel, variáveis cadastradas, secret scanning e push protection ativos; resta verificar 3 itens do ADR-002 (M-031)
 - Região do banco Supabase aprumo-dev em us-east-2 (Ohio), em desvio da D-009 (São Paulo); Vercel em iad1; RNF-007 com nota de desvio e risco R-17 aceito na fase H; D-046 resolvida (M-029)
