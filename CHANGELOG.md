@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- T10 (KAN-41, US-011) fechada: PR #16 mergeado (merge 0dd1d37) e aceito pelo PO em 2026-11-26; drawer do Mapa e criação de Jornada com arquivamento da anterior (D-060, D-061); RF-014 e RF-015 fora do recorte da fase H (D-063); US-011 feita (M-053)
 - Drawer do Mapa adiciona o conteúdo à Jornada ativa, e criar Jornada arquiva a anterior para manter só uma ativa por aluno (T10, KAN-41, US-011; D-060 e D-061; PR #16 aguardando aceite do PO) (M-052)
 - T10 (KAN-41, US-011) implementada e verificada na branch faixa-b/KAN-41-jornada, aguardando PR e aceite do PO: Jornada com meta e prazo obrigatórios (RN-002) em /jornada/nova e /jornada com roadmap; addContentsToJourney e getActiveJourney no servidor; metodologia recusável (RN-001); nivelamento e submetas ainda sem código (D-063) (M-051)
 - Seed (T4, KAN-35) executado no aprumo-dev em 2026-11-25, duas vezes com contagens iguais: 18 conteúdos, 90 questões, 54 flashcards e conta demo com estado-base; migration 0002 segue pendente no aprumo-dev (M-049)

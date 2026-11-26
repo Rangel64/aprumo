@@ -19,7 +19,7 @@ Fase vigente: H (Hackathon, 24 a 30/11/2026, 4 devs). A tabela H está na ordem 
 | US-006 | Ver o Mapa com conteúdos de exemplo (H) | M | Must | em sprint | 01 |
 | US-010 | Usar Trilha da plataforma (H) | P | Must | em sprint | 01 |
 | US-009 | Explorar o Mapa (H) | M | Must | em sprint | 01 |
-| US-011 | Criar Jornada com meta (H) | G | Must | em sprint | 01 |
+| US-011 | Criar Jornada com meta (H; T10 mergeada pelo PR #16, merge 0dd1d37, aceite do PO em 2026-11-26; RF-014 e RF-015 fora do recorte da fase H por D-063) | G | Must | feita | 01 |
 | US-012 | Estudar um conteúdo (H) | G | Must | em sprint | 01 |
 | US-013 | Dominar conteúdo e ver progresso no Mapa (H) | M | Must | em sprint | 01 |
 | US-042 | Redação por partes com 5 competências (H; só a escolha do modelo depende de D-010) | G | Must | em sprint | 01 |
