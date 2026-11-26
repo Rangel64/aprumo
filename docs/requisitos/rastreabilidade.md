@@ -45,7 +45,7 @@ Projeto sem código. Status inicial: planejado. Coluna Fase: H = hackathon (vige
 | US-039 | pós | UC-010 | RF-050, RF-051 | - | - | planejado |
 | US-040 | pós | UC-011 | RF-052 | - | - | planejado |
 | US-041 | pós | UC-011 | RF-053 | - | - | planejado |
-| US-042 | H | UC-013 | RF-054 (RNF-024) | - | - | planejado |
+| US-042 | H | UC-013 | RF-054 (RNF-018, RNF-024; RN-014, RN-023; D-010) | src/server/ai/ (types.ts, models.ts, ai-sdk-essay-model.ts, fake-essay-model.ts, factory.ts, server.ts, prompts/essay-feedback.v1.ts), scripts/eval-essay.ts, content/essays/corpus-d010.json (T17, KAN-48; rota e tela nas T18 e T19) | src/server/ai/__tests__/ai-sdk-essay-model.test.ts, src/server/ai/__tests__/fake-essay-model.test.ts, src/server/ai/__tests__/models-factory.test.ts, src/server/ai/__tests__/prompt.test.ts, scripts/__tests__/eval-essay.test.ts (só unitário; sem evidência em docs/evidencias/sprint-01/US-042/) | implementado (parcial: adapter, prompt v1 e corpus; não verificado: chamadas reais a provedor, eval D-010, rota e tela) |
 | US-043 | H | UC-013 | RF-055, RF-056 (RN-022, RN-014, D-020; RNF-024) | - | - | planejado |
 | US-044 | H | UC-013 | RF-057 (D-019; RNF-024) | - | - | planejado |
 | US-045 | H | - | RF-058 (RNF-019, RNF-021) | - | - | planejado |

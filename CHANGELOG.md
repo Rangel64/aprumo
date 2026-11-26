@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- T17 (KAN-48, US-042) em andamento: fase sem chave concluída na branch faixa-d/KAN-48-ia-adapter, sem PR; adapter de IA da redação (src/server/ai), prompt essay-feedback@v1, corpus content/essays/corpus-d010.json e scripts/eval-essay.ts (--dry-run), com testes unitários; eval real, decisão do modelo (D-010) e ADR-005 pendentes; US-042 segue não feita (M-054)
 - T10 (KAN-41, US-011) fechada: PR #16 mergeado (merge 0dd1d37) e aceito pelo PO em 2026-11-26; drawer do Mapa e criação de Jornada com arquivamento da anterior (D-060, D-061); RF-014 e RF-015 fora do recorte da fase H (D-063); US-011 feita (M-053)
 - Drawer do Mapa adiciona o conteúdo à Jornada ativa, e criar Jornada arquiva a anterior para manter só uma ativa por aluno (T10, KAN-41, US-011; D-060 e D-061; PR #16 aguardando aceite do PO) (M-052)
 - T10 (KAN-41, US-011) implementada e verificada na branch faixa-b/KAN-41-jornada, aguardando PR e aceite do PO: Jornada com meta e prazo obrigatórios (RN-002) em /jornada/nova e /jornada com roadmap; addContentsToJourney e getActiveJourney no servidor; metodologia recusável (RN-001); nivelamento e submetas ainda sem código (D-063) (M-051)
