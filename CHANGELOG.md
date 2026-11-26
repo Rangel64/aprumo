@@ -2,6 +2,7 @@
 
 ## [Não lançado]
 ### Adicionado
+- T11 (KAN-42, US-016) fechada: PR #19 mergeado (merge de0b6d5) e aceito pelo PO em 2026-11-26; cronograma mínimo em /cronograma; D-064 resolvida pelo aceite do PR; US-016 feita (M-058)
 - T11 (KAN-42, US-016) implementada e verificada na branch faixa-b/KAN-42-cronograma, aguardando PR e aceite do PO: tela /cronograma (lista do dia e da semana, disponibilidade, regerar, "Começar sessão", aviso de prazo em risco e estados de vazio e erro) e e2e de 3 testes; verificação em Supabase local com 424 testes, build e e2e 21 de 21; US-016 segue não feita (M-057)
 - T11 (KAN-42, US-016) em andamento: backend e domínio do cronograma na branch faixa-b/KAN-42-cronograma, sem PR (buildSchedule, saveAvailability, generateSchedule e getScheduleView, com testes unitários); tela /cronograma pendente; US-016 segue não feita (M-055)
 - T17 (KAN-48, US-042), complemento da fase sem chave: `pnpm eval:essay --save-outputs` grava retornos cegos (X e Y) e key.json separado, `--summarize-grades` agrega as notas de 2 pessoas e `--fake` ensaia o protocolo D-010 com 2 modelos falsos, sem chave, rede ou custo; eval real, contas e chaves, decisão do modelo e ADR-005 seguem pendentes (M-056)
