@@ -1,0 +1,162 @@
+{
+  "slug": "conclusao-retomada-e-proposta",
+  "title": "Conclusão: retomada e proposta",
+  "summary": "Como fechar a redação: o que a Cartilha pede da conclusão, a prática observada em textos comentados e um roteiro didático para retomar a discussão e apresentar a proposta.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 520,
+    "y": 1140
+  },
+  "sort": 18,
+  "prerequisites": [
+    "proposta-de-intervencao-5-elementos",
+    "direitos-humanos-na-proposta"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "O que a Cartilha pede da conclusão",
+      "bodyMd": "A Cartilha orienta: iniciar o texto apresentando o ponto de vista, desenvolver justificativas para comprová-lo e **elaborar uma conclusão que dê um fechamento à discussão**.\n\nNa Competência II, os níveis tratam da estrutura com **proposição, argumentação e conclusão**. Na Competência III, a Cartilha recomenda examinar a introdução e a conclusão para garantir coerência entre início e fim do texto.\n\nA Cartilha não tem descritor próprio para a conclusão e não fixa uma fórmula para ela.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 40 (item 2), p. 27 (estrutura com proposição, argumentação e conclusão) e p. 29 (coerência entre introdução e conclusão)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Prática observada em textos comentados",
+      "bodyMd": "Nos comentários de redações da edição de 2025 que receberam boas notas, comentadas na Cartilha (amostra), a Cartilha descreve, **em textos específicos**, parágrafos conclusivos que **retomam a tese** e apresentam a **proposta de intervenção** (por exemplo, nas redações comentadas das p. 43, 51, 58 e 65).\n\nIsso é uma **prática observada** nesses textos, e não uma regra geral. A Cartilha não diz, como exigência, que a proposta deva ficar no último parágrafo nem que a conclusão precise retomar a tese. O que ela exige é que o texto tenha conclusão que feche a discussão e, na Competência V, que exista proposta de intervenção articulada ao texto.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43, 51, 58 e 65 (comentários de redações específicas) e p. 40 (item 2)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Roteiro didático da plataforma",
+      "bodyMd": "Como sugestão de estudo, a plataforma propõe este roteiro para o parágrafo final:\n\n1. **Retomar** a ideia central da tese, com outras palavras.\n2. **Apresentar a proposta** com agente, ação, meio, finalidade e, se couber, detalhamento, de forma explícita (p. 35 e 36).\n3. **Fechar** a discussão, ligando a finalidade da proposta ao problema.\n\nCuidados didáticos: manter coerência com os argumentos desenvolvidos, evitar abrir um argumento novo que o texto não discutiu e respeitar os direitos humanos na proposta.\n\nEsse roteiro é **orientação didática da plataforma**, útil para treinar, e não critério de avaliação criado pela Cartilha. A plataforma não promete nota.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 35 e 36 (elementos da proposta) e p. 40 (item 2). O roteiro em três passos é orientação didática da plataforma, não consta na Cartilha (conferir com professor)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Conclusão de exemplo (fictícia)",
+      "bodyMd": "Tema fictício: **a escassez de áreas de lazer em bairros densamente povoados**.\n\n\"Em suma, a escassez de áreas de lazer nos bairros densamente povoados persiste por falta de planejamento e de manutenção. Cabe à prefeitura, por meio da secretaria de urbanismo, reservar terrenos ociosos para praças e criar equipes de manutenção, em parceria com associações de moradores, a fim de ampliar o convívio nas comunidades.\"\n\n- **Retomada**: \"a escassez [...] persiste por falta de planejamento e de manutenção\".\n- **Proposta**: agente (prefeitura), ação (reservar terrenos e criar equipes), meio (parceria com associações) e finalidade (ampliar o convívio).\n\nO texto é inventado, não é modelo obrigatório e não promete nota.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 35, 36 e 43 (elementos da proposta e comentário de redação). Exemplo original e fictício da plataforma",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 40 (item 2)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "Pelo texto, a ideia de que a proposta fica sempre no último parágrafo é:",
+        "options": [
+          "Uma regra expressa da Cartilha, válida para toda redação escrita.",
+          "Uma prática observada em textos comentados, não regra geral.",
+          "Uma proibição expressa da Cartilha para toda e qualquer redação.",
+          "Uma exigência da Competência I, ligada ao uso da norma culta."
+        ],
+        "correctIndex": 1,
+        "explanation": "A Cartilha descreve esse formato em redações específicas. Não o apresenta como regra, nem como proibição, nem o vincula à Competência I."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A Cartilha pede uma conclusão que dê fechamento à discussão.\n- Retomar a tese e apresentar a proposta no parágrafo final é prática observada em textos comentados, não regra geral.\n- O roteiro retomar, propor e fechar é orientação didática da plataforma.\n- A proposta deve ser explícita e respeitar os direitos humanos.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 27, 40 e 43 (conclusão e proposta)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "O que a Cartilha orienta, no item sobre a estrutura do texto, a respeito da conclusão?",
+      "options": [
+        "Que o texto traga conclusão que feche a discussão.",
+        "Que a conclusão tenha exatamente cinco linhas, sem exceção.",
+        "Que a conclusão seja dispensada quando a introdução tiver tese.",
+        "Que a conclusão traga sempre um novo repertório obrigatório.",
+        "Que a conclusão seja substituída por uma citação final."
+      ],
+      "correctIndex": 0,
+      "explanation": "A orientação é fechar a discussão. A Cartilha não fixa número de linhas, não dispensa a conclusão, não obriga novo repertório e não a substitui por citação.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 40 (item 2)",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Segundo os comentários de redações específicas da Cartilha (p. 43, 51, 58 e 65), que prática aparece nos parágrafos conclusivos descritos?",
+      "options": [
+        "A introdução de um tema diferente do que foi debatido.",
+        "Uma citação isolada, sem proposta de intervenção.",
+        "A repetição integral da introdução, palavra por palavra.",
+        "O abandono da proposta para evitar riscos de avaliação.",
+        "A retomada da tese e a apresentação da proposta."
+      ],
+      "correctIndex": 4,
+      "explanation": "Os comentários descrevem conclusões que retomam a tese e apresentam proposta. Isso foi observado nesses textos e não é regra geral. Mudar de tema, citar sem propor, copiar a introdução e abandonar a proposta não são o que as passagens descrevem.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43, 51, 58 e 65",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Conclusão fictícia: \"Em suma, a escassez de áreas de lazer persiste por falta de planejamento e de manutenção. Cabe à prefeitura reservar terrenos ociosos para praças, a fim de ampliar o convívio.\" Qual trecho cumpre a função de retomar a tese?",
+      "options": [
+        "Cabe à prefeitura reservar terrenos ociosos para as praças.",
+        "A escassez persiste por falta de planejamento e manutenção.",
+        "A fim de ampliar o convívio nas comunidades de cada bairro.",
+        "Reservar terrenos ociosos para a construção de praças novas.",
+        "Nenhum trecho retoma a ideia central apresentada no texto."
+      ],
+      "correctIndex": 1,
+      "explanation": "A primeira frase repete a ideia central (a escassez e suas causas), o que é retomar a tese. Cabe à prefeitura e reservar terrenos formam agente e ação da proposta. Ampliar o convívio é a finalidade. A opção \"Nenhum trecho retoma...\" ignora a frase inicial.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 43 e 40 (item 2)",
+      "sectionPosition": 4
+    },
+    {
+      "stem": "Pelo roteiro didático da plataforma, o que se deve evitar no parágrafo final?",
+      "options": [
+        "Retomar a ideia central da tese com outras palavras.",
+        "Indicar o agente e a ação da proposta.",
+        "Abrir um argumento novo que o texto não discutiu.",
+        "Manter coerência com os argumentos já desenvolvidos.",
+        "Explicitar a finalidade que a proposta pretende alcançar."
+      ],
+      "correctIndex": 2,
+      "explanation": "O roteiro recomenda evitar argumento novo no fechamento. Retomar a ideia central, indicar agente e ação, manter coerência e explicitar a finalidade são passos do próprio roteiro. Lembre que ele é orientação da plataforma, não critério da Cartilha.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 40 (coerência entre introdução e conclusão). O roteiro é orientação didática da plataforma",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Por que não se deve afirmar que a Cartilha exige a proposta de intervenção no último parágrafo?",
+      "options": [
+        "Porque a Cartilha proíbe qualquer proposta na conclusão do texto.",
+        "Porque a proposta só pode aparecer na introdução do texto escrito.",
+        "Porque a Cartilha diz que a conclusão deve vir antes da tese.",
+        "Porque o formato aparece em textos comentados, não como regra.",
+        "Porque a Competência V não avalia a proposta de intervenção."
+      ],
+      "correctIndex": 3,
+      "explanation": "A Cartilha descreve a conclusão com proposta em textos específicos, sem fixá-la como regra de posição. Ela não proíbe proposta na conclusão, não a limita à introdução, não inverte a ordem do texto e avalia a proposta na Competência V.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 35, 40 e 43",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que a Cartilha pede da conclusão?",
+      "back": "Uma conclusão que dê fechamento à discussão, compondo o processo argumentativo do texto."
+    },
+    {
+      "front": "Retomar a tese e propor no último parágrafo é regra da Cartilha?",
+      "back": "Não. É prática descrita em redações comentadas específicas (como p. 43, 51, 58 e 65), e não regra geral."
+    },
+    {
+      "front": "Quais são os três passos do roteiro didático do parágrafo final?",
+      "back": "Retomar a ideia central da tese, apresentar a proposta de forma explícita e fechar ligando a finalidade ao problema. É orientação da plataforma."
+    }
+  ]
+}

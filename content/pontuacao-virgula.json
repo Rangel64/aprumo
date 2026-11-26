@@ -1,0 +1,154 @@
+{
+  "slug": "pontuacao-virgula",
+  "title": "Pontuação: vírgula",
+  "summary": "Quando a vírgula é necessária (enumeração, vocativo, aposto, orações explicativas, adversativas) e quando é um desvio (entre sujeito e verbo, entre verbo e complemento), e como a Cartilha trata a pontuação na Competência 1.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 260,
+    "y": 940
+  },
+  "sort": 14,
+  "prerequisites": [
+    "concordancia-verbal-e-nominal"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "A pontuação na Competência 1",
+      "bodyMd": "A **pontuação** está na lista de desvios gramaticais avaliados na Competência 1. Ao descrever a estrutura sintática, a Cartilha aponta falhas como o período truncado (ponto-final separando orações que deveriam formar um período) e a vírgula usada onde caberia um ponto-final.\n\nA Cartilha também traz, em um comentário de redação, o caso de uma vírgula sem justificativa sintática, tratada como desvio pontual que não compromete a leitura. A leitura guiada também recomenda revisar a pontuação.\n\nA Cartilha não ensina as regras da vírgula; elas vêm das gramáticas de referência, nas próximas seções.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 (desvios gramaticais e estrutura sintática), p. 40 (leitura guiada) e p. 61 (comentário sobre vírgula inadequada)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Quando usar a vírgula",
+      "bodyMd": "Casos de consenso na norma-padrão:\n\n- **Enumeração:** *\"Compramos livros, cadernos e canetas.\"* (sem vírgula antes do *e* final).\n- **Vocativo:** *\"Alunos, entreguem os trabalhos.\"*\n- **Aposto:** vem entre vírgulas. *\"O Brasil, maior país da América do Sul, tem grande diversidade.\"*\n- **Expressão ou conectivo intercalado:** *\"A medida é, portanto, necessária.\"*\n- **Oração explicativa** (informação extra sobre o termo todo): *\"Os alunos, que estudaram, foram aprovados\"* indica que todos estudaram e foram aprovados.\n- **Antes de conjunção adversativa** (*mas*, *porém*, *contudo*): *\"Estudou muito, mas não passou.\"*\n- **Oração subordinada adverbial antes da principal:** *\"Se houver investimento, o problema diminuirá.\"*\n- **Adjunto adverbial deslocado e longo** costuma ser separado: *\"Nos últimos anos de crescimento urbano acelerado, a mobilidade piorou.\"*\n\nTermo intercalado leva **duas** vírgulas, uma de cada lado.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação, emprego da vírgula; capítulo e página a conferir)"
+    },
+    {
+      "kind": "text",
+      "title": "Quando a vírgula é desvio",
+      "bodyMd": "A vírgula **não** deve separar termos que formam um bloco sintático:\n\n- **Sujeito e verbo:** *\"Os moradores do bairro reivindicam melhorias.\"* (sem vírgula depois de *bairro*).\n- **Verbo e complemento:** *\"A escola informou que as aulas voltam.\"* (sem vírgula depois de *informou*).\n- **Preposição e o termo que ela rege:** *\"Precisamos de mais investimentos.\"*\n\nAtenção a duas armadilhas:\n\n- **Vírgula única em termo intercalado.** *\"O projeto, que é coordenado pela secretaria, atende cem alunos\"* precisa das duas vírgulas.\n- **Oração restritiva sem vírgula.** *\"Os alunos que estudaram foram aprovados\"* indica que só os que estudaram foram aprovados; com vírgulas, o sentido muda.\n\nDica de revisão: leia em voz alta e pare só onde o sentido e a estrutura da frase pedem. A pausa da fala nem sempre coincide com a vírgula.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação, emprego da vírgula; capítulo e página a conferir)"
+    },
+    {
+      "kind": "example",
+      "title": "Trecho com e sem desvio (fictício)",
+      "bodyMd": "Trecho com desvios:\n\n\"Os jovens do bairro, buscam oportunidades de trabalho. A prefeitura anunciou, que vai abrir cursos gratuitos. O projeto que é coordenado pela secretaria de educação, atende cem alunos mas ainda faltam vagas.\"\n\nVersão ajustada:\n\n\"Os jovens do bairro buscam oportunidades de trabalho. A prefeitura anunciou que vai abrir cursos gratuitos. O projeto, que é coordenado pela secretaria de educação, atende cem alunos, mas ainda faltam vagas.\"\n\nO que mudou: saiu a vírgula entre sujeito e verbo; saiu a vírgula entre o verbo e a oração que o completa; a oração explicativa ganhou as duas vírgulas; entrou a vírgula antes de *mas*.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir); exemplo original e fictício"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir)",
+      "quickQuestion": {
+        "prompt": "Qual frase tem a pontuação adequada?",
+        "options": [
+          "\"Os moradores do bairro, pedem melhorias no transporte.\"",
+          "\"Estudou muito, mas não conseguiu a aprovação desejada.\"",
+          "\"A escola informou, que as aulas voltam na segunda-feira.\"",
+          "\"Precisamos, de mais investimentos em educação e saúde.\""
+        ],
+        "correctIndex": 1,
+        "explanation": "A vírgula antes de \"mas\" (adversativa) é adequada. Em \"bairro, pedem\", a vírgula separa sujeito e verbo. Em \"informou, que\", separa o verbo da oração que o completa. Em \"Precisamos, de\", separa o verbo da preposição que introduz o complemento."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A Cartilha inclui a pontuação entre os desvios gramaticais da Competência 1 e cita vírgula no lugar de ponto-final como falha de estrutura sintática.\n- Use vírgula em enumeração, vocativo, aposto, expressões intercaladas, antes de adversativas e para oração explicativa.\n- Não separe sujeito e verbo, verbo e complemento, nem preposição e seu termo.\n- Termo intercalado leva duas vírgulas.\n- Sem vírgulas, a oração adjetiva restringe o termo; com vírgulas, apenas explica.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 61 (pontuação como critério); regras: gramática de referência (BECHARA e CUNHA; CINTRA, tema: pontuação; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a Cartilha, em que contexto de avaliação a pontuação aparece?",
+      "options": [
+        "Como item da Competência 4, ligado aos conectivos entre parágrafos.",
+        "Como item da Competência 2, ligado à compreensão do tema proposto.",
+        "Como item da Competência 5, ligado à elaboração da proposta final.",
+        "Como desvio gramatical avaliado na Competência 1, junto de outros."
+      ],
+      "correctIndex": 3,
+      "explanation": "A pontuação está na lista de desvios gramaticais da Competência 1. As demais competências tratam de coesão, tema e proposta de intervenção, e a Cartilha não coloca a pontuação como critério delas.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 14",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Leia o trecho fictício: \"Os moradores do bairro, reivindicam melhorias no transporte.\" Qual ajuste está de acordo com a norma-padrão?",
+      "options": [
+        "Retirar a vírgula, pois ela separa o sujeito do verbo da oração.",
+        "Trocar a vírgula por ponto, já que a frase terminaria em \"bairro\".",
+        "Manter a vírgula e acrescentar outra depois do verbo \"reivindicam\".",
+        "Pôr vírgula também antes de \"melhorias\", para marcar o complemento."
+      ],
+      "correctIndex": 0,
+      "explanation": "O sujeito é \"Os moradores do bairro\" e vem logo antes do verbo, sem pausa sintática que justifique vírgula. Trocar por ponto deixaria um fragmento sem verbo. Mais uma vírgula depois do verbo ou antes do complemento só criaria novas separações indevidas.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação, emprego da vírgula; capítulo e página a conferir)",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Em qual frase a vírgula está empregada de acordo com a norma-padrão?",
+      "options": [
+        "\"Os jovens, precisam de oportunidades de trabalho.\"",
+        "\"A escola informou, que as aulas voltarão em março.\"",
+        "\"Compramos livros, cadernos e canetas para a turma.\"",
+        "\"O prefeito anunciou, a reforma da praça central.\"",
+        "\"Precisamos de, mais investimentos em saúde pública.\""
+      ],
+      "correctIndex": 2,
+      "explanation": "A vírgula separa os itens de uma enumeração, sem vírgula antes do \"e\" final. Nas demais, ela separa sujeito e verbo, verbo e oração completiva, verbo e complemento, ou preposição e o termo que ela rege.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, emprego da vírgula; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação, emprego da vírgula; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual frase pontua corretamente o aposto?",
+      "options": [
+        "\"O prefeito médico de formação, visitou a escola.\"",
+        "\"O prefeito, médico de formação visitou a escola.\"",
+        "\"O prefeito, médico, de formação, visitou a escola.\"",
+        "\"O prefeito médico, de formação visitou a escola.\"",
+        "\"O prefeito, médico de formação, visitou a escola.\""
+      ],
+      "correctIndex": 4,
+      "explanation": "O aposto \"médico de formação\" é um termo intercalado e fica entre duas vírgulas. Em \"O prefeito médico de formação, visitou\", a vírgula única separa o sujeito do verbo. Em \"O prefeito, médico de formação visitou\", falta a vírgula que fecha o aposto. Em \"O prefeito, médico, de formação, visitou\", as vírgulas quebram o bloco \"médico de formação\". Em \"O prefeito médico, de formação visitou\", a vírgula cai no meio do aposto, que também não é aberto nem fechado.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação, aposto; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação, aposto; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia: \"Os candidatos que se prepararam bem foram aprovados.\" O que a ausência de vírgulas indica?",
+      "options": [
+        "Que todos os candidatos se prepararam bem e foram aprovados.",
+        "Que só os candidatos que se prepararam bem foram aprovados.",
+        "Que a oração é explicativa e acrescenta dado sobre o grupo todo.",
+        "Que falta pontuação, pois toda oração com \"que\" exige vírgulas."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sem vírgulas, a oração é restritiva: limita o grupo aos candidatos que se prepararam. Com vírgulas (\"Os candidatos, que se prepararam bem, foram aprovados\"), a oração seria explicativa e valeria para todos. Não é verdade que toda oração com \"que\" exija vírgulas.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: pontuação e orações adjetivas; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: pontuação e orações adjetivas; capítulo e página a conferir)",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Que pares de termos a vírgula não deve separar?",
+      "back": "Sujeito e verbo, verbo e complemento, e a preposição do termo que ela rege."
+    },
+    {
+      "front": "Como pontuar um aposto ou termo intercalado?",
+      "back": "Com duas vírgulas, uma de cada lado: \"O Brasil, maior país da América do Sul, tem grande diversidade.\""
+    },
+    {
+      "front": "Qual a diferença de sentido entre oração adjetiva com e sem vírgulas?",
+      "back": "Sem vírgulas, restringe o termo (só parte do grupo); com vírgulas, explica e vale para todo o grupo."
+    }
+  ]
+}

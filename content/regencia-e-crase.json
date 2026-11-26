@@ -1,0 +1,154 @@
+{
+  "slug": "regencia-e-crase",
+  "title": "Regência e crase",
+  "summary": "Como escolher a preposição que o verbo ou o nome pede (regência) e quando a preposição a se funde com o artigo (crase), e por que a Cartilha trata esses desvios como critério da Competência 1.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 0,
+    "y": 940
+  },
+  "sort": 13,
+  "prerequisites": [
+    "concordancia-verbal-e-nominal"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Regência e crase na Competência 1",
+      "bodyMd": "A Competência 1 avalia o domínio da modalidade escrita formal da língua portuguesa. Entre os desvios gramaticais que a Cartilha lista estão a **regência verbal e nominal** e o **emprego de pronomes e crase**. Na leitura guiada, a Cartilha também recomenda atenção à regência e à crase ao revisar o texto.\n\nNa descrição dos níveis, a Cartilha fala em **poucos**, **alguns** ou **muitos** desvios e em **reincidência**: um deslize pontual pesa menos do que desvios que se repetem.\n\nA Cartilha só nomeia esses desvios; as regras de uso vêm das gramáticas de referência, nas próximas seções.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 (desvios gramaticais), p. 14 (níveis da Competência I) e p. 40 (leitura guiada)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Regência: a preposição que o verbo ou o nome pede",
+      "bodyMd": "**Regência** é a relação de dependência entre um termo (verbo ou nome) e o seu complemento, às vezes mediada por preposição. Cada verbo ou nome \"pede\" uma preposição específica. Casos de consenso na norma-padrão:\n\n- **Obedecer** e **responder** pedem a: *\"obedecer às regras\"*, *\"responder ao questionário\"*.\n- **Referir-se** pede a: *\"Refiro-me ao debate.\"*\n- **Aspirar**, no sentido de almejar, pede a: *\"aspirar a uma vida digna\"*.\n- **Preferir** pede a, e não *do que* nem *mais*: *\"Prefiro ler a ver televisão.\"*\n- **Ir** e **chegar** indicam destino com a: *\"Fui à reunião.\"*, *\"Chegamos ao fim do prazo.\"*\n- **Informar** admite dois padrões: *\"Informei o problema à direção\"* ou *\"Informei a direção do problema\"*.\n- **Regência nominal:** *acesso a*, *contrário a*, *necessidade de*: *\"acesso à educação\"*, *\"necessidade de investimentos\"*.\n\nQuando tiver dúvida sobre a preposição, consulte a gramática ou reescreva a frase com um verbo cuja regência você domine.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: regência verbal e nominal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: regência verbal e nominal; capítulo e página a conferir)"
+    },
+    {
+      "kind": "text",
+      "title": "Crase: a preposição a mais o artigo a",
+      "bodyMd": "**Crase** é a fusão da preposição *a* com o artigo definido feminino *a(s)* (ou com o *a* inicial de *aquele*, *aquela*, *aquilo*), marcada pelo acento grave: *à*, *às*.\n\n**Teste prático:** a crase exige dois *a* juntos, um da preposição e outro do artigo. Troque a palavra feminina por uma masculina: se aparecer *ao*, há crase no feminino. *\"Refiro-me à proposta\"* (masculino: *\"ao projeto\"*).\n\n**Há crase** em: *\"acesso à educação\"*; indicação de horas, como *\"às oito horas\"*; locuções femininas, como *\"à luz de\"*, *\"à medida que\"* e *\"às vezes\"*.\n\n**Não há crase:**\n\n- antes de palavra masculina: *\"a pé\"*, *\"a favor\"*;\n- antes de verbo: *\"começou a estudar\"*;\n- antes de pronome pessoal: *\"entregou a ela\"*;\n- antes de palavra feminina no plural sem artigo: *\"dedicou-se a causas sociais\"*;\n- em expressões com palavras repetidas: *\"frente a frente\"*;\n- na locução *\"a partir de\"*.\n\nOs casos em que a crase é facultativa ou os gramáticos divergem ficam fora deste conteúdo; na dúvida, reescreva a frase.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: crase; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: crase; capítulo e página a conferir)"
+    },
+    {
+      "kind": "example",
+      "title": "Trecho com e sem desvio (fictício)",
+      "bodyMd": "Trecho com desvios:\n\n\"Os moradores aspiram uma vida mais segura e obedecem as normas do condomínio. Ontem, a associação informou o problema a prefeitura e se referiu à problemas de iluminação. As reuniões começam as dezoito horas.\"\n\nVersão ajustada:\n\n\"Os moradores aspiram a uma vida mais segura e obedecem às normas do condomínio. Ontem, a associação informou o problema à prefeitura e se referiu a problemas de iluminação. As reuniões começam às dezoito horas.\"\n\nO que mudou: *aspirar* e *obedecer* pedem a; *prefeitura* aceita o artigo e o verbo pede a, logo *à*; antes de *problemas*, plural sem artigo, só a preposição; em *às dezoito horas* há crase por indicar horas.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: regência e crase; capítulo e página a conferir); exemplo original e fictício"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: regência e crase; capítulo e página a conferir)",
+      "quickQuestion": {
+        "prompt": "Qual frase está de acordo com a norma-padrão?",
+        "options": [
+          "\"O texto se refere à problemas sociais do bairro.\"",
+          "\"As aulas começam às sete horas da manhã.\"",
+          "\"Os jovens preferem mais estudar do que trabalhar.\"",
+          "\"Os alunos têm acesso de livros novos na escola.\""
+        ],
+        "correctIndex": 1,
+        "explanation": "Na indicação de horas há crase. Em \"refere à problemas\", \"problemas\" está no plural sem artigo, então só a preposição. Em \"preferem mais estudar do que trabalhar\", preferir pede \"a\" (\"preferem estudar a trabalhar\"). Em \"acesso de livros\", o nome acesso pede a (\"acesso a livros\")."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A Cartilha cita regência verbal e nominal e crase entre os desvios gramaticais da Competência 1.\n- Regência: o verbo ou o nome pede uma preposição; obedecer, responder, referir-se, aspirar (almejar) e preferir pedem a.\n- Crase: preposição a + artigo a(s); teste de trocar por um termo masculino (ao).\n- Não há crase antes de verbo, de palavra masculina ou de pronome pessoal.\n- Na dúvida, reescreva a frase com uma construção que você domine.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 14 (regência e crase como critério); regras: gramática de referência (BECHARA e CUNHA; CINTRA, temas: regência e crase; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a Cartilha, como a regência verbal e nominal e a crase aparecem na avaliação da redação?",
+      "options": [
+        "Como critérios da Competência 3, ligados à seleção de argumentos.",
+        "Como desvios gramaticais citados entre os avaliados na Competência 1.",
+        "Como exigências da Competência 5, ligadas à proposta de intervenção.",
+        "Como itens da Competência 4, ligados aos mecanismos de coesão textual."
+      ],
+      "correctIndex": 1,
+      "explanation": "A regência verbal e nominal e o emprego de pronomes e crase estão na lista de desvios gramaticais da Competência 1. As demais competências avaliam argumentação, coesão e proposta de intervenção, não esses desvios.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 14",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Leia o trecho fictício: \"Os motoristas devem obedecer as placas de trânsito.\" Qual ajuste corrige o desvio de regência?",
+      "options": [
+        "Trocar por \"obedecem\", pois o verbo deve concordar com \"placas\".",
+        "Retirar o artigo, deixando \"obedecer placas de trânsito\" no texto.",
+        "Pôr vírgula antes de \"as placas\", para marcar a regência do verbo.",
+        "Usar a preposição a: \"obedecer às placas\", pois o verbo a pede."
+      ],
+      "correctIndex": 3,
+      "explanation": "Obedecer pede a, que se funde ao artigo de \"as placas\" e dá \"às\". Trocar para \"obedecem\" mexe na concordância, que já estava certa (o sujeito é \"motoristas\"). Retirar o artigo mantém a preposição ausente. Vírgula entre verbo e complemento não marca regência e é desnecessária.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: regência verbal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: regência verbal; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Em qual frase a crase foi empregada ou omitida corretamente?",
+      "options": [
+        "\"A proposta se refere à educação de jovens e adultos.\"",
+        "\"Os alunos assistiram à uma palestra sobre cidadania.\"",
+        "\"O texto foi escrito à partir de dados do censo local.\"",
+        "\"A equipe percorreu o bairro à pé durante a pesquisa.\"",
+        "\"Os gestores devem obedecer à normas de segurança.\""
+      ],
+      "correctIndex": 0,
+      "explanation": "Referir-se pede a e \"educação\" aceita o artigo, logo há crase. Antes de \"uma\" (artigo indefinido) não há crase. \"A partir de\" é locução sem crase. \"Pé\" é masculino, então \"a pé\". Antes de \"normas\", plural sem artigo, não há crase (o correto seria \"às normas\" ou \"a normas\", conforme haja artigo).",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: crase; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: crase; capítulo e página a conferir)",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual frase está de acordo com a norma-padrão quanto à regência?",
+      "options": [
+        "\"Os moradores aspiram uma vida com mais segurança.\"",
+        "\"Muitos jovens preferem estudar do que ficar parados.\"",
+        "\"A turma foi na biblioteca pesquisar sobre o tema.\"",
+        "\"Os jovens têm acesso de serviços de saúde na cidade.\"",
+        "\"Os moradores informaram o problema à prefeitura.\""
+      ],
+      "correctIndex": 4,
+      "explanation": "Informar algo a alguém é uma regência correta, e \"prefeitura\" aceita o artigo, logo \"à\". Em \"aspiram uma vida\", falta o a (aspirar a). Preferir pede \"a\", e não \"do que\". Para destino, ir pede a (\"foi à biblioteca\"). Acesso pede a (\"acesso a serviços\"), e não de.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: regência verbal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: regência verbal; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Em \"Os alunos começaram a estudar a partir de segunda\", por que nenhum dos dois \"a\" leva crase?",
+      "options": [
+        "Porque a crase só ocorre antes de palavras no plural, o que não é o caso.",
+        "Porque a crase não se usa em frases em que o verbo está no pretérito.",
+        "Porque antes de verbo e na locução \"a partir de\" não há artigo feminino.",
+        "Porque todo dia da semana dispensa a crase, qualquer que seja o contexto."
+      ],
+      "correctIndex": 2,
+      "explanation": "Antes do verbo \"estudar\" e na locução \"a partir de\" não existe artigo a fundir com a preposição, então não há crase. A crase não depende de número plural nem do tempo do verbo. Os dias da semana também podem levar crase em outros contextos, como em \"às segundas\", em expressões de tempo.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: crase; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: crase; capítulo e página a conferir)",
+      "sectionPosition": 3
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é crase e como testar se ela existe?",
+      "back": "Fusão da preposição a com o artigo a(s), marcada por à(s). Teste: troque a palavra feminina por uma masculina; se aparecer ao(s), há crase."
+    },
+    {
+      "front": "Que preposição pedem obedecer, responder, referir-se e aspirar (almejar)?",
+      "back": "A preposição a: obedecer às regras, responder ao questionário, referir-se ao debate, aspirar a uma vida digna."
+    },
+    {
+      "front": "Em que casos não se usa crase?",
+      "back": "Antes de verbo, de palavra masculina, de pronome pessoal, de plural sem artigo e em locuções com palavras repetidas ou a partir de."
+    }
+  ]
+}
