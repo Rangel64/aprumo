@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useId, useRef, useState } from "react";
 import { Chip } from "@/components/ui";
 import { ROUTES } from "@/contracts/routes";
+import { addContentsToJourney } from "@/server/actions/journey";
+import { ADD_MESSAGES, decideAddToJourney, type AddToJourneyOutcome } from "./add-to-journey";
 import { STATUS_LABELS, type NodeDetails } from "./map-model";
 
 const focus =
@@ -27,10 +30,44 @@ export function NodeDrawer({
   const titleId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const { node, prerequisites, trails } = details;
+  const router = useRouter();
+  const pendingRef = useRef(false);
+  const [pending, setPending] = useState(false);
+  const [feedback, setFeedback] = useState<{
+    kind: "success" | "error";
+    message: string;
+  } | null>(null);
 
   useEffect(() => {
     panelRef.current?.focus();
   }, []);
+
+  async function addToJourney() {
+    if (pendingRef.current) return;
+    pendingRef.current = true;
+    setPending(true);
+    setFeedback(null);
+    let outcome: AddToJourneyOutcome;
+    try {
+      outcome = decideAddToJourney(
+        await addContentsToJourney({ contentIds: [node.id], source: "map" }),
+        node.slug,
+      );
+    } catch {
+      outcome = { kind: "error", message: ADD_MESSAGES.error };
+    }
+    if (outcome.kind === "redirect") {
+      router.push(outcome.href); // mantém o botão desabilitado até a navegação
+      return;
+    }
+    pendingRef.current = false;
+    setPending(false);
+    setFeedback(
+      outcome.kind === "error"
+        ? { kind: "error", message: outcome.message }
+        : { kind: "success", message: outcome.message },
+    );
+  }
 
   function onKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
     if (e.key === "Escape") {
@@ -149,12 +186,31 @@ export function NodeDrawer({
           >
             Estudar conteúdo
           </Link>
-          <Link
-            href={ROUTES.newJourney({ conteudos: [node.slug] })}
-            className={`inline-flex items-center justify-center rounded-pill border border-line bg-white px-6 py-3 font-bold text-ink shadow-card hover:bg-purple-light ${focus}`}
+          <button
+            type="button"
+            onClick={addToJourney}
+            aria-disabled={pending ? "true" : undefined}
+            aria-busy={pending}
+            className={`inline-flex items-center justify-center rounded-pill border border-line bg-white px-6 py-3 font-bold text-ink shadow-card hover:bg-purple-light aria-disabled:cursor-not-allowed aria-disabled:opacity-60 ${focus}`}
           >
-            Adicionar a uma Jornada
-          </Link>
+            {pending ? "Adicionando..." : "Adicionar a uma Jornada"}
+          </button>
+          <div role="status" aria-live="polite" className="text-sm font-bold text-ink">
+            {feedback?.kind === "success" && feedback.message}
+          </div>
+          {feedback?.kind === "success" && (
+            <Link
+              href={ROUTES.journey}
+              className={`self-start rounded-pill text-sm font-bold text-purple-dark underline ${focus}`}
+            >
+              Ver Jornada
+            </Link>
+          )}
+          <div role="alert">
+            {feedback?.kind === "error" && (
+              <p className="text-sm font-bold text-ink">{feedback.message}</p>
+            )}
+          </div>
         </div>
       </div>
     </div>

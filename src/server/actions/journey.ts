@@ -37,8 +37,8 @@ async function allContentsExist(supabase: Supabase, ids: string[]): Promise<bool
 
 /**
  * Cria a Jornada do aluno (RN-002: meta e prazo obrigatórios). Cliente do aluno (RLS):
- * `user_id` vem da sessão, nunca da entrada. Não há limite de Jornadas nem constraint de
- * unicidade de ativa no schema; cada criação gera uma nova Jornada `active`.
+ * `user_id` vem da sessão, nunca da entrada. Não há constraint de unicidade de ativa no
+ * schema; cada criação gera uma nova `active` e arquiva as anteriores do aluno (D-060).
  * NUNCA escreve em `content_progress`.
  */
 export async function createJourney(input: unknown): Promise<ActionResult<CreateJourneyResult>> {
@@ -97,7 +97,7 @@ export async function createJourney(input: unknown): Promise<ActionResult<Create
         methodology,
         status: "active",
       })
-      .select("id")
+      .select("id, created_at")
       .single();
     if (journeyError || !journey) return fail("INTERNAL", MSG.internal);
 
@@ -109,11 +109,34 @@ export async function createJourney(input: unknown): Promise<ActionResult<Create
         added_from: "base" as const,
       })),
     );
-    if (linkError) {
-      // Sem transação no client: desfaz a Jornada órfã (a RLS permite apagar a própria).
+    // Sem transação no client: se algo falhar abaixo, desfaz a Jornada nova (a RLS permite
+    // apagar a própria; journey_contents some por ON DELETE CASCADE).
+    const undoNewJourney = async () => {
       const { error: rollbackError } = await supabase.from("journeys").delete().eq("id", journey.id);
       // Mensagem genérica: sem user_id, e-mail ou ids de conteúdo.
       if (rollbackError) console.error("createJourney: falha ao desfazer Jornada órfã.");
+    };
+    if (linkError) {
+      await undoNewJourney();
+      return fail("INTERNAL", MSG.internal);
+    }
+
+    // D-060: só uma Jornada ativa por aluno. Arquiva só as ativas do mesmo aluno MAIS ANTIGAS
+    // que a nova (created_at menor), e só depois de a nova estar completa. Invariante: nunca
+    // fica zero ativa, pois a mais recente nunca é arquivada por outra criação (em empate
+    // exato de created_at nenhuma das duas é arquivada). Com concorrência (duplo clique, duas
+    // abas) podem coexistir duas ativas por instantes; a mais recente prevalece nas leituras
+    // (getActiveJourney/addContentsToJourney usam created_at desc) até a próxima criação
+    // arquivar a mais antiga.
+    const { error: archiveError } = await supabase
+      .from("journeys")
+      .update({ status: "archived" })
+      .eq("user_id", user.id)
+      .eq("status", "active")
+      .neq("id", journey.id)
+      .lt("created_at", journey.created_at);
+    if (archiveError) {
+      await undoNewJourney();
       return fail("INTERNAL", MSG.internal);
     }
 

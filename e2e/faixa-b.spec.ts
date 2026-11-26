@@ -92,10 +92,10 @@ test.describe("mapa e trilha", () => {
       "href",
       `/conteudos/${slug}`,
     );
-    await expect(dialog.getByRole("link", { name: "Adicionar a uma Jornada" })).toHaveAttribute(
-      "href",
-      `/jornada/nova?conteudos=${slug}`,
-    );
+    // D-061: é um botão que chama a action. Não clicar: o spec pode rodar com dados reais.
+    const addButton = dialog.getByRole("button", { name: "Adicionar a uma Jornada" });
+    await expect(addButton).toBeVisible();
+    await expect(addButton).toBeEnabled();
     // O foco entrou no drawer.
     await expect(dialog).toBeFocused();
 
@@ -145,10 +145,15 @@ const GOAL_PREFIX = `e2e-jornada-${Date.now()}`;
 const CREATED_GOAL = `${GOAL_PREFIX} Melhorar minha redação até o ENEM`;
 
 /** REST/Auth admin pela service role (padrão do flashcards.spec.ts). */
-async function admin(path: string, method = "GET") {
+async function admin(path: string, method = "GET", body?: unknown) {
   const res = await fetch(`${supaUrl}${path}`, {
     method,
-    headers: { apikey: serviceKey as string, Authorization: `Bearer ${serviceKey}` },
+    headers: {
+      apikey: serviceKey as string,
+      Authorization: `Bearer ${serviceKey}`,
+      ...(body ? { "Content-Type": "application/json" } : {}),
+    },
+    ...(body ? { body: JSON.stringify(body) } : {}),
   });
   const text = await res.text();
   if (!res.ok) throw new Error(`${method} ${path} -> ${res.status} ${text.slice(0, 200)}`);
@@ -158,19 +163,54 @@ async function admin(path: string, method = "GET") {
 test.describe("jornada", () => {
   test.skip(!email || !password, SKIP_REASON);
 
-  // Limpeza: sem service role no ambiente, não apaga nada (a Jornada de teste fica na conta).
+  // D-060: criar Jornada arquiva as ativas. Guardamos o id das ativas da conta E2E antes dos
+  // testes para reativá-las (por id) na limpeza. Sem service role, não registra nem limpa nada.
+  let e2eUserId: string | null = null;
+  let activeBefore: string[] = [];
+
+  async function findE2eUserId() {
+    const list = await admin("/auth/v1/admin/users?per_page=200");
+    return (
+      (list.users as { id: string; email: string }[]).find((u) => u.email === email)?.id ?? null
+    );
+  }
+
+  test.beforeAll(async () => {
+    if (!supaUrl || !serviceKey) return;
+    try {
+      e2eUserId = await findE2eUserId();
+      if (!e2eUserId) return;
+      const rows = (await admin(
+        `/rest/v1/journeys?select=id&user_id=eq.${e2eUserId}&status=eq.active`,
+      )) as { id: string }[];
+      activeBefore = rows.map((r) => r.id);
+    } catch {
+      console.warn("e2e jornada: falha ao registrar o estado inicial das Jornadas.");
+    }
+  });
+
+  // Limpeza: apaga as Jornadas de teste (prefixo) e reativa as que estavam ativas antes.
+  // Erros de limpeza viram só aviso genérico, para não mascarar a falha do teste.
   test.afterAll(async () => {
     if (!supaUrl || !serviceKey) return;
-    const list = await admin("/auth/v1/admin/users?per_page=200");
-    const uid = (list.users as { id: string; email: string }[]).find((u) => u.email === email)?.id;
-    if (!uid) return;
-    const like = encodeURIComponent(`${GOAL_PREFIX}*`);
-    const rows = (await admin(
-      `/rest/v1/journeys?select=id&user_id=eq.${uid}&goal_description=like.${like}`,
-    )) as { id: string }[];
-    for (const { id } of rows) {
-      await admin(`/rest/v1/journey_contents?journey_id=eq.${id}`, "DELETE");
-      await admin(`/rest/v1/journeys?id=eq.${id}&user_id=eq.${uid}`, "DELETE");
+    try {
+      const uid = e2eUserId ?? (await findE2eUserId());
+      if (!uid) return;
+      const like = encodeURIComponent(`${GOAL_PREFIX}*`);
+      const rows = (await admin(
+        `/rest/v1/journeys?select=id&user_id=eq.${uid}&goal_description=like.${like}`,
+      )) as { id: string }[];
+      for (const { id } of rows) {
+        await admin(`/rest/v1/journey_contents?journey_id=eq.${id}`, "DELETE");
+        await admin(`/rest/v1/journeys?id=eq.${id}&user_id=eq.${uid}`, "DELETE");
+      }
+      for (const id of activeBefore) {
+        await admin(`/rest/v1/journeys?id=eq.${id}&user_id=eq.${uid}`, "PATCH", {
+          status: "active",
+        });
+      }
+    } catch {
+      console.warn("e2e jornada: falha na limpeza das Jornadas de teste.");
     }
   });
 

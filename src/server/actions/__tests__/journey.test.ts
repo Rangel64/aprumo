@@ -6,6 +6,7 @@ const uuid = (n: number) => `00000000-0000-4000-8000-${String(n).padStart(12, "0
 const USER = uuid(1);
 const JOURNEY = uuid(10);
 const TRAIL = uuid(20);
+const CREATED = "2099-03-10T15:00:00.123456+00:00";
 const C1 = uuid(101);
 const C2 = uuid(102);
 const C3 = uuid(103);
@@ -21,12 +22,25 @@ let deletes: { table: string; args: unknown[] }[] = [];
 let touched: string[] = [];
 let insertErrors: Record<string, Err> = {};
 let deleteErrors: Record<string, Err> = {};
+let updateErrors: Record<string, Err> = {};
+let updates: { table: string; values: unknown; filters: unknown[][] }[] = [];
 
 function builder(table: string) {
   const t = () => tables[table] ?? {};
-  let mode: "read" | "insert" | "delete" = "read";
+  let mode: "read" | "insert" | "delete" | "update" = "read";
   const b: Record<string, unknown> = {};
   for (const op of ["select", "eq", "in", "order", "limit"]) b[op] = () => b;
+  b.update = (values: unknown) => {
+    mode = "update";
+    updates.push({ table, values, filters: [] });
+    return b;
+  };
+  for (const op of ["neq", "lt"]) {
+    b[op] = (...args: unknown[]) => {
+      updates.at(-1)?.filters.push([op, ...args]);
+      return b;
+    };
+  }
   b.insert = (rows: unknown) => {
     mode = "insert";
     inserts.push({ table, rows });
@@ -39,6 +53,7 @@ function builder(table: string) {
   const eqOriginal = b.eq as () => unknown;
   b.eq = (...args: unknown[]) => {
     if (mode === "delete") deletes.push({ table, args });
+    if (mode === "update") updates.at(-1)?.filters.push(["eq", ...args]);
     return eqOriginal();
   };
   b.maybeSingle = async () => ({ data: t().one ?? null, error: t().error ?? null });
@@ -52,7 +67,9 @@ function builder(table: string) {
         ? { data: null, error: insertErrors[table] ?? null }
         : mode === "delete"
           ? { data: null, error: deleteErrors[table] ?? null }
-          : { data: t().list ?? [], error: t().error ?? null },
+          : mode === "update"
+            ? { data: null, error: updateErrors[table] ?? null }
+            : { data: t().list ?? [], error: t().error ?? null },
     );
   return b;
 }
@@ -87,9 +104,11 @@ beforeEach(() => {
   touched = [];
   insertErrors = {};
   deleteErrors = {};
+  updateErrors = {};
+  updates = [];
   tables = {
     contents: { list: [{ id: C1 }, { id: C2 }, { id: C3 }, { id: C4 }] },
-    journeys: { one: { id: JOURNEY } },
+    journeys: { one: { id: JOURNEY, created_at: CREATED } },
     trails: { one: { id: TRAIL } },
     trail_contents: { list: [] },
     journey_contents: { list: [] },
@@ -229,6 +248,82 @@ describe("createJourney", () => {
       expect(logged).not.toContain(secret);
     }
     spy.mockRestore();
+  });
+
+  it("D-060: arquiva as outras ativas do próprio aluno, excluindo a recém-criada", async () => {
+    const res = await createJourney(valid);
+    expect(res.ok).toBe(true);
+    // Exatamente um UPDATE, em journeys, só status; filtros: user_id da sessão (não de outro
+    // usuário), apenas ativas, a nova (JOURNEY) excluída e só as MAIS ANTIGAS que ela.
+    expect(updates).toEqual([
+      {
+        table: "journeys",
+        values: { status: "archived" },
+        filters: [
+          ["eq", "user_id", USER],
+          ["eq", "status", "active"],
+          ["neq", "id", JOURNEY],
+          ["lt", "created_at", CREATED],
+        ],
+      },
+    ]);
+    expect(deletes).toEqual([]);
+  });
+
+  it("D-060: duas criações intercaladas: cada UPDATE só atinge created_at menor que o da própria nova", async () => {
+    const OLDER = "2099-03-10T15:00:00.000001+00:00";
+    const NEWER = "2099-03-10T15:00:00.000002+00:00";
+    const A = uuid(11);
+    const B = uuid(12);
+    tables.journeys = { one: { id: A, created_at: OLDER } };
+    await createJourney(valid);
+    tables.journeys = { one: { id: B, created_at: NEWER } };
+    await createJourney(valid);
+    // Simula o banco: aplica cada UPDATE às duas ativas (A e B) e vê quem sobra.
+    const rows = [
+      { id: A, created_at: OLDER, status: "active" },
+      { id: B, created_at: NEWER, status: "active" },
+    ];
+    for (const u of updates) {
+      const neq = u.filters.find((f) => f[0] === "neq")![2] as string;
+      const lt = u.filters.find((f) => f[0] === "lt")![2] as string;
+      for (const r of rows) if (r.id !== neq && r.created_at < lt) r.status = "archived";
+    }
+    // A (mais antiga) é arquivada; B (mais nova) nunca é; sempre resta uma ativa.
+    expect(rows.find((r) => r.id === A)!.status).toBe("archived");
+    expect(rows.find((r) => r.id === B)!.status).toBe("active");
+  });
+
+  it("D-060: falha no arquivamento desfaz a Jornada nova e retorna INTERNAL sem dados pessoais", async () => {
+    updateErrors.journeys = { message: "segredo interno" };
+    const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await createJourney(valid);
+    expect(res).toMatchObject({ ok: false, error: { code: "INTERNAL" } });
+    expect(JSON.stringify(res)).not.toContain("segredo");
+    expect(deletes).toContainEqual({ table: "journeys", args: ["id", JOURNEY] });
+    expect(spy).not.toHaveBeenCalled(); // rollback ok: nada a logar
+    expect(touched).not.toContain("content_progress");
+    spy.mockRestore();
+  });
+
+  it("D-060: arquivamento e rollback falhando: log genérico sem dados do aluno", async () => {
+    updateErrors.journeys = { message: "segredo interno" };
+    deleteErrors.journeys = { message: "delete falhou" };
+    const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await createJourney(valid);
+    expect(res).toMatchObject({ ok: false, error: { code: "INTERNAL" } });
+    expect(spy).toHaveBeenCalledTimes(1);
+    const logged = JSON.stringify(spy.mock.calls);
+    for (const secret of [USER, JOURNEY, C1, C2, "segredo", "delete falhou"]) {
+      expect(logged).not.toContain(secret);
+    }
+    spy.mockRestore();
+  });
+
+  it("falha na inserção dos conteúdos não arquiva nada", async () => {
+    insertErrors.journey_contents = { message: "x" };
+    await createJourney(valid);
+    expect(updates).toEqual([]);
   });
 
   it("uuid inválido na base: VALIDATION com mensagem pt-BR genérica", async () => {
