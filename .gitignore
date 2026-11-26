@@ -49,3 +49,7 @@ supabase/.temp
 /playwright-report/
 /blob-report/
 /evidencias-tmp/
+eval-output/
+
+# Eval D-010: key.json e relatorio fake (nunca entregar aos avaliadores)
+eval-output-key/
