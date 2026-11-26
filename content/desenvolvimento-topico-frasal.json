@@ -1,0 +1,162 @@
+{
+  "slug": "desenvolvimento-topico-frasal",
+  "title": "Desenvolvimento: tópico frasal e aprofundamento",
+  "summary": "Como abrir o parágrafo de desenvolvimento com uma ideia principal clara e aprofundá-la com explicação, exemplo e fechamento, sem repetições nem saltos.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 260,
+    "y": 540
+  },
+  "sort": 8,
+  "prerequisites": [
+    "estrutura-em-4-paragrafos",
+    "tipos-de-argumento"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Uma ideia principal por parágrafo",
+      "bodyMd": "Na Competência IV, a Cartilha descreve o parágrafo como uma unidade com **uma ideia principal** à qual se ligam ideias secundárias, e que pode ser desenvolvida por comparação, causa e consequência, exemplificação, detalhamento, entre outras formas.\n\nÉ essa lógica que sustenta o parágrafo de desenvolvimento: ele não é uma lista de frases, mas a exploração de **um** argumento ligado à tese.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 (estruturação dos parágrafos)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "O que é o tópico frasal",
+      "bodyMd": "Nesta plataforma, chama-se **tópico frasal** a frase (em geral, a inicial) que enuncia a ideia principal do parágrafo. As frases seguintes a explicam, exemplificam e concluem.\n\nPara a redação do ENEM, um bom tópico frasal:\n\n- afirma **uma** ideia, ligada à tese e ao eixo anunciado na introdução;\n- é específico o bastante para ser desenvolvido em poucas linhas;\n- não é uma pergunta nem uma frase solta sobre o assunto em geral.\n\nO termo \"tópico frasal\" **não consta na Cartilha**, e a fonte do termo está **a definir**. A Cartilha cobre apenas a ideia principal e as ideias secundárias do parágrafo (p. 32); a posição da frase (em geral, a inicial) é convenção didática.",
+      "sourceCitation": "Ideia principal e ideias secundárias do parágrafo: INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32. O termo \"tópico frasal\" não consta na Cartilha; fonte do termo: A DEFINIR",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Aprofundar sem repetir nem saltar",
+      "bodyMd": "Depois da ideia principal, o desenvolvimento **explicita e explica** informações, fatos e opiniões, por exemplos, definições, comparações, analogias ou estatísticas, cuidando do limite de linhas e sem lacunas de sentido. Um roteiro possível:\n\n1. **Ideia principal** (tópico frasal).\n2. **Explicação**: por que isso acontece?\n3. **Apoio**: exemplo, comparação ou outro caminho.\n4. **Fechamento**: volta à tese ou prepara o parágrafo seguinte.\n\nO encadeamento entre parágrafos também importa: cada um deve trazer informações coerentes com o anterior, sem repetições desnecessárias nem saltos temáticos. Esse roteiro é uma sugestão didática, não uma regra da Cartilha.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 30 (desenvolvimento e encadeamento). O roteiro em quatro passos é sugestão didática da plataforma",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Parágrafo de desenvolvimento (fictício)",
+      "bodyMd": "Tese fictícia: *a escassez de áreas de lazer persiste por falta de planejamento urbano e baixa manutenção.*\n\n\"Em primeiro lugar, a falta de planejamento urbano impede que bairros novos reservem espaço para convivência. Isso ocorre porque os projetos priorizam a construção de moradias e deixam as praças para uma etapa que raramente chega. Em um bairro imaginário chamado Jardim Novo, por exemplo, as ruas foram abertas antes de qualquer projeto de praça. Assim, o planejamento tardio perpetua a ausência de lazer.\"\n\n**Tópico frasal:** a primeira frase. **Explicação:** a segunda. **Exemplo:** a terceira. **Fechamento:** a última, que volta à tese.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 32 (desenvolvimento e parágrafo). Exemplo original e fictício da plataforma",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 (ideia principal do parágrafo)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No parágrafo de exemplo, qual frase tem a função de exemplo?",
+        "options": [
+          "A primeira, que afirma a ideia principal.",
+          "A segunda, que explica a causa.",
+          "A terceira, que cita o bairro imaginário.",
+          "A última, que volta à tese."
+        ],
+        "correctIndex": 2,
+        "explanation": "A terceira frase traz um caso concreto (Jardim Novo) para ilustrar a ideia principal."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- O parágrafo gira em torno de uma ideia principal, enunciada em geral na primeira frase (tópico frasal, termo didático).\n- O desenvolvimento explica e apoia a ideia com exemplos, comparações, dados e outros caminhos.\n- O fechamento volta à tese ou prepara o parágrafo seguinte.\n- Evite repetições desnecessárias e saltos temáticos entre parágrafos.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29, 30 e 32 (desenvolvimento, encadeamento e parágrafo). Termo \"tópico frasal\": fonte A DEFINIR (não consta na Cartilha)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "O que é o tópico frasal, no sentido usado nesta plataforma?",
+      "options": [
+        "A frase, em geral inicial, que enuncia a ideia principal do parágrafo.",
+        "O título obrigatório que o participante deve dar à sua redação final.",
+        "A última frase da conclusão, que encerra o texto inteiro do participante.",
+        "Uma citação literal de um texto motivador no início do parágrafo do texto.",
+        "A proposta de intervenção apresentada no fim do texto dissertativo-argumentativo."
+      ],
+      "correctIndex": 0,
+      "explanation": "Tópico frasal é a frase que enuncia a ideia principal. Título, conclusão, citação e proposta são elementos distintos do texto.",
+      "origin": "original",
+      "sourceCitation": "Ideia principal do parágrafo: INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32. O termo \"tópico frasal\" não consta na Cartilha; fonte do termo: A DEFINIR",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual alternativa é o melhor tópico frasal para um parágrafo sobre a falta de manutenção de praças (tema fictício)?",
+      "options": [
+        "\"Praças existem em várias cidades brasileiras, grandes e pequenas, há muito tempo.\"",
+        "\"Será que as praças são realmente importantes para a vida das pessoas?\"",
+        "\"Eu acho as praças muito bonitas e gosto de passear nelas aos domingos.\"",
+        "\"Praças, parques, ruas, escolas e hospitais são importantes para a população.\"",
+        "\"A falta de manutenção faz com que praças existentes percam o uso pela população.\""
+      ],
+      "correctIndex": 4,
+      "explanation": "A última afirma uma ideia específica e desenvolvível. A primeira é genérica, a segunda é uma pergunta, a terceira é opinião pessoal sem argumento e a quarta dispersa o foco em vários assuntos.",
+      "origin": "original",
+      "sourceCitation": "Ideia principal do parágrafo e desenvolvimento: INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 29. Enunciados originais e fictícios da plataforma; o termo \"tópico frasal\" não consta na Cartilha",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia o parágrafo fictício: \"A falta de fiscalização favorece o descarte irregular de lixo em terrenos vazios. O preço do transporte público também subiu. As praias são belas no verão.\" Qual é o principal problema de desenvolvimento?",
+      "options": [
+        "O parágrafo é longo demais e deveria ser dividido em vários parágrafos.",
+        "Há salto temático: as frases seguintes não explicam a ideia principal.",
+        "O parágrafo usa exemplos em excesso e deixa o texto repetitivo.",
+        "A ideia principal está bem desenvolvida e articulada às demais.",
+        "O texto não pode abordar descarte de lixo em terrenos vazios."
+      ],
+      "correctIndex": 1,
+      "explanation": "Depois da ideia principal, as frases mudam de assunto sem explicá-la, o que gera salto temático. O parágrafo é curto, não tem exemplo e o assunto não é proibido.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 30 (encadeamento sem saltos temáticos). Trecho original e fictício da plataforma",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "No roteiro didático de desenvolvimento, qual é a função do fechamento do parágrafo?",
+      "options": [
+        "Introduzir um assunto totalmente novo, sem relação com a ideia principal.",
+        "Repetir a primeira frase com exatamente as mesmas palavras.",
+        "Citar uma autoridade, necessariamente, para encerrar o raciocínio.",
+        "Retomar a tese ou preparar a passagem para o parágrafo seguinte.",
+        "Apresentar a proposta de intervenção completa, com todos os detalhes."
+      ],
+      "correctIndex": 3,
+      "explanation": "O fechamento amarra o parágrafo à tese ou ao próximo. Assunto novo causa salto temático, repetição literal é desnecessária, citar autoridade é opcional e a proposta completa fica na conclusão.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 29 e 30. O roteiro de fechamento é sugestão didática da plataforma",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Por que o parágrafo de desenvolvimento deve se ligar ao eixo anunciado na introdução?",
+      "options": [
+        "Porque a introdução proíbe qualquer assunto novo no corpo do texto, em todos os casos.",
+        "Porque o corretor lê apenas a introdução e ignora o restante de todo o texto do participante.",
+        "Porque a coerência entre as partes mostra o projeto de texto e evita informações soltas.",
+        "Porque assim o desenvolvimento fica sem exemplos e sem qualquer aprofundamento.",
+        "Porque o desenvolvimento deve repetir a introdução com as mesmas palavras, sempre."
+      ],
+      "correctIndex": 2,
+      "explanation": "Ligar o desenvolvimento ao eixo anunciado revela planejamento e coerência. Não há proibição de assuntos, o texto continua com exemplos, a leitura é do texto inteiro e repetir a introdução seria redundante.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 28, 29 e 43 (projeto de texto e coerência entre as partes)",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "O que é o tópico frasal?",
+      "back": "A frase, em geral inicial, que enuncia a ideia principal do parágrafo (termo didático; não consta na Cartilha, fonte a definir)."
+    },
+    {
+      "front": "Que roteiro organiza um parágrafo de desenvolvimento?",
+      "back": "Ideia principal, explicação, apoio (exemplo ou comparação) e fechamento ligado à tese."
+    },
+    {
+      "front": "Que defeitos de encadeamento evitar entre parágrafos?",
+      "back": "Repetições desnecessárias e saltos temáticos."
+    }
+  ]
+}

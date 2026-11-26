@@ -1,0 +1,161 @@
+{
+  "slug": "paragrafacao",
+  "title": "Paragrafação",
+  "summary": "Como dividir o texto em parágrafos com uma ideia principal cada e articulá-los dentro e entre si, na Competência IV.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 520,
+    "y": 540
+  },
+  "sort": 9,
+  "prerequisites": [
+    "estrutura-em-4-paragrafos"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "O que a Competência IV avalia",
+      "bodyMd": "A Competência IV avalia a estruturação lógica e formal entre as partes do texto: frases e parágrafos devem se relacionar, garantindo sequenciação coerente e interdependência de ideias. A Cartilha distingue as duas competências vizinhas: a C3 trata da estrutura profunda do texto (as ideias e sua organização); a C4, da **superfície textual**, isto é, das marcas linguísticas que mostram a ligação.\n\nA paragrafação é uma dessas marcas visíveis: onde o parágrafo começa e termina revela como as ideias foram divididas.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32 (Competência IV)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Um parágrafo, uma ideia principal",
+      "bodyMd": "Segundo a Cartilha, o parágrafo tem uma **ideia principal** à qual se ligam ideias secundárias, e pode ser desenvolvido por comparação, causa e consequência, exemplificação ou detalhamento. Daí uma regra prática: quando a ideia principal muda, é hora de um novo parágrafo.\n\nA Cartilha também aponta o oposto como problema: a **ausência de paragrafação**, isto é, o texto escrito em um único bloco. Ela não fixa um número ideal de parágrafos; menciona apenas introdução, desenvolvimento e conclusão. A divisão em quatro parágrafos, vista antes na trilha, é um modelo didático.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 33 (parágrafo e ausência de paragrafação), p. 40 e 43 (introdução, desenvolvimento e conclusão)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Articulação dentro e entre parágrafos",
+      "bodyMd": "A Cartilha pede articulação explícita entre um parágrafo e outro, e coesão dentro e entre eles. Na prática:\n\n- **Dentro do parágrafo**: as frases se encadeiam, retomando e acrescentando informações.\n- **Entre parágrafos**: o início do novo parágrafo sinaliza a relação com o anterior (continuidade, oposição, consequência).\n- A Cartilha lista como pontos a evitar a ausência de articulação entre orações, frases e parágrafos.\n\nOs recursos de coesão (retomadas, conectivos) serão vistos nos próximos conteúdos.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 33 (articulação e coesão entre parágrafos)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Dois parágrafos articulados (fictícios)",
+      "bodyMd": "Tema fictício: **o excesso de ruído em áreas residenciais**.\n\n\"O ruído noturno de bares prejudica o sono dos moradores de áreas residenciais. Sem descanso adequado, as pessoas acordam cansadas e rendem menos no trabalho e nos estudos. Por isso, o barulho que parece restrito à madrugada acaba afetando o dia inteiro.\"\n\n\"Além disso, o trânsito intenso nas vias residenciais agrava o problema. Os veículos circulam em horários que deveriam ser de silêncio, pois muitas ruas servem de atalho para avenidas congestionadas. Dessa forma, o ruído deixa de ter uma única origem e passa a atingir o bairro em vários momentos.\"\n\nCada parágrafo tem uma ideia principal (bares; trânsito), desenvolvida em três frases ligadas por causa e efeito (\"Sem descanso...\", \"Por isso\", \"pois\"). O início do segundo (\"Além disso\") indica que ele **soma** um novo eixo ao anterior.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 33 (parágrafo e articulação). Exemplo original e fictício da plataforma",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 (parágrafo e ideia principal)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "Quando é hora de abrir um novo parágrafo?",
+        "options": [
+          "A cada duas frases, sempre.",
+          "Quando a ideia principal muda.",
+          "Nunca: o texto deve ter um bloco só.",
+          "Somente na conclusão."
+        ],
+        "correctIndex": 1,
+        "explanation": "Cada parágrafo tem uma ideia principal; quando ela muda, abre-se outro. Um bloco único é a ausência de paragrafação, e a contagem fixa de frases não é critério da Cartilha."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A C4 avalia a articulação entre as partes, na superfície textual.\n- Cada parágrafo tem uma ideia principal; ideia nova, parágrafo novo.\n- Texto em um único bloco é falha de paragrafação.\n- Deve haver articulação dentro de cada parágrafo e entre eles.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31, 32 e 33 (Competência IV)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "O que a Competência IV avalia em relação aos parágrafos?",
+      "options": [
+        "Apenas a quantidade de linhas que cada parágrafo deve ocupar.",
+        "A articulação lógica e formal entre frases e parágrafos.",
+        "A obrigatoriedade de usar uma citação no início do texto.",
+        "A escolha do tema que o participante vai desenvolver.",
+        "A beleza da caligrafia do participante na folha."
+      ],
+      "correctIndex": 1,
+      "explanation": "A C4 avalia a estruturação lógica e formal entre as partes. Contagem de linhas, citações obrigatórias, escolha de tema e caligrafia não são o foco dessa competência.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Segundo a distinção feita na Cartilha, a Competência III e a Competência IV se diferenciam porque:",
+      "options": [
+        "Ambas avaliam exatamente o mesmo aspecto do texto, sem distinção.",
+        "A C3 trata da pontuação e da ortografia; a C4, da proposta de intervenção.",
+        "A C4 trata apenas da introdução; a C3, apenas da conclusão do texto.",
+        "A C3 trata das ideias (estrutura profunda); a C4, da superfície textual.",
+        "A C3 avalia a letra do participante e a C4, o vocabulário usado."
+      ],
+      "correctIndex": 3,
+      "explanation": "A Cartilha separa a estrutura profunda do texto (C3) da superfície textual (C4). As outras opções trocam o objeto de cada competência.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Qual alternativa descreve a ausência de paragrafação?",
+      "options": [
+        "Um texto com introdução, dois desenvolvimentos e conclusão.",
+        "Um texto dividido em cinco parágrafos curtos e bem ligados.",
+        "Um parágrafo com exemplo e comparação para sustentar a ideia.",
+        "Um texto que usa conectivos para ligar um parágrafo ao outro.",
+        "Um texto elaborado em um único parágrafo."
+      ],
+      "correctIndex": 4,
+      "explanation": "A ausência de paragrafação é o texto em um único parágrafo. As demais opções descrevem textos divididos ou recursos legítimos.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia o trecho fictício: \"O lixo acumulado nas ruas atrai pragas e agrava doenças. A cidade também precisa ampliar o número de bibliotecas. O descarte irregular é um problema de saúde pública.\" Qual é o problema de paragrafação?",
+      "options": [
+        "Há ideia nova (bibliotecas) no meio do parágrafo, sem ligação.",
+        "O trecho é curto demais para ser considerado um parágrafo completo.",
+        "O parágrafo desenvolve bem uma única ideia, do começo ao fim.",
+        "Falta uma citação literal de autoridade logo no início do trecho.",
+        "O trecho não pode tratar de saúde pública em uma redação do Enem."
+      ],
+      "correctIndex": 0,
+      "explanation": "A frase sobre bibliotecas introduz uma ideia principal diferente no meio do parágrafo, sem articulação. Ela deveria ser outro parágrafo ou ser ligada ao assunto. Não há regra de tamanho mínimo, nem citação obrigatória, e saúde pública é assunto válido.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 32 e 33. Trecho original e fictício da plataforma",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Sobre o número de parágrafos de uma redação, qual afirmação é correta?",
+      "options": [
+        "A Cartilha exige exatamente quatro parágrafos, nem mais nem menos, em toda redação.",
+        "A Cartilha proíbe que o texto tenha mais de três parágrafos no total.",
+        "A Cartilha nomeia as partes do texto, sem fixar número ideal de parágrafos.",
+        "A Cartilha determina que cada competência seja tratada em um parágrafo próprio.",
+        "A Cartilha não admite parágrafos de desenvolvimento, só introdução e conclusão."
+      ],
+      "correctIndex": 2,
+      "explanation": "A Cartilha menciona introdução, desenvolvimento e conclusão, sem fixar quantidade; os quatro parágrafos são um modelo didático. As demais opções inventam exigências ou proibições que ela não faz.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 40",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Quando se abre um novo parágrafo?",
+      "back": "Quando muda a ideia principal."
+    },
+    {
+      "front": "O que é ausência de paragrafação?",
+      "back": "Texto elaborado em um único parágrafo, falha apontada pela Cartilha."
+    },
+    {
+      "front": "Qual a diferença entre C3 e C4 segundo a Cartilha?",
+      "back": "A C3 cuida da estrutura profunda (ideias); a C4, da superfície textual (marcas de articulação)."
+    }
+  ]
+}

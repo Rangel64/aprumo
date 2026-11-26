@@ -1,0 +1,160 @@
+{
+  "slug": "conectivos-e-coesao-sequencial",
+  "title": "Conectivos e coesão sequencial",
+  "summary": "Como usar conectivos e operadores argumentativos para ligar orações, períodos e parágrafos, escolhendo a relação lógica certa (oposição, causa, consequência, conclusão) sem exagero.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 260,
+    "y": 740
+  },
+  "sort": 11,
+  "prerequisites": [
+    "paragrafacao"
+  ],
+  "related": [
+    "coesao-referencial"
+  ],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Ligar ideias com relação lógica",
+      "bodyMd": "A Cartilha explica que a articulação entre as partes do texto se faz com recursos coesivos, em especial os **operadores argumentativos**. Preposições, conjunções, alguns advérbios e locuções adverbiais ligam orações, frases e parágrafos.\n\nOs períodos com duas ou mais orações podem expressar **causa e consequência, contradição, temporalidade, comparação e conclusão**. Por isso, antes de escolher o conectivo, pergunte: *que relação existe entre estas duas ideias?*",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31, 32 e 33 (operadores argumentativos e relações entre orações)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Relações e conectivos mais usados",
+      "bodyMd": "A Cartilha dá exemplos de operadores para quatro relações:\n\n- **Igualdade:** *assim como, outrossim*.\n- **Adversidade (oposição):** *entretanto, porém*.\n- **Causa/consequência:** *por isso, assim*.\n- **Conclusão:** *enfim, portanto*.\n\nA gramática amplia a lista e acrescenta outras relações, como:\n\n- **Oposição:** mas, contudo, todavia.\n- **Causa:** porque, já que, visto que.\n- **Consequência:** por isso, de modo que.\n- **Concessão:** embora, ainda que (com verbo no subjuntivo: *\"Embora o projeto tenha avançado...\"*).\n- **Condição:** se, caso.\n- **Finalidade:** para que, a fim de que.\n- **Tempo:** quando, enquanto, depois que.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32 (exemplos de operadores); demais relações e conectivos: gramática de referência (BECHARA, Moderna Gramática Portuguesa, e CUNHA; CINTRA, Nova Gramática do Português Contemporâneo, tema: conjunções e orações coordenadas e subordinadas; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Qualidade, não quantidade",
+      "bodyMd": "A Cartilha avisa: usar coesivos de forma **artificial ou excessiva** não ajuda. A boa coesão não depende de encher o texto de conectivos, e sim de **relações lógicas adequadas**. Entre os problemas listados está o conector que não estabelece a relação de sentido pretendida e prejudica a compreensão.\n\nTrês cuidados práticos:\n\n1. Conferir se a relação existe de fato (não usar *\"portanto\"* quando não há conclusão).\n2. Variar os operadores, sem repetir o mesmo todo parágrafo.\n3. Ligar também **dentro** do parágrafo, não só no começo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 34 (operadores adequados ao sentido; coesivos artificiais ou excessivos)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "example",
+      "title": "Parágrafo de exemplo (fictício)",
+      "bodyMd": "Tema fictício: **hortas em escolas públicas**.\n\n\"As hortas escolares aproximam os alunos de práticas de alimentação saudável. Contudo, muitas escolas não as mantêm, porque faltam recursos para ferramentas e para a formação dos professores. Por isso, os alunos perdem a chance de aprender na prática. Portanto, é preciso garantir verba e capacitação para que o projeto se sustente.\"\n\nRelações: *contudo* (oposição ao que se espera), *porque* (causa), *por isso* (consequência), *portanto* (conclusão) e *para que* (finalidade). Cada conectivo marca uma relação que realmente existe entre as ideias.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 a 33 (relações entre orações; exemplo original fictício)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32 (exemplos de operadores)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf",
+      "quickQuestion": {
+        "prompt": "No exemplo, qual conectivo introduz a causa de as escolas não manterem as hortas?",
+        "options": [
+          "\"Contudo\"",
+          "\"Porque\"",
+          "\"Portanto\"",
+          "\"Para que\""
+        ],
+        "correctIndex": 1,
+        "explanation": "\"Porque\" introduz o motivo: faltam recursos. \"Contudo\" marca oposição, \"portanto\" conclusão e \"para que\" finalidade."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- Conectivos e operadores ligam orações, períodos e parágrafos.\n- Primeiro identifique a relação (adição, oposição, causa, consequência, conclusão, concessão, condição, finalidade, tempo); depois escolha o conectivo.\n- Conectivo que não combina com a relação prejudica a compreensão.\n- Mais conectivos não significam melhor coesão: o que conta é a lógica entre as ideias.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 a 34 (operadores argumentativos e relações lógicas); lista ampliada: gramática de referência (capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a lógica dos conectivos, qual par traz operadores de adversidade (oposição)?",
+      "options": [
+        "\"Portanto\" e \"enfim\".",
+        "\"Entretanto\" e \"porém\".",
+        "\"Assim como\" e \"outrossim\".",
+        "\"Por isso\" e \"assim\"."
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Entretanto\" e \"porém\" opõem ideias. \"Portanto\" e \"enfim\" concluem; \"assim como\" e \"outrossim\" indicam igualdade; \"por isso\" e \"assim\" indicam consequência.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 31 e 32",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Leia o trecho fictício: \"A cidade ampliou as ciclovias; por isso, poucas pessoas deixaram o carro em casa.\" Qual conectivo expressa melhor a relação pretendida, de oposição entre as duas ideias?",
+      "options": [
+        "\"Portanto\"",
+        "\"Assim\"",
+        "\"Contudo\"",
+        "\"Logo\"",
+        "\"Porque\""
+      ],
+      "correctIndex": 2,
+      "explanation": "A segunda ideia contraria o que se esperaria da primeira (ampliar ciclovias deveria reduzir o uso do carro), então a relação é de oposição: \"contudo\". \"Por isso\", \"portanto\", \"assim\" e \"logo\" marcam consequência ou conclusão, e \"porque\" marcaria causa; nenhum deles é adequado aqui.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 33 e 34",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Qual frase usa corretamente a concessão com \"embora\"?",
+      "options": [
+        "\"Embora o projeto avançou bastante, ainda faltam professores.\"",
+        "\"Embora o projeto avança bastante, ainda faltam professores.\"",
+        "\"Embora o projeto avançará muito, ainda faltam professores.\"",
+        "\"Embora o projeto avançou, portanto ainda faltam professores.\"",
+        "\"Embora o projeto tenha avançado, ainda faltam professores.\""
+      ],
+      "correctIndex": 4,
+      "explanation": "\"Embora\" é conjunção concessiva e pede verbo no subjuntivo (\"tenha avançado\"). As formas no indicativo e o \"portanto\" extra quebram a norma ou a lógica da frase.",
+      "origin": "original",
+      "sourceCitation": "Gramática de referência (BECHARA, Moderna Gramática Portuguesa, e CUNHA; CINTRA, Nova Gramática do Português Contemporâneo, tema: orações subordinadas adverbiais; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Por que um texto com muitos conectivos pode ter coesão ruim?",
+      "options": [
+        "Porque a Cartilha proíbe o uso de qualquer conectivo em textos dissertativos.",
+        "Porque conectivos só podem aparecer no parágrafo de conclusão, nunca no desenvolvimento.",
+        "Porque conectivos de conclusão são sempre incorretos, mesmo quando há uma conclusão.",
+        "Porque a coesão depende de relações lógicas adequadas, não da quantidade de conectivos."
+      ],
+      "correctIndex": 3,
+      "explanation": "O uso artificial ou excessivo não melhora a coesão: importa que cada conectivo marque uma relação real. A Cartilha não proíbe conectivos, eles podem aparecer em qualquer parágrafo e os de conclusão são corretos quando há conclusão.",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 34",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "No trecho fictício \"Muitos moradores deixaram de usar a praça ____ a iluminação é precária.\", qual conectivo indica a causa?",
+      "options": [
+        "\"Visto que\"",
+        "\"Contudo\"",
+        "\"Caso\"",
+        "\"Embora\""
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Visto que\" introduz o motivo do abandono da praça. \"Contudo\" opõe, \"caso\" expressa condição e \"embora\" concessão: nenhum deles liga a causa ao fato.",
+      "origin": "original",
+      "sourceCitation": "Gramática de referência (BECHARA, Moderna Gramática Portuguesa, e CUNHA; CINTRA, Nova Gramática do Português Contemporâneo, tema: conjunções e orações subordinadas adverbiais; capítulo e página a conferir)",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Antes de escolher um conectivo, o que se deve identificar?",
+      "back": "A relação lógica entre as ideias: adição, oposição, causa, consequência, conclusão, concessão etc."
+    },
+    {
+      "front": "Dê exemplos de operadores de oposição e de conclusão citados pela Cartilha.",
+      "back": "Oposição: entretanto, porém. Conclusão: enfim, portanto."
+    },
+    {
+      "front": "Mais conectivos significam melhor coesão?",
+      "back": "Não. O que conta são relações lógicas adequadas, sem uso artificial ou excessivo."
+    }
+  ]
+}

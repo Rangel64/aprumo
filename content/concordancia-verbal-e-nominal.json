@@ -1,0 +1,153 @@
+{
+  "slug": "concordancia-verbal-e-nominal",
+  "title": "Concordância verbal e nominal",
+  "summary": "Como fazer o verbo concordar com o sujeito e o adjetivo, o artigo e o pronome concordarem com o substantivo, e por que a Cartilha trata esses desvios como critério da Competência 1.",
+  "subject": "Redação ENEM",
+  "position": {
+    "x": 520,
+    "y": 740
+  },
+  "sort": 12,
+  "prerequisites": [
+    "tipologia-dissertativo-argumentativo"
+  ],
+  "related": [],
+  "sections": [
+    {
+      "kind": "text",
+      "title": "Por que a concordância importa na Competência 1",
+      "bodyMd": "A Competência 1 avalia o domínio da modalidade escrita formal da língua portuguesa. Entre os desvios gramaticais que a Cartilha lista está expressamente a **concordância verbal e nominal**, junto de regência, tempos e modos, pontuação, crase e outros.\n\nO nível atribuído depende da **frequência** dos desvios e do **prejuízo à compreensão**: um deslize isolado pesa menos que desvios que se repetem.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 (desvios gramaticais) e p. 14 (níveis da Competência I)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    },
+    {
+      "kind": "text",
+      "title": "Concordância verbal: o verbo segue o sujeito",
+      "bodyMd": "Regra geral: o **verbo concorda em número e pessoa com o núcleo do sujeito**. Cuidados frequentes:\n\n- **Sujeito distante do verbo.** Em *\"A falta de recursos destinados às escolas causa prejuízos\"*, o núcleo é *falta* (singular), não *recursos*; o verbo fica no singular.\n- **Sujeito depois do verbo.** *\"Faltam recursos\"*: o sujeito é *recursos* (plural), mesmo vindo depois.\n- **Sujeito composto antes do verbo** leva o verbo ao plural: *\"A escola e a família devem agir.\"*\n- **Haver com sentido de existir** e **fazer indicando tempo** ficam no singular: *\"Há muitos problemas\"*, *\"Faz dois anos\"*. Com auxiliar, o auxiliar também fica no singular: *\"Deve haver soluções.\"*\n- **Verbo com \"se\"** que indica indeterminação (verbo que pede preposição) fica no singular: *\"Precisa-se de professores.\"* Já a voz passiva sintética concorda com o sujeito: *\"Vendem-se casas.\"*",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância verbal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: concordância verbal; capítulo e página a conferir)"
+    },
+    {
+      "kind": "text",
+      "title": "Concordância nominal: palavras que acompanham o substantivo",
+      "bodyMd": "Artigos, pronomes, numerais e adjetivos **concordam em gênero e número com o substantivo** a que se referem: *\"as propostas apresentadas\"*, *\"esses jovens preocupados\"*.\n\nAlguns casos pedem atenção:\n\n- **Menos** é invariável: *\"menos pessoas\"*, nunca *\"menas pessoas\"*.\n- **Meio**, como advérbio (\"um pouco\"), não varia: *\"Ela estava meio cansada.\"*\n- **Bastante** varia como adjetivo (*\"bastantes problemas\"*, no sentido de muitos) e não varia como advérbio (*\"Os alunos estudaram bastante\"*).\n- **Mesmo, próprio** e o adjetivo *anexo* concordam com o substantivo a que se referem: *\"as próprias famílias\"*, *\"as planilhas anexas\"*.\n\nRevise sempre depois de escrever: o descuido costuma aparecer quando o substantivo está longe do adjetivo.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância nominal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: concordância nominal; capítulo e página a conferir)"
+    },
+    {
+      "kind": "example",
+      "title": "Trecho com e sem desvio (fictício)",
+      "bodyMd": "Trecho com desvios:\n\n\"Existe muitas pessoas que ainda não conhece os serviços do bairro. Fazem dois anos que o posto de saúde foi reformado, mas as informações chegam meia atrasadas.\"\n\nVersão ajustada:\n\n\"Existem muitas pessoas que ainda não conhecem os serviços do bairro. Faz dois anos que o posto de saúde foi reformado, mas as informações chegam meio atrasadas.\"\n\nO que mudou: *existem* e *conhecem* concordam com *pessoas*; *faz* é impessoal (tempo decorrido); *meio* é advérbio e fica invariável.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância; capítulo e página a conferir); exemplo original e fictício"
+    },
+    {
+      "kind": "quick_question",
+      "title": "Confira o que entendeu",
+      "bodyMd": "Esta pergunta é só autoavaliação.",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância verbal; capítulo e página a conferir)",
+      "quickQuestion": {
+        "prompt": "Qual frase está de acordo com a norma-padrão?",
+        "options": [
+          "\"Faltam recursos para as escolas.\"",
+          "\"Falta recursos para as escolas.\"",
+          "\"Devem haver recursos para as escolas.\"",
+          "\"Fazem dois anos que faltam recursos.\""
+        ],
+        "correctIndex": 0,
+        "explanation": "O sujeito é \"recursos\" (plural), que vem depois do verbo. Na 3ª, o verbo haver impessoal pede \"Deve haver\"; na 4ª, \"fazer\" indicando tempo fica no singular (\"Faz dois anos\")."
+      }
+    },
+    {
+      "kind": "summary",
+      "title": "Resumo",
+      "bodyMd": "- A Cartilha cita concordância verbal e nominal entre os desvios gramaticais da Competência 1.\n- O verbo concorda com o núcleo do sujeito, mesmo se ele vier depois ou longe do verbo.\n- Haver (existir) e fazer (tempo) ficam no singular.\n- Adjetivos, artigos e pronomes concordam com o substantivo; *menos* e *meio* (advérbio) não variam.\n- Releia o texto procurando o sujeito de cada verbo.",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 14 (concordância como critério); regras: gramática de referência (BECHARA e CUNHA; CINTRA, tema: concordância; capítulo e página a conferir)",
+      "sourceUrl": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/cartilha_enem_2026.pdf"
+    }
+  ],
+  "questions": [
+    {
+      "stem": "Segundo a Cartilha, em qual competência a concordância verbal e nominal aparece como critério de avaliação?",
+      "options": [
+        "Competência 1, de domínio da modalidade escrita formal.",
+        "Competência 2, de compreensão do tema e do gênero textual.",
+        "Competência 3, de seleção e organização de argumentos.",
+        "Competência 5, de elaboração da proposta de intervenção."
+      ],
+      "correctIndex": 0,
+      "explanation": "A concordância verbal e nominal está na lista de desvios gramaticais da Competência 1. As demais competências avaliam outros aspectos (tema, argumentos, proposta).",
+      "origin": "original",
+      "sourceCitation": "INEP. A Redação do Enem 2026: Cartilha do(a) Participante. Brasília: Inep/MEC, 2026, p. 13 e 14",
+      "sectionPosition": 1
+    },
+    {
+      "stem": "Leia o trecho fictício: \"A falta de recursos destinados às escolas públicas ainda não causam prejuízos aos alunos.\" Qual correção está de acordo com a norma-padrão?",
+      "options": [
+        "\"... ainda não causarão prejuízos aos alunos.\", pois \"recursos\" está no plural.",
+        "\"... ainda não causam prejuízos aos alunos.\" (sem mudança), pois o último termo está no plural.",
+        "\"... ainda não causavam prejuízos aos alunos.\", por causa do tempo verbal.",
+        "\"... ainda não causa prejuízos aos alunos.\", pois o núcleo do sujeito é \"falta\"."
+      ],
+      "correctIndex": 3,
+      "explanation": "O núcleo do sujeito é \"falta\", singular (não é substantivo coletivo), então o verbo fica em \"causa\". Deixar o verbo no plural por causa de \"recursos\" é concordar com o termo mais próximo, e não com o núcleo. Mudar o tempo verbal não resolve a concordância.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância verbal; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual frase está correta quanto à concordância?",
+      "options": [
+        "\"Fazem cinco anos que o clube foi fundado.\"",
+        "\"Devem existir soluções para o problema.\"",
+        "\"Haviam muitos alunos na sala.\"",
+        "\"Devem haver soluções para o problema.\""
+      ],
+      "correctIndex": 1,
+      "explanation": "Com o verbo existir, o sujeito é \"soluções\" e o auxiliar \"devem\" vai ao plural. Fazer (tempo) e haver (existir) são impessoais e ficam no singular (\"Faz cinco anos\", \"Havia muitos alunos\", \"Deve haver soluções\").",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância verbal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: concordância verbal; capítulo e página a conferir)",
+      "sectionPosition": 2
+    },
+    {
+      "stem": "Qual alternativa apresenta concordância nominal adequada à norma-padrão?",
+      "options": [
+        "\"Havia menas pessoas na reunião.\"",
+        "\"Ela estava meia cansada depois da viagem.\"",
+        "\"As próprias famílias devem participar da escola.\"",
+        "\"Os alunos estudaram bastantes.\""
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Próprias\" concorda com \"famílias\". \"Menos\" é invariável, \"meio\" como advérbio não varia e \"bastante\" como advérbio, depois do verbo, também não varia.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância nominal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: concordância nominal; capítulo e página a conferir)",
+      "sectionPosition": 3
+    },
+    {
+      "stem": "Em qual frase o verbo com \"se\" está de acordo com a norma-padrão?",
+      "options": [
+        "\"Precisam-se de professores na escola.\"",
+        "\"Vende-se casas na região central.\"",
+        "\"Aluga-se salas comerciais no centro.\"",
+        "\"Vendem-se casa na região central.\"",
+        "\"Precisa-se de professores na escola.\""
+      ],
+      "correctIndex": 4,
+      "explanation": "Com o verbo que pede preposição (precisar de), o \"se\" indica indeterminação do sujeito e o verbo fica no singular. \"Precisam-se de professores\" erra por pôr o verbo no plural. Em \"Vende-se casas\" e \"Aluga-se salas\", voz passiva sintética, o verbo deveria concordar com o sujeito plural; em \"Vendem-se casa\", o verbo está no plural, mas o sujeito, no singular. Por isso só a última alternativa está correta.",
+      "origin": "original",
+      "sourceCitation": "BECHARA, Evanildo. Moderna Gramática Portuguesa (tema: concordância verbal; capítulo e página a conferir); CUNHA, Celso; CINTRA, Lindley. Nova Gramática do Português Contemporâneo (tema: concordância verbal; capítulo e página a conferir)",
+      "sectionPosition": 2
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Com quem o verbo concorda?",
+      "back": "Com o núcleo do sujeito, em número e pessoa, mesmo que o sujeito venha depois ou longe do verbo."
+    },
+    {
+      "front": "Como ficam \"haver\" (existir) e \"fazer\" (tempo)?",
+      "back": "No singular: \"Há muitos problemas\", \"Faz dois anos\", \"Deve haver soluções\"."
+    },
+    {
+      "front": "Menos e meio (advérbio) variam?",
+      "back": "Não. \"Menos pessoas\", \"ela estava meio cansada\"."
+    }
+  ]
+}
